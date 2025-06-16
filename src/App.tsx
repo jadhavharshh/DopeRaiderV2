@@ -1,35 +1,102 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0)
+// Pages
+import { ProductionActiveScreen } from "./pages/ProductionActiveScreen";
+import { MapScreen } from "./pages/MapScreen";
+import { MapChinatownScreen } from "./pages/MapChinatownScreen";
+import { MarketTradeScreen } from "./pages/MarketTradeScreen";
+import { ProductionScreen } from "./pages/ProductionScreen";
+import { MarketScreen } from "./pages/MarketScreen";
+import { TrophiesScreen } from "./pages/TrophiesScreen";
+import { InventoryScreen } from "./pages/InventoryScreen";
+import { SocialScreen } from "./pages/SocialScreen";
+import { UpgradesScreen } from "./pages/UpgradesScreen";
+import { ActiveRaidScreen } from "./pages/ActiveRaidScreen";
+import { RaidPlayersScreen } from "./pages/RaidPlayersScreen";
+import { RaidProtectedPlayerScreen } from "./pages/RaidProtectedPlayerScreen";
+import { AirdropScreen } from "./pages/AirdropScreen";
+import { IntroScreen } from "./pages/IntroScreen";
+import { RaidLobbyScreen } from "./pages/RaidLobbyScreen";
+import { RaidWinScreen } from "./pages/RaidWinScreen";
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <IntroScreen />,
+  },
+  {
+    path: "/player/inventory",
+    element: <InventoryScreen />,
+  },
+  {
+    path: "/player/trophies",
+    element: <TrophiesScreen />,
+  },
+  {
+    path: "/player/social",
+    element: <SocialScreen />,
+  },
+  {
+    path: "/player/upgrades",
+    element: <UpgradesScreen />,
+  },
+  {
+    path: "/map",
+    element: <MapScreen />,
+  },
+  {
+    path: "/map/chinatown",
+    element: <MapChinatownScreen />,
+  },
+  {
+    path: "/market",
+    element: <MarketScreen />,
+  },
+  {
+    path: "/market/trade",
+    element: <MarketTradeScreen />,
+  },
+  {
+    path: "/production",
+    element: <ProductionScreen />,
+  },
+  {
+    path: "/production/active",
+    element: <ProductionActiveScreen />,
+  },
+  {
+    path: "/raid",
+    element: <RaidLobbyScreen />,
+  },
+  {
+    path: "/raid/active",
+    element: <ActiveRaidScreen />,
+  },
+  {
+    path: "/raid/players",
+    element: <RaidPlayersScreen />,
+  },
+  {
+    path: "/raid/players/protected",
+    element: <RaidProtectedPlayerScreen />,
+  },
+  {
+    path: "/raid/win",
+    element: <RaidWinScreen />,
+  },
+  {
+    path: "/airdrop",
+    element: <AirdropScreen />,
+  },
+  {
+    path: "*",
+    element: <IntroScreen />,
+  },
+]);
 
-export default App
+const App = () => {
+  return <RouterProvider router={router} />;
+};
+
+export default App;

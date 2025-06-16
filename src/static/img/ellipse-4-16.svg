@@ -1,0 +1,16 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g style="mix-blend-mode:luminosity">
+<circle cx="12" cy="12" r="11.5" fill="url(#paint0_linear_412_3030)"/>
+<circle cx="12" cy="12" r="11.5" stroke="url(#paint1_linear_412_3030)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_412_3030" x1="12" y1="0" x2="12" y2="24" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#666666"/>
+</linearGradient>
+<linearGradient id="paint1_linear_412_3030" x1="12" y1="24" x2="12" y2="0" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#666666"/>
+</linearGradient>
+</defs>
+</svg>
