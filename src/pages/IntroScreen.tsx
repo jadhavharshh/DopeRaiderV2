@@ -1,4 +1,3 @@
-import React from "react";
 import type { JSX } from "react";
 import { Link } from "react-router-dom";
 
@@ -6,7 +5,7 @@ import { Link } from "react-router-dom";
 import backgroundImg from "../static/img/5-1.png";
 import desktopBackgroundImg from "../static/img/telegram-chair.png"; // For bigger screens
 import vectorImg from "../static/img/Vector.png"; // The green cannabis leaf
-import grungeShape from "../static/img/organic-grunge-bold-shapes-1.svg"; // The grunge shape behind text
+import shapeImg from "../static/img/organic-grunge-bold-shapes.svg"; // The grunge shape behind text
 
 export const IntroScreen = (): JSX.Element => {
   return (
@@ -49,18 +48,18 @@ export const IntroScreen = (): JSX.Element => {
             </div>
 
             {/* Main Title */}
-            <h1 className="text-white text-5xl md:text-6xl lg:text-7xl font-black mb-12 leading-none tracking-wider drop-shadow-2xl">
+            <h1 className="text-white text-5xl md:text-6xl lg:text-7xl font-black mb-2 leading-none tracking-wider drop-shadow-2xl">
               DOPERAIDER
             </h1>
 
             {/* Tagline with grunge background */}
             <div className="relative mb-24 w-full">
-              {/* Grunge shape background */}
+              {/* Grunge shape background - Using organic-grunge-bold-shapes.svg */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <img
                   className="w-[500px] h-24 md:w-[600px] md:h-28 lg:w-[700px] lg:h-32 opacity-90 object-contain"
                   alt="Grunge background"
-                  src={grungeShape}
+                  src={shapeImg}
                   style={{
                     filter: 'brightness(0.6) contrast(1.4) saturate(1.3)'
                   }}
@@ -74,22 +73,42 @@ export const IntroScreen = (): JSX.Element => {
             </div>
 
             {/* Play Game Button */}
-            <div className="w-full">
-              <Link
-                to="/map"
-                className="block w-60 mx-auto rounded-full shadow-2xl overflow-hidden"
+            <Link
+              to="/player/inventory"
+              className="group relative inline-flex items-center justify-center"
+            >
+              {/* Button Glow Effect */}
+              <div 
+                className="absolute inset-0 rounded-full blur-sm opacity-75 group-hover:opacity-100 transition-opacity duration-300" 
                 style={{
-                  background: 'linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #15803d 100%)',
-                  border: '2px solid #16a34a'
+                  background: 'linear-gradient(to bottom, #103410, #318952)'
+                }}
+              />
+
+              {/* Main Button with inner border gradient */}
+              <div 
+                className="relative transition-all duration-200 text-white px-8 md:px-10 py-3 md:py-4 rounded-full shadow-lg hover:shadow-xl transform group-hover:scale-105 group-active:scale-95"
+                style={{
+                  background: `
+                    linear-gradient(to bottom, #76E39D, #6BBA1C) padding-box,
+                    linear-gradient(to bottom, #103410, #318952) border-box
+                  `,
+                  border: '2px solid transparent'
                 }}
               >
-                <div className="px-10 py-5 hover:bg-black/10 transition-all duration-200">
-                  <span className="text-white text-xl font-bold tracking-widest">
-                    PLAY GAME
-                  </span>
-                </div>
-              </Link>
-            </div>
+                {/* Inner content with main background */}
+                <div 
+                  className="absolute inset-[2px] rounded-full"
+                  style={{
+                    background: 'linear-gradient(to bottom, #103410, #318952)'
+                  }}
+                />
+                
+                <span className="relative text-white text-lg md:text-xl font-semibold z-10">
+                  PLAY GAME
+                </span>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
