@@ -4,6 +4,24 @@
   padding: 2rem;
   text-align: center;
 }
+/* Hide scrollbar globally but keep scroll functionality */
+
+/* For all elements */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
+
+/* Allow scrolling */
+html, body {
+  overflow: auto;
+  height: 100%;
+}
+
 
 .logo {
   height: 6em;

@@ -1,10 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
-
-* {
+/* Remove the global * selector and make Bangers the default only for body */
+body {
   font-family: 'Bangers', cursive;
+}
+
+/* Add specific font classes to ensure they work */
+.font-bangers {
+  font-family: 'Bangers', cursive !important;
+}
+
+.font-roboto-condensed {
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
 }
 
 @custom-variant dark (&:is(.dark *));
