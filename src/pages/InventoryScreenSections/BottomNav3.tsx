@@ -12,13 +12,14 @@ import layerMarket from "@/static/img/layer-1.svg";
 import layerProduce from "@/static/img/layer-1-19.svg";
 import iconMap from "@/static/img/icon-46.svg";
 import iconRaid from "@/static/img/icon-47.svg";
+import type { JSX } from "react";
 
 export const BottomNav3 = (): JSX.Element => {
   return (
-    <div className="h-[120px] left-0 absolute top-[732px] w-[393px]">
+    <div className="md:relative md:w-full md:h-auto md:top-0 md:left-0 h-[120px] left-0 absolute top-[732px] w-[393px] bottom-nav">
       {/* Top stats bar */}
-      <div className="bg-gradient-to-b from-[#303030] to-[#1b1b1b] border-b border-black h-10 left-0 absolute top-0 w-[393px]">
-        <div className="flex items-center gap-[2px] justify-end left-20 absolute top-1">
+      <div className="md:w-full md:relative md:top-0 md:left-0 bg-gradient-to-b from-[#303030] to-[#1b1b1b] border-b border-black h-10 left-0 absolute top-0 w-[393px]">
+        <div className="md:w-full md:max-w-none md:justify-center md:px-4 md:relative md:left-0 md:top-1 flex items-center gap-[2px] justify-end left-20 absolute top-1">
           {/* Balance - Gray gradient */}
           <div className="flex items-center bg-gradient-to-b from-[#666666] to-[#454545] border-none rounded shadow-[0px_4px_4px_rgba(0,0,0,0.25)] gap-1 h-8 py-1 px-2 relative overflow-hidden before:absolute before:inset-0 before:rounded before:p-[1px] before:bg-gradient-to-b before:from-black before:to-[#666666] before:mask-composite-exclude before:pointer-events-none before:z-[1]">
             <div className="font-['Roboto_Condensed'] text-base font-bold text-white tracking-0 leading-normal text-center drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] whitespace-nowrap relative z-10">
@@ -69,7 +70,7 @@ export const BottomNav3 = (): JSX.Element => {
         </div>
 
         {/* Notification icon */}
-        <div className="h-[49px] left-4 absolute top-[-13px] w-[49px]">
+        <div className="md:left-4 md:top-[-13px] h-[49px] left-4 absolute top-[-13px] w-[49px]">
           <div className="h-[49px] relative">
             <div className="bg-gradient-to-b from-black to-[#414141] border-none rounded-[74px] h-[47px] left-0 absolute top-[2px] w-[47px] flex items-center justify-center overflow-hidden relative before:absolute before:inset-0 before:rounded-[74px] before:p-[1px] before:bg-gradient-to-b before:from-black before:to-[#666666] before:mask-composite-exclude before:pointer-events-none before:z-[1]">
               <div className="h-[21px] w-4 transform rotate-180 relative z-10">
@@ -91,49 +92,49 @@ export const BottomNav3 = (): JSX.Element => {
       </div>
 
       {/* Bottom navigation */}
-      <div className="bg-black h-20 left-0 absolute top-10 w-[393px]">
-        <div className="h-[61px] left-[15px] relative top-[9px] w-[364px]">
-          <div className="flex items-center left-[-15px] relative top-[-9px] w-[393px]">
+      <div className="md:w-full md:relative md:top-0 md:left-0 bg-black h-20 left-0 absolute top-10 w-[393px]">
+        <div className="md:w-full md:max-w-none md:relative md:left-0 md:top-0 h-[61px] left-[15px] relative top-[9px] w-[364px]">
+          <div className="md:justify-center md:w-full md:relative md:left-0 md:top-0 flex items-center left-[-15px] relative top-[-9px] w-[393px]">
             {/* YOU - Active */}
-            <Link className="bg-gradient-to-b from-[#1c1c1c] to-black border-r border-transparent h-20 relative w-[79px] flex flex-col items-center justify-center" to="/you/inventory" style={{
+            <Link className="bg-gradient-to-b from-[#1c1c1c] to-black border-r border-transparent h-20 relative w-[79px] flex flex-col items-center justify-center" to="/player/inventory" style={{
               borderImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 153, 153, 0.43) 100%) 1',
               borderRightStyle: 'solid',
               borderRightWidth: '1px'
             }}>
-              <div className="font-['Roboto_Condensed'] text-xs font-black text-white left-[29px] tracking-0 leading-normal absolute top-[55px] whitespace-nowrap">
+              <div className="font-['Roboto_Condensed'] text-xs font-black text-white md:relative md:left-0 md:top-0 left-[29px] tracking-0 leading-normal absolute top-[55px] whitespace-nowrap">
                 YOU
               </div>
               <img
-                className="h-[34px] left-[22px] absolute top-[15px] w-[35px]"
+                className="h-[34px] md:relative md:left-0 md:top-0 left-[22px] absolute top-[15px] w-[35px]"
                 alt="Union"
                 src={unionYou}
               />
             </Link>
 
             {/* MARKET */}
-            <Link className="border-r border-transparent h-20 relative w-[79px] flex flex-col items-center justify-center" to="/you/market" style={{
+            <Link className="border-r border-transparent h-20 relative w-[79px] flex flex-col items-center justify-center" to="/market" style={{
               borderImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 153, 153, 0.43) 100%) 1',
               borderRightStyle: 'solid',
               borderRightWidth: '1px'
             }}>
-              <div className="font-['Roboto_Condensed'] text-xs font-black text-[#aaaaaa] left-[18px] tracking-0 leading-normal absolute top-[55px] whitespace-nowrap">
+              <div className="font-['Roboto_Condensed'] text-xs font-black text-[#aaaaaa] md:relative md:left-0 md:top-0 left-[18px] tracking-0 leading-normal absolute top-[55px] whitespace-nowrap">
                 MARKET
               </div>
-              <div className="h-9 left-[21px] absolute top-[13px] w-[37px]">
+              <div className="h-9 md:relative md:left-0 md:top-0 left-[21px] absolute top-[13px] w-[37px]">
                 <img className="h-[33px] left-0 absolute top-[3px] w-9" alt="Layer" src={layerMarket} />
               </div>
             </Link>
 
             {/* PRODUCE */}
-            <Link className="border-r border-transparent h-20 relative w-[79px] flex flex-col items-center justify-center" to="/you/production" style={{
+            <Link className="border-r border-transparent h-20 relative w-[79px] flex flex-col items-center justify-center" to="/production" style={{
               borderImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 153, 153, 0.43) 100%) 1',
               borderRightStyle: 'solid',
               borderRightWidth: '1px'
             }}>
-              <div className="font-['Roboto_Condensed'] text-xs font-black text-[#aaaaaa] left-4 tracking-0 leading-normal absolute top-[55px] whitespace-nowrap">
+              <div className="font-['Roboto_Condensed'] text-xs font-black text-[#aaaaaa] md:relative md:left-0 md:top-0 left-4 tracking-0 leading-normal absolute top-[55px] whitespace-nowrap">
                 PRODUCE
               </div>
-              <div className="h-[43px] left-[18px] absolute top-[10px] w-11">
+              <div className="h-[43px] md:relative md:left-0 md:top-0 left-[18px] absolute top-[10px] w-11">
                 <img
                   className="h-8 left-[2px] absolute top-[6px] w-10"
                   alt="Layer"
@@ -143,28 +144,28 @@ export const BottomNav3 = (): JSX.Element => {
             </Link>
 
             {/* MAP */}
-            <Link className="border-r border-transparent h-20 relative w-[79px] flex flex-col items-center justify-center" to="/you/map" style={{
+            <Link className="border-r border-transparent h-20 relative w-[79px] flex flex-col items-center justify-center" to="/map" style={{
               borderImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 153, 153, 0.43) 100%) 1',
               borderRightStyle: 'solid',
               borderRightWidth: '1px'
             }}>
-              <div className="font-['Roboto_Condensed'] text-xs font-black text-[#aaaaaa] left-7 tracking-0 leading-normal absolute top-[55px] whitespace-nowrap">
+              <div className="font-['Roboto_Condensed'] text-xs font-black text-[#aaaaaa] md:relative md:left-0 md:top-0 left-7 tracking-0 leading-normal absolute top-[55px] whitespace-nowrap">
                 MAP
               </div>
-              <img className="h-[34px] left-[22px] absolute top-[15px] w-[35px]" alt="Icon" src={iconMap} />
+              <img className="h-[34px] md:relative md:left-0 md:top-0 left-[22px] absolute top-[15px] w-[35px]" alt="Icon" src={iconMap} />
             </Link>
 
             {/* RAID */}
-            <div className="border-r border-transparent h-20 -mr-[2px] relative w-[79px] flex flex-col items-center justify-center" style={{
+            <Link className="border-r border-transparent h-20 -mr-[2px] relative w-[79px] flex flex-col items-center justify-center" to="/raid" style={{
               borderImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 153, 153, 0.43) 100%) 1',
               borderRightStyle: 'solid',
               borderRightWidth: '1px'
             }}>
-              <div className="font-['Roboto_Condensed'] text-xs font-black text-[#aaaaaa] left-[27px] tracking-0 leading-normal absolute top-[55px] whitespace-nowrap">
+              <div className="font-['Roboto_Condensed'] text-xs font-black text-[#aaaaaa] md:relative md:left-0 md:top-0 left-[27px] tracking-0 leading-normal absolute top-[55px] whitespace-nowrap">
                 RAID
               </div>
-              <img className="h-[34px] left-[21px] absolute top-[15px] w-[37px]" alt="Icon" src={iconRaid} />
-            </div>
+              <img className="h-[34px] md:relative md:left-0 md:top-0 left-[21px] absolute top-[15px] w-[37px]" alt="Icon" src={iconRaid} />
+            </Link>
           </div>
         </div>
       </div>

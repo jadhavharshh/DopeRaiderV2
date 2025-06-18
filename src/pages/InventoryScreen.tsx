@@ -5,21 +5,82 @@ import { YourStatsWrapper } from "./InventoryScreenSections/YourStatsWrapper";
 import type { JSX } from "react";
 import TelegramIMG from "@/static/img/telegram-cloud-photo-size-4-5809685116522448568-y-1.png"
 import Logo from "@/static/img/logo-1.svg";
+
 export const InventoryScreen = (): JSX.Element => {
   return (
-    <div className="bg-black h-[852px] w-[393px]" data-model-id="412:1574">
-      <div className="h-[852px] relative">
+    <div className="min-h-screen w-full bg-black overflow-hidden">
+      {/* Mobile Layout - unchanged */}
+      <div className="md:hidden flex items-center justify-center h-screen w-screen">
+        <div className="bg-black h-full w-[393px] relative overflow-hidden">
+          <img
+            className="absolute top-[15%] w-full object-cover h-[70%]"
+            alt="Telegram cloud photo"
+            src={TelegramIMG}
+          />
+
+          <TopWrapper />
+          <Scroll />
+          <BottomNav3 />
+          <YourStatsWrapper />
+
+          <img
+            className="h-7 absolute top-[7%] left-1/2 -translate-x-1/2 w-[157px]"
+            alt="Logo"
+            src={Logo}
+          />
+        </div>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="hidden md:block h-screen relative">
+        {/* Background Image for Desktop */}
         <img
-          className="h-[729px] left-0 object-cover absolute top-[123px] w-[393px]"
-          alt="Telegram cloud photo"
-          src= {TelegramIMG}
+          className="absolute inset-0 w-full h-full object-cover opacity-20"
+          alt="Background"
+          src={TelegramIMG}
         />
 
-        <TopWrapper />
-        <Scroll />
-        <BottomNav3 />
-        <YourStatsWrapper />
-        <img className="h-7 left-[118px] absolute top-[60px] w-[157px]" alt="Logo" src={Logo} />
+        {/* Logo - Top Center */}
+        <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-20">
+          <img
+            className="h-8 lg:h-10 w-auto"
+            alt="Logo"
+            src={Logo}
+          />
+        </div>
+
+        {/* Profile Section - Top Left - Scale down */}
+        <div className="absolute top-10 left-6 lg:left-8 z-10 w-64 lg:w-72 scale-75 lg:scale-90 origin-top-left">
+          <div className="bg-black/40 backdrop-blur-sm rounded-lg border border-gray-600/30">
+            <TopWrapper />
+          </div>
+        </div>
+
+        {/* Center Content - Scale down significantly */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-80 lg:w-96 h-80 lg:h-96 scale-75 lg:scale-85">
+          {/* Scroll Content */}
+          <div className="bg-black/40 backdrop-blur-sm rounded-lg border border-gray-600/30 h-full">
+            <div className="relative h-full flex flex-col">
+              <div className="flex-shrink-0">
+                {/* Your Stats Wrapper */}
+                <YourStatsWrapper />
+              </div>
+              <div className="flex-1 overflow-hidden">
+                <Scroll />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Navigation - Desktop version with scaling */}
+        <div className="fixed bottom-0 left-0 right-0 z-30">
+          <div className="w-full bg-black border-t border-gray-600">
+            {/* Scale down the bottom navigation for desktop */}
+            <div className="hidden md:block scale-90 lg:scale-100 origin-bottom">
+              <BottomNav3 />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
