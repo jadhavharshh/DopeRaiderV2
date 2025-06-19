@@ -51,7 +51,7 @@ export const InventoryScreen = (): JSX.Element => {
         </div>
 
         {/* Profile Section - Top Left - Scale down */}
-        <div className="absolute top-10 left-6 lg:left-8 z-10 w-64 lg:w-72 scale-75 lg:scale-90 origin-top-left">
+        <div className="absolute top-5 left-5 lg:left-5 z-10 w-64 lg:w-72 scale-75 lg:scale-90 origin-top-left">
           <div className="bg-black/40 backdrop-blur-sm rounded-lg border border-gray-600/30">
             <TopWrapper />
           </div>
