@@ -2,7 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Pages
 import { ProductionActiveScreen } from "./pages/ProductionActiveScreen";
-import { MapScreen } from "./pages/MapScreen";
+import { DoperaiderMap } from "./pages/MapScreen";
 import { MapChinatownScreen } from "./pages/MapChinatownScreen";
 import { MarketTradeScreen } from "./pages/MarketTradeScreen";
 import { ProductionScreen } from "./pages/ProductionScreen";
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/map",
-    element: <MapScreen />,
+    element: <DoperaiderMap />,
   },
   {
     path: "/map/chinatown",

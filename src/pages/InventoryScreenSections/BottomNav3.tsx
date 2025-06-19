@@ -16,7 +16,7 @@ import type { JSX } from "react";
 
 export const BottomNav3 = (): JSX.Element => {
   return (
-    <div className="md:relative md:w-auto md:h-auto md:top-0 md:left-0 h-[120px] left-0 absolute top-[732px] w-[393px] bottom-nav">
+    <div className="md:relative md:w-auto md:h-20 md:top-0 md:left-0 h-[120px] left-0 absolute top-[732px] w-[393px] bottom-nav">
       {/* Top stats bar - Hide on desktop */}
       <div className="md:hidden bg-gradient-to-b from-[#303030] to-[#1b1b1b] border-b border-black h-10 left-0 absolute top-0 w-[393px]">
         <div className="flex items-center gap-[2px] justify-end left-20 absolute top-1">
