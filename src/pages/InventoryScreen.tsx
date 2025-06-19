@@ -4,6 +4,7 @@ import { TopWrapper } from "./InventoryScreenSections/TopWrapper";
 import { YourStatsWrapper } from "./InventoryScreenSections/YourStatsWrapper";
 import type { JSX } from "react";
 import TelegramIMG from "@/static/img/telegram-cloud-photo-size-4-5809685116522448568-y-1.png"
+import TelegramChairIMG from "@/static/img/telegram-chair.png";
 import Logo from "@/static/img/logo-1.svg";
 
 export const InventoryScreen = (): JSX.Element => {
@@ -35,9 +36,9 @@ export const InventoryScreen = (): JSX.Element => {
       <div className="hidden md:block h-screen relative">
         {/* Background Image for Desktop */}
         <img
-          className="absolute inset-0 w-full h-full object-cover opacity-20"
+          className="absolute inset-0 w-full h-full object-cover opacity-70"
           alt="Background"
-          src={TelegramIMG}
+          src={TelegramChairIMG}
         />
 
         {/* Logo - Top Center */}
@@ -57,7 +58,7 @@ export const InventoryScreen = (): JSX.Element => {
         </div>
 
         {/* Center Content - Scale down significantly */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-80 lg:w-96 h-80 lg:h-96 scale-75 lg:scale-85">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-80 lg:w-96 h-96 lg:h-[28rem] scale-75 lg:scale-85">
           {/* Scroll Content */}
           <div className="bg-black/40 backdrop-blur-sm rounded-lg border border-gray-600/30 h-full">
             <div className="relative h-full flex flex-col">
@@ -74,9 +75,8 @@ export const InventoryScreen = (): JSX.Element => {
 
         {/* Bottom Navigation - Desktop version with scaling */}
         <div className="fixed bottom-0 left-0 right-0 z-30">
-          <div className="w-full bg-black border-t border-gray-600">
-            {/* Scale down the bottom navigation for desktop */}
-            <div className="hidden md:block scale-90 lg:scale-100 origin-bottom">
+          <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-30">
+            <div className="scale-90 lg:scale-100 origin-bottom">
               <BottomNav3 />
             </div>
           </div>
