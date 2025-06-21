@@ -1,16 +1,37 @@
+import { useState } from "react";
 import { BottomNav3 } from "./InventoryScreenSections/BottomNav3";
 import { Scroll } from "./InventoryScreenSections/Scroll";
 import { TopWrapper } from "./InventoryScreenSections/TopWrapper";
 import { YourStatsWrapper } from "./InventoryScreenSections/YourStatsWrapper";
+import { UpgradesContent } from "@/components/UpgradesContent";
+import { TrophiesContent } from "@/components/TrophiesContent";
+import { SocialContent } from "@/components/SocialContent";
 import type { JSX } from "react";
 import TelegramIMG from "@/static/img/telegram-cloud-photo-size-4-5809685116522448568-y-1.png"
 import TelegramChairIMG from "@/static/img/telegram-chair.png";
 import Logo from "@/static/img/logo-1.svg";
 
 export const InventoryScreen = (): JSX.Element => {
+  const [activeTab, setActiveTab] = useState('inventory');
+
+  const renderTabContent = () => {
+    switch (activeTab) {
+      case 'inventory':
+        return <Scroll />;
+      case 'upgrades':
+        return <UpgradesContent />;
+      case 'social':
+        return <SocialContent />;
+      case 'trophies':
+        return <TrophiesContent />;
+      default:
+        return <Scroll />;
+    }
+  };
+
   return (
     <div className="min-h-screen w-full bg-black overflow-hidden">
-      {/* Mobile Layout - unchanged */}
+      {/* Mobile Layout */}
       <div className="md:hidden flex items-center justify-center h-screen w-screen">
         <div className="bg-black h-full w-[393px] relative overflow-hidden">
           <img
@@ -20,9 +41,9 @@ export const InventoryScreen = (): JSX.Element => {
           />
 
           <TopWrapper />
-          <Scroll />
+          {renderTabContent()}
           <BottomNav3 />
-          <YourStatsWrapper />
+          <YourStatsWrapper activeTab={activeTab} onTabChange={setActiveTab} />
 
           <img
             className="h-7 absolute top-[7%] left-1/2 -translate-x-1/2 w-[157px]"
@@ -64,10 +85,10 @@ export const InventoryScreen = (): JSX.Element => {
             <div className="relative h-full flex flex-col">
               <div className="flex-shrink-0">
                 {/* Your Stats Wrapper */}
-                <YourStatsWrapper />
+                <YourStatsWrapper activeTab={activeTab} onTabChange={setActiveTab} />
               </div>
               <div className="flex-1 overflow-hidden">
-                <Scroll />
+                {renderTabContent()}
               </div>
             </div>
           </div>
