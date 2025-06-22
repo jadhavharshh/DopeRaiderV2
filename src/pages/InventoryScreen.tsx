@@ -31,29 +31,50 @@ export const InventoryScreen = (): JSX.Element => {
 
   return (
     <div className="min-h-screen w-full bg-black overflow-hidden">
-      {/* Mobile Layout */}
-      <div className="md:hidden flex items-center justify-center h-screen w-screen">
-        <div className="bg-black h-full w-[393px] relative overflow-hidden">
+      {/* Mobile Layout - up to 767px */}
+      <div className="flex flex-col h-screen w-full min-w-[390px] md:hidden">
+        <div className="bg-black h-full w-full relative overflow-hidden flex flex-col">
+          {/* Background Image - Fixed positioning */}
           <img
-            className="absolute top-[15%] w-full object-cover h-[70%]"
+            className="absolute inset-0 w-full h-full object-cover z-0"
             alt="Telegram cloud photo"
             src={TelegramIMG}
           />
 
-          <TopWrapper />
-          {renderTabContent()}
-          <BottomNav3 />
-          <YourStatsWrapper activeTab={activeTab} onTabChange={setActiveTab} />
+          {/* Logo - Fixed at top */}
+          <div className="relative z-20 flex justify-center pt-4 pb-2 flex-shrink-0">
+            <img
+              className="h-6 w-auto"
+              alt="Logo"
+              src={Logo}
+            />
+          </div>
 
-          <img
-            className="h-7 absolute top-[7%] left-1/2 -translate-x-1/2 w-[157px]"
-            alt="Logo"
-            src={Logo}
-          />
+          {/* Top Wrapper - Fixed height, stacked properly */}
+          <div className="relative z-10 flex-shrink-0">
+            <TopWrapper />
+          </div>
+
+          {/* Tab Navigation - Fixed height, properly positioned */}
+          <div className="relative z-10 flex-shrink-0">
+            <YourStatsWrapper activeTab={activeTab} onTabChange={setActiveTab} />
+          </div>
+
+          {/* Main Content - Flexible height */}
+          <div className="relative z-10 flex-1 overflow-hidden">
+            <div className="h-full overflow-y-auto">
+              {renderTabContent()}
+            </div>
+          </div>
+
+          {/* Bottom Navigation - Fixed at bottom */}
+          <div className="relative z-10 flex-shrink-0">
+            <BottomNav3 />
+          </div>
         </div>
       </div>
 
-      {/* Desktop Layout */}
+      {/* Tablet and Desktop Layout - 768px and above */}
       <div className="hidden md:block h-screen relative">
         {/* Background Image for Desktop */}
         <img
@@ -62,24 +83,30 @@ export const InventoryScreen = (): JSX.Element => {
           src={TelegramChairIMG}
         />
 
-        {/* Logo - Top Center */}
-        <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-20">
+        {/* Logo - Top Center - Responsive sizing */}
+        <div className="absolute top-4 md:top-6 lg:top-8 left-1/2 transform -translate-x-1/2 z-20">
           <img
-            className="h-8 lg:h-10 w-auto"
+            className="h-6 md:h-8 lg:h-10 xl:h-12 w-auto"
             alt="Logo"
             src={Logo}
           />
         </div>
 
-        {/* Profile Section - Top Left - Scale down */}
-        <div className="absolute top-5 left-5 lg:left-5 z-10 w-64 lg:w-72 scale-75 lg:scale-90 origin-top-left">
+        {/* Profile Section - Top Left - Responsive positioning and scaling */}
+        <div className="absolute top-3 left-3 md:top-4 md:left-4 lg:top-5 lg:left-5 z-10 
+                       w-48 sm:w-52 md:w-56 lg:w-64 xl:w-72 2xl:w-80
+                       scale-50 sm:scale-60 md:scale-65 lg:scale-75 xl:scale-90 2xl:scale-100 
+                       origin-top-left">
           <div className="bg-black/40 backdrop-blur-sm rounded-lg border border-gray-600/30">
             <TopWrapper />
           </div>
         </div>
 
-        {/* Center Content - Scale down significantly */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-80 lg:w-96 h-96 lg:h-[28rem] scale-75 lg:scale-85">
+        {/* Center Content - Responsive scaling and positioning */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10
+                       w-64 sm:w-72 md:w-80 lg:w-96 xl:w-[26rem] 2xl:w-[30rem]
+                       h-80 sm:h-[22rem] md:h-96 lg:h-[28rem] xl:h-[32rem] 2xl:h-[36rem]
+                       scale-60 sm:scale-65 md:scale-75 lg:scale-85 xl:scale-95 2xl:scale-100">
           {/* Scroll Content */}
           <div className="bg-black/40 backdrop-blur-sm rounded-lg border border-gray-600/30 h-full">
             <div className="relative h-full flex flex-col">
@@ -94,10 +121,10 @@ export const InventoryScreen = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Bottom Navigation - Desktop version with scaling */}
+        {/* Bottom Navigation - Desktop version with responsive scaling */}
         <div className="fixed bottom-0 left-0 right-0 z-30">
           <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-30">
-            <div className="scale-90 lg:scale-100 origin-bottom">
+            <div className="scale-60 sm:scale-70 md:scale-80 lg:scale-90 xl:scale-100 origin-bottom">
               <BottomNav3 />
             </div>
           </div>
