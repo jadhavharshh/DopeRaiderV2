@@ -41,19 +41,22 @@ export const InventoryScreen = (): JSX.Element => {
             src={TelegramIMG}
           />
 
-          {/* Logo - Fixed at top */}
-          <div className="relative z-20 flex justify-center pt-4 pb-2 flex-shrink-0">
-            <img className="h-6 w-auto" alt="Logo" src={Logo} />
-          </div>
+          {/* Gray Background Container with Logo, TopWrapper, and YourStatsWrapper */}
+          <div className="relative z-10 flex-shrink-0 bg-gradient-to-b from-[#303030] to-black">
+            {/* Logo - At the top of gray container */}
+            <div className="flex justify-center pt-4 pb-2">
+              <img className="h-6 w-auto" alt="Logo" src={Logo} />
+            </div>
 
-          {/* Top Wrapper */}
-          <div className="relative z-10 flex-shrink-0">
-            <TopWrapper />
-          </div>
+            {/* Top Wrapper - Main profile content */}
+            <div className="px-0">
+              <TopWrapper />
+            </div>
 
-          {/* Tab Navigation */}
-          <div className="relative z-10 flex-shrink-0">
-            <YourStatsWrapper activeTab={activeTab} onTabChange={setActiveTab} />
+            {/* Tab Navigation - At bottom of gray container */}
+            <div className="pb-2">
+              <YourStatsWrapper activeTab={activeTab} onTabChange={setActiveTab} />
+            </div>
           </div>
 
           {/* Main Content */}

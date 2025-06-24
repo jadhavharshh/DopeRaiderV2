@@ -15,16 +15,17 @@ export const YourStatsWrapper = ({ activeTab, onTabChange }: YourStatsWrapperPro
   ];
 
   return (
-    <div className="border-b border-black h-[43px] left-0 absolute top-[250px] w-[393px]
-                   md:border-none md:h-auto md:relative md:top-0 md:left-0 md:w-full md:min-h-[50px]">
-      <div className="flex items-center gap-3 sm:gap-4 md:gap-6 left-[22px] absolute top-3 w-[349px]
-                     md:left-0 md:relative md:top-0 md:w-full md:px-2 lg:px-4 md:py-3 md:justify-center lg:justify-start">
+    <div className="border-b border-black h-[50px] w-full
+                   md:border-none md:h-auto md:min-h-[50px]">
+      <div className="flex items-center gap-2 justify-center px-2 py-3 w-full h-full
+                     md:gap-3 md:px-4 md:justify-center lg:justify-start lg:gap-6">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => onTabChange(tab.id)}
-            className={`font-[Bangers] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] 
-                       font-normal tracking-0 leading-normal -mt-[1px] relative whitespace-nowrap w-fit 
+            className={`font-[Bangers] text-[20px] font-normal tracking-0 leading-normal 
+                       relative whitespace-nowrap flex-1 text-center
+                       sm:text-[22px] md:text-[22px] lg:text-[24px] md:flex-none md:w-fit
                        hover:text-white transition-colors duration-200 
                        ${activeTab === tab.id ? 'text-white' : 'text-[#aeaeae]'}`}
           >
