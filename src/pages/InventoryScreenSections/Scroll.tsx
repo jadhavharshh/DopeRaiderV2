@@ -20,10 +20,10 @@ import frameSvg from "@/static/img/frame.svg";
 
 export const Scroll = (): JSX.Element => {
   return (
-    <div className="font-['Roboto_Condensed'] h-[439px]  overflow-hidden overflow-y-scroll  flex w-full h-full align-center justify-center  scrollbar-hide">
-      <div className="h-[469px] relative top-4 w-[362px]">
+    <div className="font-['Roboto_Condensed'] h-[439px] overflow-hidden overflow-y-scroll flex w-full h-full align-center justify-center scrollbar-hide">
+      <div className="h-[469px] relative top-4 w-full max-w-[362px] min-w-[320px] px-2 sm:px-0">
         {/* AIRDROP Section */}
-        <div className="bg-gradient-to-b from-[#666666] to-[#454545] border border-[#666666] rounded shadow-[0px_4px_4px_rgba(0,0,0,0.25)] h-[73px] left-0 overflow-hidden absolute top-0 w-[361px]">
+        <div className="bg-gradient-to-b from-[#666666] to-[#454545] border border-[#666666] rounded shadow-[0px_4px_4px_rgba(0,0,0,0.25)] h-[73px] left-0 overflow-hidden absolute top-0 w-full">
           <div className="h-[179px] left-[-205px] absolute top-[-40px] w-[394px]">
             <img
               className="h-[179px] w-[394px] object-cover"
@@ -54,7 +54,7 @@ export const Scroll = (): JSX.Element => {
           </div>
 
           <Link
-            className="flex items-center bg-gradient-to-b from-[#10341d] to-[#318952] border border-[#76e39d] rounded-[74px] gap-2 justify-center left-[226px] overflow-hidden py-2 px-4 absolute top-[21px]"
+            className="flex items-center bg-gradient-to-b from-[#10341d] to-[#318952] border border-[#76e39d] rounded-[74px] gap-2 justify-center right-4 overflow-hidden py-2 px-4 absolute top-[21px]"
             to="/airdrop"
           >
             <div className="text-xs font-semibold text-white tracking-[-0.36px] leading-normal -mt-[1px] drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] whitespace-nowrap">
@@ -64,7 +64,7 @@ export const Scroll = (): JSX.Element => {
         </div>
 
         {/* INVENTORY BOXES Section */}
-        <div className="flex items-start flex-col gap-2 left-0 absolute top-[81px] w-[362px]">
+        <div className="flex items-start flex-col gap-2 left-0 absolute top-[81px] w-full">
           {/* First row - RESPECT, COKE, WEED */}
           <div className="flex items-center gap-2 w-full">
             <div className="flex items-center bg-gradient-to-b from-[#0a0a28] to-[#49497f] border border-[#666666] rounded flex-1 flex-col gap-1 justify-center overflow-hidden p-2">
@@ -181,17 +181,13 @@ export const Scroll = (): JSX.Element => {
 
           {/* WALLET Section */}
           <div className="h-[124px] relative w-full">
-            <div className="h-[124px] relative w-[361px]">
+            <div className="h-[124px] relative w-full">
               {/* Background rectangle */}
-              <img
-                className="h-[124px] w-[361px] object-cover"
-                alt="Rectangle"
-                src={rectangle4Svg}
-              />
+              <div className="bg-gradient-to-b from-[#666666] to-[#454545] border border-[#666666] rounded h-[124px] w-full" />
 
               {/* Disconnect button */}
               <Link
-                className="flex items-center bg-gradient-to-b from-[#10341d] to-[#318952] border border-[#76e39d] rounded-[74px] gap-2 justify-center left-[244px] overflow-hidden p-2 absolute top-[14px] w-[104px]"
+                className="flex items-center bg-gradient-to-b from-[#10341d] to-[#318952] border border-[#76e39d] rounded-[74px] gap-2 justify-center right-4 overflow-hidden p-2 absolute top-[14px] w-[104px]"
                 to="/player/inventory"
               >
                 <div className="text-xs font-semibold text-white tracking-[-0.36px] leading-normal -mt-[1px] drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] whitespace-nowrap">
@@ -200,14 +196,10 @@ export const Scroll = (): JSX.Element => {
               </Link>
 
               {/* Inner rectangle overlay */}
-              <img
-                className="h-[113px] left-[6px] absolute top-[5px] w-[350px]"
-                alt="Rectangle"
-                src={rectangle7Svg}
-              />
+              <div className="bg-black/30 border border-white/20 rounded h-[113px] left-[6px] absolute top-[5px] right-[6px]" />
 
               {/* Wallet address section */}
-              <div className="flex items-center bg-black/50 border border-white/40 rounded gap-[10px] h-[30px] justify-center left-4 py-[21px] px-4 absolute top-[14px] w-[220px]">
+              <div className="flex items-center bg-black/50 border border-white/40 rounded gap-[10px] h-[30px] justify-center left-4 py-[21px] px-4 absolute top-[14px] right-[120px]">
                 <div className="flex items-center gap-2 -mb-[14px] -mt-[14px]">
                   <div className="h-[15px] w-4">
                     <img
@@ -226,7 +218,7 @@ export const Scroll = (): JSX.Element => {
               </div>
 
               {/* Balance section - left part */}
-              <div className="flex items-center bg-black/50 border-b border-l border-t border-white/40 rounded-[4px_0px_0px_4px] gap-[10px] h-[58px] justify-center left-[14px] overflow-hidden py-[21px] px-[25px] absolute top-[52px] w-[222px]">
+              <div className="flex items-center bg-black/50 border-b border-l border-t border-white/40 rounded-[4px_0px_0px_4px] gap-[10px] h-[58px] justify-center left-[14px] overflow-hidden py-[21px] px-[25px] absolute top-[52px] w-[calc(100%-140px)]">
                 <div className="flex items-center gap-2 -mb-[6px] -mt-[6px]">
                   <img className="h-[18px] w-[18px]" alt="Frame" src={frameSvg} />
                   <div className="text-2xl font-bold text-white tracking-0 leading-normal -mt-[1px] whitespace-nowrap">
@@ -236,7 +228,7 @@ export const Scroll = (): JSX.Element => {
               </div>
 
               {/* Network section - right part */}
-              <div className="flex items-center bg-black/50 border border-white/40 rounded-[0px_4px_4px_0px] gap-[10px] justify-center left-[236px] overflow-hidden py-[21px] px-[25px] absolute top-[52px] w-[112px]">
+              <div className="flex items-center bg-black/50 border border-white/40 rounded-[0px_4px_4px_0px] gap-[10px] justify-center right-[14px] overflow-hidden py-[21px] px-[25px] absolute top-[52px] w-[112px]">
                 <div className="text-sm font-bold text-white tracking-0 leading-normal -ml-[5.5px] -mr-[5.5px] -mt-[0.5px] whitespace-nowrap">
                   Base Sepolia
                 </div>
@@ -246,8 +238,8 @@ export const Scroll = (): JSX.Element => {
         </div>
 
         {/* SETTINGS Section */}
-        <div className="h-[88px] left-4 absolute top-[365px] w-[329px]">
-          <div className="flex items-center gap-2 left-0 absolute top-12 w-[329px]">
+        <div className="h-[88px] left-4 absolute top-[365px] right-4">
+          <div className="flex items-center gap-2 left-0 absolute top-12 w-full">
             <div className="flex items-center bg-gradient-to-b from-black to-[#414141] border border-[#666666] rounded-[74px] flex-1 gap-2 justify-center overflow-hidden py-1 px-4 pr-1">
               <div className="text-xs font-semibold text-[#aeaeae] tracking-0 leading-normal whitespace-nowrap">
                 EFFECTS
@@ -274,11 +266,9 @@ export const Scroll = (): JSX.Element => {
             </Link>
           </div>
 
-          <img
-            className="h-10 left-0 absolute top-0 w-[329px]"
-            alt="Music tab"
-            src={musicTabSvg}
-          />
+          <div className="bg-gradient-to-b from-[#333] to-[#666] border border-[#666666] rounded h-10 left-0 absolute top-0 w-full flex items-center justify-center">
+            <div className="text-sm font-bold text-white">MUSIC TAB</div>
+          </div>
         </div>
       </div>
     </div>
