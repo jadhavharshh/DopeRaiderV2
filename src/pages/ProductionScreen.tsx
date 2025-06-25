@@ -1,9 +1,363 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import type { JSX } from "react";
+import { BottomNav3 } from "./InventoryScreenSections/BottomNav3";
 
-export const ProductionScreen = () => {
+// Import images using Vite's path configuration
+import backgroundImg from "@/static/img/image-2.png";
+import TelegramChairIMG from "@/static/img/telegram-chair.png";
+import weedIcon from "@/static/img/weed-icon.svg";
+import cokeIcon from "@/static/img/coke-icon.svg";
+import seedsIcon from "@/static/img/seeds-icon.svg";
+import chemicalsIcon from "@/static/img/chemicals-icon.svg";
+import chemicalsDetailedIcon from "@/static/img/chemicals-detailed-icon.svg";
+import grungeBackground from "@/static/img/organic-grunge-bold-shapes-16.svg";
+
+export const ProductionScreen = (): JSX.Element => {
   return (
-    <div>
-      <h1>ProductionScreen</h1>
+    <div className="min-h-screen w-full bg-black overflow-hidden">
+      {/* Mobile Layout - Exact Figma Dimensions (393x852) - up to 767px */}
+      <div className="relative w-full h-screen bg-white overflow-hidden md:hidden">
+        {/* BG Container - Exact positioning from Figma */}
+        <div className="absolute w-[906px] h-[944px] left-[-277px] top-[-78px]">
+          {/* Background Image with blur */}
+          <img
+            className="absolute w-[429px] h-[751px] left-[-27px] top-[-12px] object-cover"
+            style={{ filter: 'blur(1px)' }}
+            alt="Background"
+            src={backgroundImg}
+          />
+          
+          {/* Dark overlay */}
+          <div className="absolute w-[426px] h-[874px] left-[-15px] top-[-8px] bg-black bg-opacity-60" />
+          
+          {/* Ellipse blur effects - Exact Figma positioning */}
+          <div className="absolute w-[229px] h-[433px] left-[calc(50%-229px/2)] top-[calc(50%-433px/2+1.5px)] bg-white rounded-[114.5px] blur-[27px] mix-blend-soft-light" />
+          <div className="absolute w-[117px] h-[333px] left-[calc(50%-117px/2-109px)] top-[calc(50%-333px/2-135.5px)] bg-white rounded-[58.5px] blur-[27px] mix-blend-soft-light" />
+          <div className="absolute w-[127px] h-[433px] left-[calc(50%-127px/2+114px)] top-[calc(50%-433px/2-161.5px)] bg-white rounded-[63.5px] blur-[27px] mix-blend-soft-light" />
+          <div className="absolute w-[406px] h-[906px] left-[calc(50%-406px/2+635.92px)] top-[calc(50%-906px/2-50.91px)] bg-black opacity-30 blur-[27px] mix-blend-soft-light rotate-90" />
+          <div className="absolute w-[250px] h-[558px] left-[calc(50%-250px/2+393.5px)] top-[calc(50%-558px/2-216px)] bg-black opacity-60 blur-[27px] mix-blend-soft-light rotate-90" />
+        </div>
+
+        {/* PRODUCTION Title */}
+        <div className="absolute w-[137px] h-[34px] left-[128px] top-[59px]">
+          <h1 className="text-white text-[32px] font-normal leading-[34px] text-center tracking-[0.02em]" style={{ fontFamily: 'Bangers' }}>
+            PRODUCTION
+          </h1>
+        </div>
+
+        {/* Status Message Frame */}
+        <div className="absolute w-[208px] h-[42px] left-[calc(50%-208px/2+1.5px)] top-[211px]">
+          <div 
+            className="absolute w-[42px] left-[calc(50%-42px/2+125px)] top-0 bottom-[-395.24%] bg-gradient-to-b from-[#303030] to-[#1B1B1B] rotate-90"
+            style={{ backgroundImage: `url(${grungeBackground})` }}
+          />
+          <div className="absolute w-[145px] h-[19px] left-[calc(50%-145px/2+0.5px)] top-[11px]">
+            <span className="text-white text-[16px] font-bold leading-[19px]" style={{ fontFamily: 'Roboto Condensed' }}>
+              LET'S GET TO WORK...
+            </span>
+          </div>
+        </div>
+
+        {/* Left Production Card - GROW WEED */}
+        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2-92.5px)] top-[277px] bg-black bg-opacity-70 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center p-[16px] gap-[16px]">
+          {/* WEED Header */}
+          <div className="flex items-center justify-center gap-[8px] w-full h-[24px]">
+            {/* Icon */}
+            <div className="relative w-[24px] h-[24px]">
+              <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full mix-blend-luminosity" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <img className="w-[15px] h-[15px]" alt="Weed" src={weedIcon} />
+              </div>
+            </div>
+            {/* Title */}
+            <span className="text-white text-[16px] font-bold leading-[19px]" style={{ fontFamily: 'Roboto Condensed' }}>
+              GROW WEED
+            </span>
+          </div>
+
+          {/* Requirements Frame */}
+          <div className="w-[144px] h-[111px] bg-black bg-opacity-50 border border-[#6e6b67] border-opacity-40 rounded-[4px] relative">
+            {/* REQUIRES text */}
+            <div className="absolute w-[49px] h-[14px] left-[calc(50%-49px/2+0.5px)] top-[16px]">
+              <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[14px]" style={{ fontFamily: 'Roboto Condensed' }}>
+                REQUIRES
+              </span>
+            </div>
+            
+            {/* Icon Frame */}
+            <div className="absolute w-[24px] h-[24px] left-[calc(50%-24px/2)] top-[36px]">
+              <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full mix-blend-luminosity" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <img className="w-[12px] h-[13px]" alt="Seeds" src={seedsIcon} />
+              </div>
+            </div>
+            
+            {/* 20 SEEDS */}
+            <div className="absolute w-[55px] h-[16px] left-[calc(50%-55px/2+0.5px)] top-[65px]">
+              <span className="text-white text-[14px] font-bold leading-[16px]" style={{ fontFamily: 'Roboto Condensed' }}>
+                20 SEEDS
+              </span>
+            </div>
+            
+            {/* 20 available */}
+            <div className="absolute w-[57px] h-[14px] left-[calc(50%-57px/2+0.5px)] top-[85px]">
+              <span className="text-[#AEAEAE] text-[12px] font-normal leading-[14px] text-center" style={{ fontFamily: 'Roboto Condensed' }}>
+                20 available
+              </span>
+            </div>
+          </div>
+
+          {/* Stats Frame */}
+          <div className="w-[144px] h-[48px] relative">
+            {/* Left column - labels */}
+            <div className="absolute w-[51px] h-[48px] left-[calc(50%-51px/2-41.5px)] top-0">
+              <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[16px]" style={{ fontFamily: 'Roboto Condensed' }}>
+                Max Yield:<br/>Time:<br/>Cost:
+              </span>
+            </div>
+            
+            {/* Right column - values */}
+            <div className="absolute w-[48px] h-[48px] left-[calc(50%-48px/2+43px)] top-0">
+              <span className="text-white text-[12px] font-bold leading-[16px] text-right" style={{ fontFamily: 'Roboto Condensed' }}>
+                15oZ<br/>3 Minutes<br/>$0.25
+              </span>
+            </div>
+          </div>
+
+          {/* GROW Button */}
+          <Link
+            to="/production/active"
+            className="w-[144px] h-[35px] bg-gradient-to-t from-[#10341D] to-[#318952] rounded-[74px] flex items-center justify-center"
+          >
+            <span className="text-white text-[16px] font-semibold leading-[19px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
+              GROW
+            </span>
+          </Link>
+        </div>
+
+        {/* Right Production Card - PRODUCE COKE */}
+        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2+92.5px)] top-[277px] bg-black bg-opacity-70 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center p-[16px] gap-[16px]">
+          {/* COKE Header */}
+          <div className="flex items-center justify-center gap-[8px] w-full h-[24px]">
+            {/* Icon */}
+            <div className="relative w-[24px] h-[24px]">
+              <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full mix-blend-luminosity" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <img className="w-[13px] h-[15px]" alt="Coke" src={cokeIcon} />
+              </div>
+            </div>
+            {/* Title */}
+            <span className="text-white text-[16px] font-bold leading-[19px]" style={{ fontFamily: 'Roboto Condensed' }}>
+              PRODUCE COKE
+            </span>
+          </div>
+
+          {/* Requirements Frame */}
+          <div className="w-[144px] h-[111px] bg-black bg-opacity-50 border border-[#6e6b67] border-opacity-40 rounded-[4px] relative">
+            {/* REQUIRES text */}
+            <div className="absolute w-[49px] h-[14px] left-[calc(50%-49px/2+0.5px)] top-[16px]">
+              <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[14px]" style={{ fontFamily: 'Roboto Condensed' }}>
+                REQUIRES
+              </span>
+            </div>
+            
+            {/* Icon Frame */}
+            <div className="absolute w-[24px] h-[24px] left-[calc(50%-24px/2)] top-[36px]">
+              <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full mix-blend-luminosity" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <img className="w-[10px] h-[12px]" alt="Chemicals" src={chemicalsDetailedIcon} />
+              </div>
+            </div>
+            
+            {/* 20 CHEMICALS */}
+            <div className="absolute w-[86px] h-[16px] left-[calc(50%-86px/2)] top-[65px]">
+              <span className="text-white text-[14px] font-bold leading-[16px]" style={{ fontFamily: 'Roboto Condensed' }}>
+                20 CHEMICALS
+              </span>
+            </div>
+            
+            {/* 20 available */}
+            <div className="absolute w-[57px] h-[14px] left-[calc(50%-57px/2+0.5px)] top-[85px]">
+              <span className="text-[#AEAEAE] text-[12px] font-normal leading-[14px] text-center" style={{ fontFamily: 'Roboto Condensed' }}>
+                20 available
+              </span>
+            </div>
+          </div>
+
+          {/* Stats Frame */}
+          <div className="w-[144px] h-[48px] flex items-center px-[5px] gap-[35px]">
+            {/* Left column - labels */}
+            <div className="w-[51px] h-[48px]">
+              <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[16px]" style={{ fontFamily: 'Roboto Condensed' }}>
+                Max Yield:<br/>Time:<br/>Cost:
+              </span>
+            </div>
+            
+            {/* Right column - values */}
+            <div className="w-[48px] h-[48px]">
+              <span className="text-white text-[12px] font-bold leading-[16px] text-right" style={{ fontFamily: 'Roboto Condensed' }}>
+                15oZ<br/>3 Minutes<br/>$0.25
+              </span>
+            </div>
+          </div>
+
+          {/* PRODUCE Button */}
+          <button className="w-[144px] h-[35px] bg-gradient-to-t from-[#10341D] to-[#318952] rounded-[74px] flex items-center justify-center">
+            <span className="text-white text-[16px] font-semibold leading-[19px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
+              PRODUCE
+            </span>
+          </button>
+        </div>
+
+        {/* Bottom Navigation - Exact positioning from Figma */}
+        <div className="absolute w-[393px] h-[120px] left-0 top-[732px]">
+          <BottomNav3 />
+        </div>
+      </div>
+
+      {/* Desktop Layout - 768px and above */}
+      <div className="hidden md:block h-screen relative">
+        <img
+          className="absolute inset-0 w-full h-full object-cover opacity-70"
+          alt="Background"
+          src={TelegramChairIMG}
+        />
+
+        {/* Desktop Content - Scaled and Centered */}
+        <div className="absolute inset-0 flex items-center justify-center z-10">
+          <div className="bg-black/40 backdrop-blur-sm rounded-lg border border-gray-600/30 p-8 w-full max-w-4xl mx-4">
+            {/* Title */}
+            <div className="text-center mb-8">
+              <h1 className="text-white text-5xl font-black tracking-wider" style={{ fontFamily: 'Bangers' }}>
+                PRODUCTION
+              </h1>
+            </div>
+
+            {/* Status Message */}
+            <div className="flex justify-center mb-8">
+              <div 
+                className="relative w-[320px] h-[56px] bg-cover bg-center flex items-center justify-center"
+                style={{ backgroundImage: `url(${grungeBackground})` }}
+              >
+                <span className="text-white text-xl font-bold" style={{ fontFamily: 'Roboto Condensed' }}>
+                  LET'S GET TO WORK...
+                </span>
+              </div>
+            </div>
+
+            {/* Production Cards - Side by Side for Desktop */}
+            <div className="grid grid-cols-2 gap-8">
+              {/* Grow Weed Card */}
+              <div className="bg-black bg-opacity-70 border border-[#6e6b67] border-opacity-40 rounded-lg p-6">
+                {/* Header */}
+                <div className="flex items-center justify-center gap-3 mb-6">
+                  <div className="relative w-8 h-8">
+                    <div className="absolute w-8 h-8 bg-gradient-to-b from-black to-[#666666] rounded-full" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <img className="w-[15px] h-[15px]" alt="Weed" src={weedIcon} />
+                    </div>
+                  </div>
+                  <span className="text-white text-xl font-bold" style={{ fontFamily: 'Roboto Condensed' }}>
+                    GROW WEED
+                  </span>
+                </div>
+
+                {/* Requirements */}
+                <div className="bg-black bg-opacity-50 border border-[#6e6b67] border-opacity-40 rounded p-6 mb-6">
+                  <div className="text-center text-[#AEAEAE] text-sm font-semibold mb-4">REQUIRES</div>
+                  <div className="flex justify-center mb-4">
+                    <div className="relative w-8 h-8">
+                      <div className="absolute w-8 h-8 bg-gradient-to-b from-black to-[#666666] rounded-full" />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <img className="w-[12px] h-[13px]" alt="Seeds" src={seedsIcon} />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="text-center text-white text-lg font-bold mb-2">20 SEEDS</div>
+                  <div className="text-center text-[#AEAEAE] text-sm">20 available</div>
+                </div>
+
+                {/* Stats */}
+                <div className="flex justify-between mb-6">
+                  <div className="text-[#AEAEAE] text-sm font-semibold">
+                    <div>Max Yield:</div>
+                    <div>Time:</div>
+                    <div>Cost:</div>
+                  </div>
+                  <div className="text-white text-sm font-bold text-right">
+                    <div>15oZ</div>
+                    <div>3 Minutes</div>
+                    <div>$0.25</div>
+                  </div>
+                </div>
+
+                {/* Grow Button */}
+                <Link
+                  to="/production/active"
+                  className="block w-full bg-gradient-to-t from-[#10341D] to-[#318952] rounded-full py-3 text-center hover:scale-105 transition-transform"
+                >
+                  <span className="text-white text-lg font-semibold" style={{ fontFamily: 'Roboto Condensed' }}>
+                    GROW
+                  </span>
+                </Link>
+              </div>
+
+              {/* Produce Coke Card */}
+              <div className="bg-black bg-opacity-70 border border-[#6e6b67] border-opacity-40 rounded-lg p-6">
+                {/* Header */}
+                <div className="flex items-center justify-center gap-3 mb-6">
+                  <div className="relative w-8 h-8">
+                    <div className="absolute w-8 h-8 bg-gradient-to-b from-black to-[#666666] rounded-full" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <img className="w-[13px] h-[15px]" alt="Coke" src={cokeIcon} />
+                    </div>
+                  </div>
+                  <span className="text-white text-xl font-bold" style={{ fontFamily: 'Roboto Condensed' }}>
+                    PRODUCE COKE
+                  </span>
+                </div>
+
+                {/* Requirements */}
+                <div className="bg-black bg-opacity-50 border border-[#6e6b67] border-opacity-40 rounded p-6 mb-6">
+                  <div className="text-center text-[#AEAEAE] text-sm font-semibold mb-4">REQUIRES</div>
+                  <div className="flex justify-center mb-4">
+                    <div className="relative w-8 h-8">
+                      <div className="absolute w-8 h-8 bg-gradient-to-b from-black to-[#666666] rounded-full" />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <img className="w-[10px] h-[12px]" alt="Chemicals" src={chemicalsDetailedIcon} />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="text-center text-white text-lg font-bold mb-2">20 CHEMICALS</div>
+                  <div className="text-center text-[#AEAEAE] text-sm">20 available</div>
+                </div>
+
+                {/* Stats */}
+                <div className="flex justify-between mb-6">
+                  <div className="text-[#AEAEAE] text-sm font-semibold">
+                    <div>Max Yield:</div>
+                    <div>Time:</div>
+                    <div>Cost:</div>
+                  </div>
+                  <div className="text-white text-sm font-bold text-right">
+                    <div>15oZ</div>
+                    <div>3 Minutes</div>
+                    <div>$0.25</div>
+                  </div>
+                </div>
+
+                {/* Produce Button */}
+                <button className="w-full bg-gradient-to-t from-[#10341D] to-[#318952] rounded-full py-3 hover:scale-105 transition-transform">
+                  <span className="text-white text-lg font-semibold" style={{ fontFamily: 'Roboto Condensed' }}>
+                    PRODUCE
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
