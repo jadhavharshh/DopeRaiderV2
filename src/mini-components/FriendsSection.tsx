@@ -8,17 +8,15 @@ import vector39Svg from "@/static/img/vector-39.svg";
 
 export const FriendsSection = (): JSX.Element => {
   return (
-    <div className="flex-none h-12 relative w-full">
-      <div className="flex items-center justify-between h-12 w-full px-2">
+    <div className="flex-none w-full rounded-lg bg-[#262626] px-4 py-3 shadow-sm"> {/* Removed mb-2 */}
+      <div className="flex items-center justify-between w-full">
         {/* Left side - Icon and FRIENDS text */}
         <div className="flex items-center gap-3">
 
-
-          <div className="text-white font-['Roboto_Condensed'] text-lg font-bold italic tracking-[0] leading-normal whitespace-nowrap" style={{ textShadow: '2px 2px 0 #ffb86c, 0 2px 0 #ffb86c, 2px 0 0 #ffb86c' }}>
+          <div className="text-white font-['Roboto_Condensed'] text-lg font-bold tracking-[0] leading-normal whitespace-nowrap">
             FRIENDS
           </div>
         </div>
-
         {/* Right side - Action buttons */}
         <div className="flex items-center gap-2">
           <div className="flex items-center justify-center bg-gradient-to-b from-[#95a9cd] to-[#666666] border border-white/10 rounded-full h-8 w-8">
@@ -28,15 +26,13 @@ export const FriendsSection = (): JSX.Element => {
               src={athga11Png}
             />
           </div>
-
           <div className="flex items-center justify-center bg-gradient-to-b from-[#95a9cd] to-[#666666] border border-white/10 rounded-full h-8 w-8">
             <img
               className="h-4 w-4"
-              alt="Vector"
+              alt="Element hga"
               src={vector38Svg}
             />
           </div>
-
           <div className="flex items-center justify-center bg-gradient-to-b from-[#95a9cd] to-[#666666] border border-white/10 rounded-full h-8 w-8">
             <img
               className="h-4 w-4"

@@ -23,20 +23,24 @@ export const SocialContent = (): JSX.Element => {
   return (
     <div className="w-full h-full overflow-y-auto scrollbar-hide p-4">
       <div className="flex flex-col items-start gap-1 w-full max-w-[361px] mx-auto">
-        
-                <FriendsSection />
-        
+
+        <FriendsSection />
+
         {/* TONY MONTANA */}
         <div className="flex-none h-[52px] relative w-full">
-          <div 
-            className="bg-cover bg-[100%_100%] h-12 relative top-0.5 w-full"
-            style={{ backgroundImage: `url(${organicGrunge31Svg})` }}
+          <div
+            className="bg-cover bg-center bg-no-repeat h-12 relative top-0.5 w-full"
+            style={{ 
+              backgroundImage: `url(${organicGrunge31Svg})`,
+              backgroundSize: 'cover',
+              minHeight: '48px'
+            }}
           >
-            <div className="flex items-center justify-between left-[9px] relative top-2 right-[17px]">
+            <div className="flex items-center justify-between px-[9px] py-2 h-full">
               <div className="flex items-center flex-none gap-4 relative">
-                <div 
-                  className="bg-cover bg-[100%_100%] rounded-[40px] flex-none h-8 relative w-8"
-                  style={{ 
+                <div
+                  className="bg-cover bg-center rounded-[40px] flex-none h-8 relative w-8"
+                  style={{
                     backgroundImage: `url(${telegramPeerPhoto5Png})`,
                     boxShadow: "0px 1px 2px rgba(0,0,0,0.1), 0px 3.5px 3.5px rgba(0,0,0,0.09), 0px 8px 4.75px rgba(0,0,0,0.05), 0px 14px 5.75px rgba(0,0,0,0.01), 0px 22px 6.25px transparent"
                   }}
@@ -78,15 +82,19 @@ export const SocialContent = (): JSX.Element => {
 
         {/* SONNY BLACK */}
         <div className="flex-none h-[52px] relative w-full">
-          <div 
-            className="bg-cover bg-[100%_100%] h-12 relative top-0.5 w-full"
-            style={{ backgroundImage: `url(${organicGrunge31Svg})` }}
+          <div
+            className="bg-cover bg-center bg-no-repeat h-12 relative top-0.5 w-full"
+            style={{ 
+              backgroundImage: `url(${organicGrunge31Svg})`,
+              backgroundSize: 'cover',
+              minHeight: '48px'
+            }}
           >
-            <div className="flex items-center justify-between left-[9px] relative top-2 right-[17px]">
+            <div className="flex items-center justify-between px-[9px] py-2 h-full">
               <div className="flex items-center flex-none gap-4 relative">
-                <div 
+                <div
                   className="bg-cover bg-center rounded-[40px] flex-none h-8 relative w-8"
-                  style={{ 
+                  style={{
                     backgroundImage: `url(${telegramPeerPhoto6Png})`,
                     boxShadow: "0px 1px 2px rgba(0,0,0,0.1), 0px 3.5px 3.5px rgba(0,0,0,0.09), 0px 8px 4.75px rgba(0,0,0,0.05), 0px 14px 5.75px rgba(0,0,0,0.01), 0px 22px 6.25px transparent"
                   }}
@@ -128,15 +136,19 @@ export const SocialContent = (): JSX.Element => {
 
         {/* DR GONZO */}
         <div className="flex-none h-[52px] relative w-full">
-          <div 
-            className="bg-cover bg-[100%_100%] h-12 relative top-0.5 w-full"
-            style={{ backgroundImage: `url(${organicGrunge35Svg})` }}
+          <div
+            className="bg-cover bg-center bg-no-repeat h-12 relative top-0.5 w-full"
+            style={{ 
+              backgroundImage: `url(${organicGrunge35Svg})`,
+              backgroundSize: 'cover',
+              minHeight: '48px'
+            }}
           >
-            <div className="flex items-center justify-between left-[9px] relative top-2 right-[17px]">
+            <div className="flex items-center justify-between px-[9px] py-2 h-full">
               <div className="flex items-center flex-none gap-4 relative">
-                <div 
-                  className="bg-cover bg-[100%_100%] rounded-[40px] flex-none h-8 relative w-8"
-                  style={{ 
+                <div
+                  className="bg-cover bg-center rounded-[40px] flex-none h-8 relative w-8"
+                  style={{
                     backgroundImage: `url(${telegramPeerPhoto7Png})`,
                     boxShadow: "0px 1px 2px rgba(0,0,0,0.1), 0px 3.5px 3.5px rgba(0,0,0,0.09), 0px 8px 4.75px rgba(0,0,0,0.05), 0px 14px 5.75px rgba(0,0,0,0.01), 0px 22px 6.25px transparent"
                   }}
@@ -178,15 +190,19 @@ export const SocialContent = (): JSX.Element => {
 
         {/* VITO CORLEONE */}
         <div className="flex-none h-[52px] relative w-full">
-          <div 
-            className="bg-cover bg-[100%_100%] h-12 relative top-0.5 w-full"
-            style={{ backgroundImage: `url(${organicGrunge35Svg})` }}
+          <div
+            className="bg-cover bg-center bg-no-repeat h-12 relative top-0.5 w-full"
+            style={{ 
+              backgroundImage: `url(${organicGrunge35Svg})`,
+              backgroundSize: 'cover',
+              minHeight: '48px'
+            }}
           >
-            <div className="flex items-center justify-between left-[9px] relative top-2 right-[17px]">
+            <div className="flex items-center justify-between px-[9px] py-2 h-full">
               <div className="flex items-center flex-none gap-4 relative">
-                <div 
-                  className="bg-cover bg-[100%_100%] rounded-[40px] flex-none h-8 relative w-8"
-                  style={{ 
+                <div
+                  className="bg-cover bg-center rounded-[40px] flex-none h-8 relative w-8"
+                  style={{
                     backgroundImage: `url(${telegramPeerPhoto8Png})`,
                     boxShadow: "0px 1px 2px rgba(0,0,0,0.1), 0px 3.5px 3.5px rgba(0,0,0,0.09), 0px 8px 4.75px rgba(0,0,0,0.05), 0px 14px 5.75px rgba(0,0,0,0.01), 0px 22px 6.25px transparent"
                   }}
@@ -228,15 +244,19 @@ export const SocialContent = (): JSX.Element => {
 
         {/* EL CHAPO */}
         <div className="flex-none h-[52px] relative w-full">
-          <div 
-            className="bg-cover bg-[100%_100%] h-12 relative top-0.5 w-full"
-            style={{ backgroundImage: `url(${organicGrunge35Svg})` }}
+          <div
+            className="bg-cover bg-center bg-no-repeat h-12 relative top-0.5 w-full"
+            style={{ 
+              backgroundImage: `url(${organicGrunge35Svg})`,
+              backgroundSize: 'cover',
+              minHeight: '48px'
+            }}
           >
-            <div className="flex items-center justify-between left-[9px] relative top-2 right-[17px]">
+            <div className="flex items-center justify-between px-[9px] py-2 h-full">
               <div className="flex items-center flex-none gap-4 relative">
-                <div 
-                  className="bg-cover bg-[100%_100%] rounded-[40px] flex-none h-8 relative w-8"
-                  style={{ 
+                <div
+                  className="bg-cover bg-center rounded-[40px] flex-none h-8 relative w-8"
+                  style={{
                     backgroundImage: `url(${telegramPeerPhoto9Png})`,
                     boxShadow: "0px 1px 2px rgba(0,0,0,0.1), 0px 3.5px 3.5px rgba(0,0,0,0.09), 0px 8px 4.75px rgba(0,0,0,0.05), 0px 14px 5.75px rgba(0,0,0,0.01), 0px 22px 6.25px transparent"
                   }}
@@ -278,15 +298,19 @@ export const SocialContent = (): JSX.Element => {
 
         {/* LUCKY MARY */}
         <div className="flex-none h-[52px] relative w-full">
-          <div 
-            className="bg-cover bg-[100%_100%] h-12 relative top-0.5 w-full"
-            style={{ backgroundImage: `url(${organicGrunge35Svg})` }}
+          <div
+            className="bg-cover bg-center bg-no-repeat h-12 relative top-0.5 w-full"
+            style={{ 
+              backgroundImage: `url(${organicGrunge35Svg})`,
+              backgroundSize: 'cover',
+              minHeight: '48px'
+            }}
           >
-            <div className="flex items-center justify-between left-[9px] relative top-2 right-[17px]">
+            <div className="flex items-center justify-between px-[9px] py-2 h-full">
               <div className="flex items-center flex-none gap-4 relative">
-                <div 
+                <div
                   className="bg-cover bg-center rounded-[40px] flex-none h-8 relative w-8"
-                  style={{ 
+                  style={{
                     backgroundImage: `url(${telegramPeerPhoto10Png})`,
                     boxShadow: "0px 1px 2px rgba(0,0,0,0.1), 0px 3.5px 3.5px rgba(0,0,0,0.09), 0px 8px 4.75px rgba(0,0,0,0.05), 0px 14px 5.75px rgba(0,0,0,0.01), 0px 22px 6.25px transparent"
                   }}
