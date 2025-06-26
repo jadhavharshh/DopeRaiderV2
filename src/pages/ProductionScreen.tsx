@@ -131,14 +131,14 @@ export const ProductionScreen = (): JSX.Element => {
             </div>
             
             {/* 20 SEEDS */}
-            <div className="absolute w-[55px] h-[16px] left-[calc(50%-55px/2+0.5px)] top-[65px]">
+            <div className="absolute w-[55px] h-[16px] left-[calc(50%-55px/2+0.5px)] top-[76px]">
               <span className="text-white text-[14px] font-bold leading-[16px]" style={{ fontFamily: 'Roboto Condensed' }}>
                 20 SEEDS
               </span>
             </div>
             
             {/* 20 available */}
-            <div className="absolute w-[57px] h-[14px] left-[calc(50%-57px/2+0.5px)] top-[85px]">
+            <div className="absolute w-[57px] h-[14px] left-[calc(50%-57px/2+0.5px)] top-[90px]">
               <span className="text-[#AEAEAE] text-[12px] font-normal leading-[14px] text-center" style={{ fontFamily: 'Roboto Condensed' }}>
                 20 available
               </span>
@@ -239,14 +239,14 @@ export const ProductionScreen = (): JSX.Element => {
             </div>
             
             {/* 20 CHEMICALS */}
-            <div className="absolute w-[86px] h-[16px] left-[calc(50%-86px/2)] top-[65px]">
+            <div className="absolute w-[86px] h-[16px] left-[calc(50%-86px/2)] top-[76px]">
               <span className="text-white text-[14px] font-bold leading-[16px]" style={{ fontFamily: 'Roboto Condensed' }}>
                 20 CHEMICALS
               </span>
             </div>
             
             {/* 20 available */}
-            <div className="absolute w-[57px] h-[14px] left-[calc(50%-57px/2+0.5px)] top-[85px]">
+            <div className="absolute w-[57px] h-[14px] left-[calc(50%-57px/2+0.5px)] top-[90px]">
               <span className="text-[#AEAEAE] text-[12px] font-normal leading-[14px] text-center" style={{ fontFamily: 'Roboto Condensed' }}>
                 20 available
               </span>
@@ -364,8 +364,8 @@ export const ProductionScreen = (): JSX.Element => {
                     <img className="w-[14px] h-[16px]" alt="Seeds" src={seedsIcon} />
                   </div>
                 </div>
-                <div className="text-center text-white text-base font-bold" style={{ fontFamily: 'Roboto Condensed' }}>20 SEEDS</div>
-                <div className="text-center text-[#AEAEAE] text-sm" style={{ fontFamily: 'Roboto Condensed' }}>20 available</div>
+                <div className="text-center text-white text-base font-bold mb-0" style={{ fontFamily: 'Roboto Condensed' }}>20 SEEDS</div>
+                <div className="text-center text-[#AEAEAE] text-sm -mt-1" style={{ fontFamily: 'Roboto Condensed' }}>20 available</div>
               </div>
 
               {/* Stats */}
@@ -478,8 +478,8 @@ export const ProductionScreen = (): JSX.Element => {
                     <img className="w-[12px] h-[14px]" alt="Chemicals" src={chemicalsDetailedIcon} />
                   </div>
                 </div>
-                <div className="text-center text-white text-base font-bold" style={{ fontFamily: 'Roboto Condensed' }}>20 CHEMICALS</div>
-                <div className="text-center text-[#AEAEAE] text-sm" style={{ fontFamily: 'Roboto Condensed' }}>20 available</div>
+                <div className="text-center text-white text-base font-bold mb-0" style={{ fontFamily: 'Roboto Condensed' }}>20 CHEMICALS</div>
+                <div className="text-center text-[#AEAEAE] text-sm -mt-1" style={{ fontFamily: 'Roboto Condensed' }}>20 available</div>
               </div>
 
               {/* Stats */}
