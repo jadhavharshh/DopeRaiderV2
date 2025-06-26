@@ -51,7 +51,7 @@ export const ProductionScreen = (): JSX.Element => {
           <svg width="208" height="42" viewBox="0 0 208 42" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0">
             <path d="M8.67885 37.9189C7.91783 37.6209 11.204 35.5547 9.75117 34.2435C6.3612 31.1641 -9.65462 23.0385 8.54045 22.1047L8.54045 21.1411C7.46811 20.9524 1.51842 21.5285 1.48382 20.5749C1.41464 18.7372 13.66 5.47598 17.2921 4.25415C21.3047 2.90319 28.7072 3.03237 33.8614 2.24762C35.8331 1.94962 36.0752 0.668161 37.0783 0.539026C43.6161 -0.285457 112.107 0.0125423 124.422 0.280748C133.934 0.479419 198.585 3.54892 201.491 4.48267C209.067 8.76402 203.913 13.095 204.224 17.3068C204.328 18.8763 208.167 20.5253 207.994 22.4424C207.718 25.2934 198.758 38.1076 191.84 39.4685C186.824 40.4519 146.456 41.9519 138.362 41.9916C108.717 42.1207 69.4213 40.74 40.7104 39.2401C34.0689 38.8924 11.7228 39.101 8.74798 37.9288L8.67885 37.9189Z" fill="url(#paint0_linear_117_638)"/>
             <defs>
-              <linearGradient id="paint0_linear_117_638" x1="208" y1="21" x2="-9.17939e-07" y2="21" gradientUnits="userSpaceOnUse">
+              <linearGradient id="paint0_linear_117_638" x1="104" y1="0" x2="104" y2="42" gradientUnits="userSpaceOnUse">
                 <stop stopColor="#303030"/>
                 <stop offset="1" stopColor="#1B1B1B"/>
               </linearGradient>
@@ -65,14 +65,14 @@ export const ProductionScreen = (): JSX.Element => {
         </div>
 
         {/* Left Production Card - GROW WEED */}
-        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2-92.5px)] top-[277px] bg-black bg-opacity-70 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center p-[16px] gap-[16px]">
+        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2-92.5px)] top-[277px] bg-black bg-opacity-45 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center p-[16px] gap-[16px]" style={{ backdropFilter: 'blur(10px)' }}>
           {/* WEED Header */}
           <div className="flex items-center justify-center gap-[8px] w-full h-[24px]">
             {/* Icon */}
             <div className="relative w-[24px] h-[24px]">
               <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full mix-blend-luminosity" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <img className="w-[15px] h-[15px]" alt="Weed" src={weedIcon} />
+              <div className="absolute" style={{ left: '4.42%', right: '83.19%', top: '16.67%', bottom: '20.83%' }}>
+                <img className="w-full h-full" alt="Weed" src={weedIcon} style={{ filter: 'brightness(0) saturate(100%) invert(85%) sepia(89%) saturate(2092%) hue-rotate(85deg) brightness(102%) contrast(101%)' }} />
               </div>
             </div>
             {/* Title */}
@@ -93,8 +93,8 @@ export const ProductionScreen = (): JSX.Element => {
             {/* Icon Frame */}
             <div className="absolute w-[24px] h-[24px] left-[calc(50%-24px/2)] top-[36px]">
               <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full mix-blend-luminosity" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <img className="w-[12px] h-[13px]" alt="Seeds" src={seedsIcon} />
+              <div className="absolute" style={{ left: '4.42%', right: '83.19%', top: '16.67%', bottom: '20.83%' }}>
+                <img className="w-full h-full" alt="Seeds" src={seedsIcon} style={{ filter: 'brightness(0) saturate(100%) invert(85%) sepia(89%) saturate(2092%) hue-rotate(85deg) brightness(102%) contrast(101%)' }} />
               </div>
             </div>
             
@@ -142,14 +142,14 @@ export const ProductionScreen = (): JSX.Element => {
         </div>
 
         {/* Right Production Card - PRODUCE COKE */}
-        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2+92.5px)] top-[277px] bg-black bg-opacity-70 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center p-[16px] gap-[16px]">
+        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2+92.5px)] top-[277px] bg-black bg-opacity-45 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center p-[16px] gap-[16px]" style={{ backdropFilter: 'blur(10px)' }}>
           {/* COKE Header */}
           <div className="flex items-center justify-center gap-[8px] w-full h-[24px]">
             {/* Icon */}
             <div className="relative w-[24px] h-[24px]">
               <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full mix-blend-luminosity" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <img className="w-[13px] h-[15px]" alt="Coke" src={cokeIcon} />
+              <div className="absolute" style={{ left: '4.41%', right: '86.03%', top: '20.83%', bottom: '16.67%' }}>
+                <img className="w-full h-full" alt="Coke" src={cokeIcon} style={{ filter: 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)' }} />
               </div>
             </div>
             {/* Title */}
@@ -170,8 +170,8 @@ export const ProductionScreen = (): JSX.Element => {
             {/* Icon Frame */}
             <div className="absolute w-[24px] h-[24px] left-[calc(50%-24px/2)] top-[36px]">
               <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full mix-blend-luminosity" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <img className="w-[10px] h-[12px]" alt="Chemicals" src={chemicalsDetailedIcon} />
+              <div className="absolute" style={{ left: '4.41%', right: '86.03%', top: '20.83%', bottom: '16.67%' }}>
+                <img className="w-full h-full" alt="Chemicals" src={chemicalsDetailedIcon} style={{ filter: 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)' }} />
               </div>
             </div>
             
@@ -264,7 +264,7 @@ export const ProductionScreen = (): JSX.Element => {
               style={{ 
                 width: '240px',
                 height: '340px',
-                background: 'rgba(0, 0, 0, 0.85)',
+                background: 'rgba(0, 0, 0, 0.60)',
                 border: '0.5px solid rgba(255, 255, 255, 0.4)',
                 borderRadius: '4px',
                 padding: '16px',
@@ -340,7 +340,7 @@ export const ProductionScreen = (): JSX.Element => {
               style={{ 
                 width: '240px',
                 height: '340px',
-                background: 'rgba(0, 0, 0, 0.85)',
+                background: 'rgba(0, 0, 0, 0.60)',
                 border: '0.5px solid rgba(255, 255, 255, 0.4)',
                 borderRadius: '4px',
                 padding: '16px',
