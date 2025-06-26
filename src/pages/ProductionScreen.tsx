@@ -131,14 +131,11 @@ export const ProductionScreen = (): JSX.Element => {
           </div>
 
           {/* GROW Button */}
-          <Link
-            to="/production/active"
-            className="w-[144px] h-[35px] bg-gradient-to-t from-[#10341D] to-[#318952] rounded-[74px] flex items-center justify-center"
-          >
+          <button className="w-[144px] h-[35px] bg-gradient-to-t from-[#10341D] to-[#318952] rounded-[74px] flex items-center justify-center">
             <span className="text-white text-[16px] font-semibold leading-[19px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
               GROW
             </span>
-          </Link>
+          </button>
         </div>
 
         {/* Right Production Card - PRODUCE COKE */}
@@ -320,8 +317,7 @@ export const ProductionScreen = (): JSX.Element => {
               </div>
 
               {/* Grow Button */}
-              <Link
-                to="/production/active"
+              <button
                 className="flex items-center justify-center bg-gradient-to-t from-[#10341D] to-[#318952] hover:scale-105 transition-transform"
                 style={{
                   borderRadius: '74px',
@@ -331,7 +327,7 @@ export const ProductionScreen = (): JSX.Element => {
                 <span className="text-white text-lg font-semibold" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
                   GROW
                 </span>
-              </Link>
+              </button>
             </div>
 
             {/* Produce Coke Card */}

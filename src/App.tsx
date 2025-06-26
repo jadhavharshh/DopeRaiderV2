@@ -1,7 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Pages
-import { ProductionActiveScreen } from "./pages/ProductionActiveScreen";
 import { DoperaiderMap } from "./pages/MapScreen";
 import { MapChinatownScreen } from "./pages/MapChinatownScreen";
 import { MarketTradeScreen } from "./pages/MarketTradeScreen";
@@ -59,10 +58,6 @@ const router = createBrowserRouter([
   {
     path: "/production",
     element: <ProductionScreen />,
-  },
-  {
-    path: "/production/active",
-    element: <ProductionActiveScreen />,
   },
   {
     path: "/raid",
