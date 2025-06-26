@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import type { JSX } from "react";
 import { BottomNav3 } from "./InventoryScreenSections/BottomNav3";
 
@@ -14,6 +14,38 @@ import chemicalsDetailedIcon from "@/static/img/chemicals-detailed-icon.svg";
 import grungeBackground from "@/static/img/organic-grunge-bold-shapes-16.svg";
 
 export const ProductionScreen = (): JSX.Element => {
+  const [isGrowActive, setIsGrowActive] = useState(false);
+  const [timeRemaining, setTimeRemaining] = useState(132); // 2min 12secs = 132 seconds
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    if (isGrowActive && timeRemaining > 0) {
+      interval = setInterval(() => {
+        setTimeRemaining((prev) => {
+          if (prev <= 1) {
+            setIsGrowActive(false);
+            navigate('/production/active');
+            return 0;
+          }
+          return prev - 1;
+        });
+      }, 1000);
+    }
+    return () => clearInterval(interval);
+  }, [isGrowActive, timeRemaining, navigate]);
+
+  const handleGrowClick = () => {
+    setIsGrowActive(true);
+    setTimeRemaining(132);
+  };
+
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins}min ${secs}secs`;
+  };
+
   return (
     <div className="min-h-screen w-full bg-black overflow-hidden">
       {/* Mobile Layout - Exact Figma Dimensions (393x852) - up to 767px */}
@@ -130,12 +162,46 @@ export const ProductionScreen = (): JSX.Element => {
             </div>
           </div>
 
-          {/* GROW Button */}
-          <button className="w-[144px] h-[35px] bg-gradient-to-t from-[#10341D] to-[#318952] rounded-[74px] flex items-center justify-center">
-            <span className="text-white text-[16px] font-semibold leading-[19px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
-              GROW
-            </span>
-          </button>
+          {/* GROW Button / Timer */}
+          {!isGrowActive ? (
+            <button 
+              onClick={handleGrowClick}
+              className="w-[144px] h-[35px] bg-gradient-to-t from-[#10341D] to-[#318952] rounded-[74px] flex items-center justify-center"
+            >
+              <span className="text-white text-[16px] font-semibold leading-[19px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
+                GROW
+              </span>
+            </button>
+          ) : (
+            <div className="w-[144px] h-[35px] bg-gradient-to-b from-black to-[#666666] rounded-[74px] flex items-center justify-center gap-[8px] px-[8px]">
+              {/* Animated Spinning Circle - Group 13 */}
+              <div className="relative w-[18px] h-[18px] flex-none">
+                {/* Background circle - Ellipse 9 */}
+                <div className="absolute w-[18px] h-[18px] border-[2.83px] border-[#626262] rounded-full" />
+                
+                {/* Spinning green circle - Ellipse 10 */}
+                <div 
+                  className="absolute w-[18px] h-[18px] border-[2.83px] border-transparent rounded-full animate-spin"
+                  style={{ 
+                    borderTopColor: '#5BFF8E',
+                    filter: 'drop-shadow(0px 1.125px 1.125px rgba(0, 0, 0, 0.25))',
+                    animationDuration: '2s'
+                  }}
+                />
+              </div>
+              
+              {/* Timer Text */}
+              <span 
+                className="text-[#AEAEAE] text-[16px] font-semibold leading-[19px] tracking-[-0.03em]" 
+                style={{ 
+                  fontFamily: 'Roboto Condensed',
+                  textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'
+                }}
+              >
+                {formatTime(timeRemaining)}
+              </span>
+            </div>
+          )}
         </div>
 
         {/* Right Production Card - PRODUCE COKE */}
@@ -316,18 +382,57 @@ export const ProductionScreen = (): JSX.Element => {
                 </div>
               </div>
 
-              {/* Grow Button */}
-              <button
-                className="flex items-center justify-center bg-gradient-to-t from-[#10341D] to-[#318952] hover:scale-105 transition-transform"
-                style={{
-                  borderRadius: '74px',
-                  height: '42px'
-                }}
-              >
-                <span className="text-white text-lg font-semibold" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
-                  GROW
-                </span>
-              </button>
+              {/* Grow Button / Timer */}
+              {!isGrowActive ? (
+                <button
+                  onClick={handleGrowClick}
+                  className="flex items-center justify-center bg-gradient-to-t from-[#10341D] to-[#318952] hover:scale-105 transition-transform"
+                  style={{
+                    borderRadius: '74px',
+                    height: '42px'
+                  }}
+                >
+                  <span className="text-white text-lg font-semibold" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
+                    GROW
+                  </span>
+                </button>
+              ) : (
+                <div 
+                  className="flex items-center justify-center gap-[10px] bg-gradient-to-b from-black to-[#666666]"
+                  style={{
+                    borderRadius: '74px',
+                    height: '42px',
+                    padding: '10px'
+                  }}
+                >
+                  {/* Animated Spinning Circle - Group 13 Desktop */}
+                  <div className="relative w-[22px] h-[22px] flex-none">
+                    {/* Background circle - Ellipse 9 */}
+                    <div className="absolute w-[22px] h-[22px] border-[3.5px] border-[#626262] rounded-full" />
+                    
+                    {/* Spinning green circle - Ellipse 10 */}
+                    <div 
+                      className="absolute w-[22px] h-[22px] border-[3.5px] border-transparent rounded-full animate-spin"
+                      style={{ 
+                        borderTopColor: '#5BFF8E',
+                        filter: 'drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25))',
+                        animationDuration: '2s'
+                      }}
+                    />
+                  </div>
+                  
+                  {/* Timer Text */}
+                  <span 
+                    className="text-[#AEAEAE] text-lg font-semibold tracking-[-0.03em]" 
+                    style={{ 
+                      fontFamily: 'Roboto Condensed',
+                      textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'
+                    }}
+                  >
+                    {formatTime(timeRemaining)}
+                  </span>
+                </div>
+              )}
             </div>
 
             {/* Produce Coke Card */}
