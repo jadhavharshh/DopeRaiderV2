@@ -5,7 +5,7 @@ import { BottomNav3 } from "./InventoryScreenSections/BottomNav3";
 
 // Import images using Vite's path configuration
 import backgroundImg from "@/static/img/image-2.png";
-import TelegramChairIMG from "@/static/img/telegram-chair.png";
+import WeedBgIMG from "@/static/img/weed.png";
 import weedIcon from "@/static/img/weed-icon.svg";
 import cokeIcon from "@/static/img/coke-icon.svg";
 import seedsIcon from "@/static/img/seeds-icon.svg";
@@ -215,8 +215,8 @@ export const ProductionScreen = (): JSX.Element => {
           </button>
         </div>
 
-        {/* Bottom Navigation - Exact positioning from Figma */}
-        <div className="absolute w-[393px] h-[120px] left-0 top-[732px]">
+        {/* Bottom Navigation */}
+        <div className="absolute bottom-0 left-0 right-0 z-10">
           <BottomNav3 />
         </div>
       </div>
@@ -226,7 +226,7 @@ export const ProductionScreen = (): JSX.Element => {
         <img
           className="absolute inset-0 w-full h-full object-cover opacity-70"
           alt="Background"
-          src={TelegramChairIMG}
+          src={WeedBgIMG}
         />
 
         {/* Desktop Content - Scaled and Centered */}
@@ -365,6 +365,15 @@ export const ProductionScreen = (): JSX.Element => {
                   </span>
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Bottom Navigation */}
+        <div className="fixed bottom-0 left-0 right-0 z-30">
+          <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-30">
+            <div className="scale-60 sm:scale-70 md:scale-80 lg:scale-90 xl:scale-100 origin-bottom">
+              <BottomNav3 />
             </div>
           </div>
         </div>

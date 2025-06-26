@@ -190,10 +190,10 @@ export const ProductionActiveScreen = (): JSX.Element => {
               </div>
             </div>
 
-            {/* Bottom Navigation */}
-            <div className="relative z-10 flex-shrink-0">
-              <BottomNav3 />
-            </div>
+          {/* Bottom Navigation */}
+          <div className="relative z-10 flex-shrink-0">
+            <BottomNav3 />
+          </div>
           </div>
         </div>
       </div>
@@ -317,6 +317,15 @@ export const ProductionActiveScreen = (): JSX.Element => {
                 </div>
                 <span className="relative z-10">2min 12secs</span>
               </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Bottom Navigation */}
+        <div className="fixed bottom-0 left-0 right-0 z-30">
+          <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-30">
+            <div className="scale-60 sm:scale-70 md:scale-80 lg:scale-90 xl:scale-100 origin-bottom">
+              <BottomNav3 />
             </div>
           </div>
         </div>
