@@ -229,142 +229,152 @@ export const ProductionScreen = (): JSX.Element => {
           src={WeedBgIMG}
         />
 
-        {/* Desktop Content - Scaled and Centered */}
-        <div className="absolute inset-0 flex items-center justify-center z-10">
-          <div className="bg-black/40 backdrop-blur-sm rounded-lg border border-gray-600/30 p-8 w-full max-w-4xl mx-4">
-            {/* Title */}
-            <div className="text-center mb-8">
-              <h1 className="text-white text-5xl font-black tracking-wider" style={{ fontFamily: 'Bangers' }}>
-                PRODUCTION
-              </h1>
-            </div>
+        {/* Desktop Content - Centered Layout */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pb-20">
+          {/* Title */}
+          <div className="text-center mb-6">
+            <h1 className="text-white text-4xl font-black tracking-wider" style={{ fontFamily: 'Bangers' }}>
+              PRODUCTION
+            </h1>
+          </div>
 
-            {/* Status Message */}
-            <div className="flex justify-center mb-8">
-              <div className="relative w-[320px] h-[64px] flex items-center justify-center">
-                <svg width="320" height="64" viewBox="0 0 208 42" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
-                  <path d="M8.67885 37.9189C7.91783 37.6209 11.204 35.5547 9.75117 34.2435C6.3612 31.1641 -9.65462 23.0385 8.54045 22.1047L8.54045 21.1411C7.46811 20.9524 1.51842 21.5285 1.48382 20.5749C1.41464 18.7372 13.66 5.47598 17.2921 4.25415C21.3047 2.90319 28.7072 3.03237 33.8614 2.24762C35.8331 1.94962 36.0752 0.668161 37.0783 0.539026C43.6161 -0.285457 112.107 0.0125423 124.422 0.280748C133.934 0.479419 198.585 3.54892 201.491 4.48267C209.067 8.76402 203.913 13.095 204.224 17.3068C204.328 18.8763 208.167 20.5253 207.994 22.4424C207.718 25.2934 198.758 38.1076 191.84 39.4685C186.824 40.4519 146.456 41.9519 138.362 41.9916C108.717 42.1207 69.4213 40.74 40.7104 39.2401C34.0689 38.8924 11.7228 39.101 8.74798 37.9288L8.67885 37.9189Z" fill="url(#paint0_linear_117_638_desktop)"/>
-                  <defs>
-                    <linearGradient id="paint0_linear_117_638_desktop" x1="208" y1="21" x2="-9.17939e-07" y2="21" gradientUnits="userSpaceOnUse">
-                      <stop stopColor="#303030"/>
-                      <stop offset="1" stopColor="#1B1B1B"/>
-                    </linearGradient>
-                  </defs>
-                </svg>
-                <span className="relative z-10 text-white text-xl font-bold" style={{ fontFamily: 'Roboto Condensed' }}>
-                  LET'S GET TO WORK...
+          {/* Status Message */}
+          <div className="flex justify-center mb-6">
+            <div className="relative w-[280px] h-[50px] flex items-center justify-center">
+              <svg width="280" height="50" viewBox="0 0 208 42" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full opacity-60" preserveAspectRatio="none">
+                <path d="M8.67885 37.9189C7.91783 37.6209 11.204 35.5547 9.75117 34.2435C6.3612 31.1641 -9.65462 23.0385 8.54045 22.1047L8.54045 21.1411C7.46811 20.9524 1.51842 21.5285 1.48382 20.5749C1.41464 18.7372 13.66 5.47598 17.2921 4.25415C21.3047 2.90319 28.7072 3.03237 33.8614 2.24762C35.8331 1.94962 36.0752 0.668161 37.0783 0.539026C43.6161 -0.285457 112.107 0.0125423 124.422 0.280748C133.934 0.479419 198.585 3.54892 201.491 4.48267C209.067 8.76402 203.913 13.095 204.224 17.3068C204.328 18.8763 208.167 20.5253 207.994 22.4424C207.718 25.2934 198.758 38.1076 191.84 39.4685C186.824 40.4519 146.456 41.9519 138.362 41.9916C108.717 42.1207 69.4213 40.74 40.7104 39.2401C34.0689 38.8924 11.7228 39.101 8.74798 37.9288L8.67885 37.9189Z" fill="url(#paint0_linear_117_638_desktop)"/>
+                <defs>
+                  <linearGradient id="paint0_linear_117_638_desktop" x1="208" y1="21" x2="-9.17939e-07" y2="21" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#303030"/>
+                    <stop offset="1" stopColor="#1B1B1B"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <span className="relative z-10 text-white text-lg font-bold" style={{ fontFamily: 'Roboto Condensed' }}>
+                LET'S GET TO WORK...
+              </span>
+            </div>
+          </div>
+
+          {/* Production Cards - Side by Side for Desktop */}
+          <div className="grid grid-cols-2 gap-5 max-w-[800px] w-full px-10">
+            {/* Grow Weed Card */}
+            <div 
+              className="rounded-lg p-4 h-[400px] flex flex-col"
+              style={{ 
+                background: '#000000B2',
+                border: '0.5px solid #FFFFFF66'
+              }}
+            >
+              {/* Header */}
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <div className="relative w-6 h-6">
+                  <div className="absolute w-6 h-6 bg-gradient-to-b from-black to-[#666666] rounded-full" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <img className="w-[12px] h-[12px]" alt="Weed" src={weedIcon} />
+                  </div>
+                </div>
+                <span className="text-white text-lg font-bold" style={{ fontFamily: 'Roboto Condensed' }}>
+                  GROW WEED
                 </span>
               </div>
+
+              {/* Requirements */}
+              <div className="bg-black bg-opacity-50 border border-[#6e6b67] border-opacity-40 rounded p-4 mb-3">
+                <div className="text-center text-[#AEAEAE] text-xs font-semibold mb-3">REQUIRES</div>
+                <div className="flex justify-center mb-3">
+                  <div className="relative w-6 h-6">
+                    <div className="absolute w-6 h-6 bg-gradient-to-b from-black to-[#666666] rounded-full" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <img className="w-[10px] h-[11px]" alt="Seeds" src={seedsIcon} />
+                    </div>
+                  </div>
+                </div>
+                <div className="text-center text-white text-base font-bold mb-1">20 SEEDS</div>
+                <div className="text-center text-[#AEAEAE] text-xs">20 available</div>
+              </div>
+
+              {/* Stats */}
+              <div className="flex justify-between mb-4 flex-1">
+                <div className="text-[#AEAEAE] text-xs font-semibold">
+                  <div>Max Yield:</div>
+                  <div>Time:</div>
+                  <div>Cost:</div>
+                </div>
+                <div className="text-white text-xs font-bold text-right">
+                  <div>15oZ</div>
+                  <div>3 Minutes</div>
+                  <div>$0.25</div>
+                </div>
+              </div>
+
+              {/* Grow Button */}
+              <Link
+                to="/production/active"
+                className="block w-full bg-gradient-to-t from-[#10341D] to-[#318952] rounded-full py-2.5 text-center hover:scale-105 transition-transform mt-auto"
+              >
+                <span className="text-white text-base font-semibold" style={{ fontFamily: 'Roboto Condensed' }}>
+                  GROW
+                </span>
+              </Link>
             </div>
 
-            {/* Production Cards - Side by Side for Desktop */}
-            <div className="grid grid-cols-2 gap-8">
-              {/* Grow Weed Card */}
-              <div className="bg-black bg-opacity-70 border border-[#6e6b67] border-opacity-40 rounded-lg p-6">
-                {/* Header */}
-                <div className="flex items-center justify-center gap-3 mb-6">
-                  <div className="relative w-8 h-8">
-                    <div className="absolute w-8 h-8 bg-gradient-to-b from-black to-[#666666] rounded-full" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <img className="w-[15px] h-[15px]" alt="Weed" src={weedIcon} />
-                    </div>
-                  </div>
-                  <span className="text-white text-xl font-bold" style={{ fontFamily: 'Roboto Condensed' }}>
-                    GROW WEED
-                  </span>
-                </div>
-
-                {/* Requirements */}
-                <div className="bg-black bg-opacity-50 border border-[#6e6b67] border-opacity-40 rounded p-6 mb-6">
-                  <div className="text-center text-[#AEAEAE] text-sm font-semibold mb-4">REQUIRES</div>
-                  <div className="flex justify-center mb-4">
-                    <div className="relative w-8 h-8">
-                      <div className="absolute w-8 h-8 bg-gradient-to-b from-black to-[#666666] rounded-full" />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <img className="w-[12px] h-[13px]" alt="Seeds" src={seedsIcon} />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="text-center text-white text-lg font-bold mb-2">20 SEEDS</div>
-                  <div className="text-center text-[#AEAEAE] text-sm">20 available</div>
-                </div>
-
-                {/* Stats */}
-                <div className="flex justify-between mb-6">
-                  <div className="text-[#AEAEAE] text-sm font-semibold">
-                    <div>Max Yield:</div>
-                    <div>Time:</div>
-                    <div>Cost:</div>
-                  </div>
-                  <div className="text-white text-sm font-bold text-right">
-                    <div>15oZ</div>
-                    <div>3 Minutes</div>
-                    <div>$0.25</div>
+            {/* Produce Coke Card */}
+            <div 
+              className="rounded-lg p-4 h-[400px] flex flex-col"
+              style={{ 
+                background: '#000000B2',
+                border: '0.5px solid #FFFFFF66'
+              }}
+            >
+              {/* Header */}
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <div className="relative w-6 h-6">
+                  <div className="absolute w-6 h-6 bg-gradient-to-b from-black to-[#666666] rounded-full" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <img className="w-[11px] h-[13px]" alt="Coke" src={cokeIcon} />
                   </div>
                 </div>
-
-                {/* Grow Button */}
-                <Link
-                  to="/production/active"
-                  className="block w-full bg-gradient-to-t from-[#10341D] to-[#318952] rounded-full py-3 text-center hover:scale-105 transition-transform"
-                >
-                  <span className="text-white text-lg font-semibold" style={{ fontFamily: 'Roboto Condensed' }}>
-                    GROW
-                  </span>
-                </Link>
+                <span className="text-white text-lg font-bold" style={{ fontFamily: 'Roboto Condensed' }}>
+                  PRODUCE COKE
+                </span>
               </div>
 
-              {/* Produce Coke Card */}
-              <div className="bg-black bg-opacity-70 border border-[#6e6b67] border-opacity-40 rounded-lg p-6">
-                {/* Header */}
-                <div className="flex items-center justify-center gap-3 mb-6">
-                  <div className="relative w-8 h-8">
-                    <div className="absolute w-8 h-8 bg-gradient-to-b from-black to-[#666666] rounded-full" />
+              {/* Requirements */}
+              <div className="bg-black bg-opacity-50 border border-[#6e6b67] border-opacity-40 rounded p-4 mb-3">
+                <div className="text-center text-[#AEAEAE] text-xs font-semibold mb-3">REQUIRES</div>
+                <div className="flex justify-center mb-3">
+                  <div className="relative w-6 h-6">
+                    <div className="absolute w-6 h-6 bg-gradient-to-b from-black to-[#666666] rounded-full" />
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <img className="w-[13px] h-[15px]" alt="Coke" src={cokeIcon} />
+                      <img className="w-[8px] h-[10px]" alt="Chemicals" src={chemicalsDetailedIcon} />
                     </div>
                   </div>
-                  <span className="text-white text-xl font-bold" style={{ fontFamily: 'Roboto Condensed' }}>
-                    PRODUCE COKE
-                  </span>
                 </div>
-
-                {/* Requirements */}
-                <div className="bg-black bg-opacity-50 border border-[#6e6b67] border-opacity-40 rounded p-6 mb-6">
-                  <div className="text-center text-[#AEAEAE] text-sm font-semibold mb-4">REQUIRES</div>
-                  <div className="flex justify-center mb-4">
-                    <div className="relative w-8 h-8">
-                      <div className="absolute w-8 h-8 bg-gradient-to-b from-black to-[#666666] rounded-full" />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <img className="w-[10px] h-[12px]" alt="Chemicals" src={chemicalsDetailedIcon} />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="text-center text-white text-lg font-bold mb-2">20 CHEMICALS</div>
-                  <div className="text-center text-[#AEAEAE] text-sm">20 available</div>
-                </div>
-
-                {/* Stats */}
-                <div className="flex justify-between mb-6">
-                  <div className="text-[#AEAEAE] text-sm font-semibold">
-                    <div>Max Yield:</div>
-                    <div>Time:</div>
-                    <div>Cost:</div>
-                  </div>
-                  <div className="text-white text-sm font-bold text-right">
-                    <div>15oZ</div>
-                    <div>3 Minutes</div>
-                    <div>$0.25</div>
-                  </div>
-                </div>
-
-                {/* Produce Button */}
-                <button className="w-full bg-gradient-to-t from-[#10341D] to-[#318952] rounded-full py-3 hover:scale-105 transition-transform">
-                  <span className="text-white text-lg font-semibold" style={{ fontFamily: 'Roboto Condensed' }}>
-                    PRODUCE
-                  </span>
-                </button>
+                <div className="text-center text-white text-base font-bold mb-1">20 CHEMICALS</div>
+                <div className="text-center text-[#AEAEAE] text-xs">20 available</div>
               </div>
+
+              {/* Stats */}
+              <div className="flex justify-between mb-4 flex-1">
+                <div className="text-[#AEAEAE] text-xs font-semibold">
+                  <div>Max Yield:</div>
+                  <div>Time:</div>
+                  <div>Cost:</div>
+                </div>
+                <div className="text-white text-xs font-bold text-right">
+                  <div>15oZ</div>
+                  <div>3 Minutes</div>
+                  <div>$0.25</div>
+                </div>
+              </div>
+
+              {/* Produce Button */}
+              <button className="w-full bg-gradient-to-t from-[#10341D] to-[#318952] rounded-full py-2.5 hover:scale-105 transition-transform mt-auto">
+                <span className="text-white text-base font-semibold" style={{ fontFamily: 'Roboto Condensed' }}>
+                  PRODUCE
+                </span>
+              </button>
             </div>
           </div>
         </div>
