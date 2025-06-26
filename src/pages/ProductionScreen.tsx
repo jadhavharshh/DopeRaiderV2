@@ -48,10 +48,15 @@ export const ProductionScreen = (): JSX.Element => {
 
         {/* Status Message Frame */}
         <div className="absolute w-[208px] h-[42px] left-[calc(50%-208px/2+1.5px)] top-[211px]">
-          <div 
-            className="absolute w-[42px] left-[calc(50%-42px/2+125px)] top-0 bottom-[-395.24%] bg-gradient-to-b from-[#303030] to-[#1B1B1B] rotate-90"
-            style={{ backgroundImage: `url(${grungeBackground})` }}
-          />
+          <svg width="208" height="42" viewBox="0 0 208 42" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0">
+            <path d="M8.67885 37.9189C7.91783 37.6209 11.204 35.5547 9.75117 34.2435C6.3612 31.1641 -9.65462 23.0385 8.54045 22.1047L8.54045 21.1411C7.46811 20.9524 1.51842 21.5285 1.48382 20.5749C1.41464 18.7372 13.66 5.47598 17.2921 4.25415C21.3047 2.90319 28.7072 3.03237 33.8614 2.24762C35.8331 1.94962 36.0752 0.668161 37.0783 0.539026C43.6161 -0.285457 112.107 0.0125423 124.422 0.280748C133.934 0.479419 198.585 3.54892 201.491 4.48267C209.067 8.76402 203.913 13.095 204.224 17.3068C204.328 18.8763 208.167 20.5253 207.994 22.4424C207.718 25.2934 198.758 38.1076 191.84 39.4685C186.824 40.4519 146.456 41.9519 138.362 41.9916C108.717 42.1207 69.4213 40.74 40.7104 39.2401C34.0689 38.8924 11.7228 39.101 8.74798 37.9288L8.67885 37.9189Z" fill="url(#paint0_linear_117_638)"/>
+            <defs>
+              <linearGradient id="paint0_linear_117_638" x1="208" y1="21" x2="-9.17939e-07" y2="21" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#303030"/>
+                <stop offset="1" stopColor="#1B1B1B"/>
+              </linearGradient>
+            </defs>
+          </svg>
           <div className="absolute w-[145px] h-[19px] left-[calc(50%-145px/2+0.5px)] top-[11px]">
             <span className="text-white text-[16px] font-bold leading-[19px]" style={{ fontFamily: 'Roboto Condensed' }}>
               LET'S GET TO WORK...
@@ -236,11 +241,17 @@ export const ProductionScreen = (): JSX.Element => {
 
             {/* Status Message */}
             <div className="flex justify-center mb-8">
-              <div 
-                className="relative w-[320px] h-[56px] bg-cover bg-center flex items-center justify-center"
-                style={{ backgroundImage: `url(${grungeBackground})` }}
-              >
-                <span className="text-white text-xl font-bold" style={{ fontFamily: 'Roboto Condensed' }}>
+              <div className="relative w-[320px] h-[64px] flex items-center justify-center">
+                <svg width="320" height="64" viewBox="0 0 208 42" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+                  <path d="M8.67885 37.9189C7.91783 37.6209 11.204 35.5547 9.75117 34.2435C6.3612 31.1641 -9.65462 23.0385 8.54045 22.1047L8.54045 21.1411C7.46811 20.9524 1.51842 21.5285 1.48382 20.5749C1.41464 18.7372 13.66 5.47598 17.2921 4.25415C21.3047 2.90319 28.7072 3.03237 33.8614 2.24762C35.8331 1.94962 36.0752 0.668161 37.0783 0.539026C43.6161 -0.285457 112.107 0.0125423 124.422 0.280748C133.934 0.479419 198.585 3.54892 201.491 4.48267C209.067 8.76402 203.913 13.095 204.224 17.3068C204.328 18.8763 208.167 20.5253 207.994 22.4424C207.718 25.2934 198.758 38.1076 191.84 39.4685C186.824 40.4519 146.456 41.9519 138.362 41.9916C108.717 42.1207 69.4213 40.74 40.7104 39.2401C34.0689 38.8924 11.7228 39.101 8.74798 37.9288L8.67885 37.9189Z" fill="url(#paint0_linear_117_638_desktop)"/>
+                  <defs>
+                    <linearGradient id="paint0_linear_117_638_desktop" x1="208" y1="21" x2="-9.17939e-07" y2="21" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#303030"/>
+                      <stop offset="1" stopColor="#1B1B1B"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <span className="relative z-10 text-white text-xl font-bold" style={{ fontFamily: 'Roboto Condensed' }}>
                   LET'S GET TO WORK...
                 </span>
               </div>
