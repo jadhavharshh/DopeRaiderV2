@@ -232,15 +232,15 @@ export const ProductionScreen = (): JSX.Element => {
         {/* Desktop Content - Centered Layout */}
         <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pb-20">
           {/* Title */}
-          <div className="text-center mb-6">
-            <h1 className="text-white text-4xl font-black tracking-wider" style={{ fontFamily: 'Bangers' }}>
+          <div className="text-center mb-7">
+            <h1 className="text-white text-5xl font-black tracking-wider" style={{ fontFamily: 'Bangers' }}>
               PRODUCTION
             </h1>
           </div>
 
           {/* Status Message */}
-          <div className="flex justify-center mb-6">
-            <div className="relative w-[280px] h-[50px] flex items-center justify-center">
+          <div className="flex justify-center mb-7">
+            <div className="relative w-[336px] h-[60px] flex items-center justify-center">
               <svg width="280" height="50" viewBox="0 0 208 42" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full opacity-60" preserveAspectRatio="none">
                 <path d="M8.67885 37.9189C7.91783 37.6209 11.204 35.5547 9.75117 34.2435C6.3612 31.1641 -9.65462 23.0385 8.54045 22.1047L8.54045 21.1411C7.46811 20.9524 1.51842 21.5285 1.48382 20.5749C1.41464 18.7372 13.66 5.47598 17.2921 4.25415C21.3047 2.90319 28.7072 3.03237 33.8614 2.24762C35.8331 1.94962 36.0752 0.668161 37.0783 0.539026C43.6161 -0.285457 112.107 0.0125423 124.422 0.280748C133.934 0.479419 198.585 3.54892 201.491 4.48267C209.067 8.76402 203.913 13.095 204.224 17.3068C204.328 18.8763 208.167 20.5253 207.994 22.4424C207.718 25.2934 198.758 38.1076 191.84 39.4685C186.824 40.4519 146.456 41.9519 138.362 41.9916C108.717 42.1207 69.4213 40.74 40.7104 39.2401C34.0689 38.8924 11.7228 39.101 8.74798 37.9288L8.67885 37.9189Z" fill="url(#paint0_linear_117_638_desktop)"/>
                 <defs>
@@ -250,69 +250,69 @@ export const ProductionScreen = (): JSX.Element => {
                   </linearGradient>
                 </defs>
               </svg>
-              <span className="relative z-10 text-white text-lg font-bold" style={{ fontFamily: 'Roboto Condensed' }}>
+              <span className="relative z-10 text-white text-xl font-bold" style={{ fontFamily: 'Roboto Condensed' }}>
                 LET'S GET TO WORK...
               </span>
             </div>
           </div>
 
           {/* Production Cards - Side by Side for Desktop */}
-          <div className="flex justify-center gap-4 max-w-[800px] w-full">
+          <div className="flex justify-center gap-5 max-w-[960px] w-full">
             {/* Grow Weed Card */}
             <div 
-              className="flex flex-col gap-4"
+              className="flex flex-col gap-5"
               style={{ 
-                width: '240px',
-                height: '340px',
+                width: '288px',
+                height: '408px',
                 background: 'rgba(0, 0, 0, 0.60)',
                 border: '0.5px solid rgba(255, 255, 255, 0.4)',
                 borderRadius: '4px',
-                padding: '16px',
+                padding: '20px',
                 backdropFilter: 'blur(10px)'
               }}
             >
               {/* Header */}
-              <div className="flex items-center justify-center gap-2">
-                <div className="relative w-6 h-6">
-                  <div className="absolute w-6 h-6 bg-gradient-to-b from-black to-[#666666] rounded-full" />
+              <div className="flex items-center justify-center gap-3">
+                <div className="relative w-7 h-7">
+                  <div className="absolute w-7 h-7 bg-gradient-to-b from-black to-[#666666] rounded-full" />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <img className="w-[15px] h-[15px]" alt="Weed" src={weedIcon} />
+                    <img className="w-[18px] h-[18px]" alt="Weed" src={weedIcon} />
                   </div>
                 </div>
-                <span className="text-white text-base font-bold" style={{ fontFamily: 'Roboto Condensed' }}>
+                <span className="text-white text-lg font-bold" style={{ fontFamily: 'Roboto Condensed' }}>
                   GROW WEED
                 </span>
               </div>
 
               {/* Requirements */}
               <div 
-                className="flex flex-col items-center gap-3"
+                className="flex flex-col items-center gap-4"
                 style={{
                   background: 'rgba(0, 0, 0, 0.5)',
                   border: '0.5px solid rgba(110, 107, 103, 0.4)',
                   borderRadius: '4px',
-                  padding: '16px'
+                  padding: '20px'
                 }}
               >
-                <div className="text-center text-[#AEAEAE] text-xs font-semibold" style={{ fontFamily: 'Roboto Condensed' }}>REQUIRES</div>
-                <div className="relative w-6 h-6">
-                  <div className="absolute w-6 h-6 bg-gradient-to-b from-black to-[#666666] rounded-full" />
+                <div className="text-center text-[#AEAEAE] text-sm font-semibold" style={{ fontFamily: 'Roboto Condensed' }}>REQUIRES</div>
+                <div className="relative w-7 h-7">
+                  <div className="absolute w-7 h-7 bg-gradient-to-b from-black to-[#666666] rounded-full" />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <img className="w-[12px] h-[13px]" alt="Seeds" src={seedsIcon} />
+                    <img className="w-[14px] h-[16px]" alt="Seeds" src={seedsIcon} />
                   </div>
                 </div>
-                <div className="text-center text-white text-sm font-bold" style={{ fontFamily: 'Roboto Condensed' }}>20 SEEDS</div>
-                <div className="text-center text-[#AEAEAE] text-xs" style={{ fontFamily: 'Roboto Condensed' }}>20 available</div>
+                <div className="text-center text-white text-base font-bold" style={{ fontFamily: 'Roboto Condensed' }}>20 SEEDS</div>
+                <div className="text-center text-[#AEAEAE] text-sm" style={{ fontFamily: 'Roboto Condensed' }}>20 available</div>
               </div>
 
               {/* Stats */}
               <div className="flex justify-between">
-                <div className="text-[#AEAEAE] text-xs font-semibold" style={{ fontFamily: 'Roboto Condensed' }}>
+                <div className="text-[#AEAEAE] text-sm font-semibold" style={{ fontFamily: 'Roboto Condensed' }}>
                   <div>Max Yield:</div>
                   <div>Time:</div>
                   <div>Cost:</div>
                 </div>
-                <div className="text-white text-xs font-bold text-right" style={{ fontFamily: 'Roboto Condensed' }}>
+                <div className="text-white text-sm font-bold text-right" style={{ fontFamily: 'Roboto Condensed' }}>
                   <div>15oZ</div>
                   <div>3 Minutes</div>
                   <div>$0.25</div>
@@ -325,10 +325,10 @@ export const ProductionScreen = (): JSX.Element => {
                 className="flex items-center justify-center bg-gradient-to-t from-[#10341D] to-[#318952] hover:scale-105 transition-transform"
                 style={{
                   borderRadius: '74px',
-                  height: '35px'
+                  height: '42px'
                 }}
               >
-                <span className="text-white text-base font-semibold" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
+                <span className="text-white text-lg font-semibold" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
                   GROW
                 </span>
               </Link>
@@ -336,59 +336,59 @@ export const ProductionScreen = (): JSX.Element => {
 
             {/* Produce Coke Card */}
             <div 
-              className="flex flex-col gap-4"
+              className="flex flex-col gap-5"
               style={{ 
-                width: '240px',
-                height: '340px',
+                width: '288px',
+                height: '408px',
                 background: 'rgba(0, 0, 0, 0.60)',
                 border: '0.5px solid rgba(255, 255, 255, 0.4)',
                 borderRadius: '4px',
-                padding: '16px',
+                padding: '20px',
                 backdropFilter: 'blur(10px)'
               }}
             >
               {/* Header */}
-              <div className="flex items-center justify-center gap-2">
-                <div className="relative w-6 h-6">
-                  <div className="absolute w-6 h-6 bg-gradient-to-b from-black to-[#666666] rounded-full" />
+              <div className="flex items-center justify-center gap-3">
+                <div className="relative w-7 h-7">
+                  <div className="absolute w-7 h-7 bg-gradient-to-b from-black to-[#666666] rounded-full" />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <img className="w-[13px] h-[15px]" alt="Coke" src={cokeIcon} />
+                    <img className="w-[16px] h-[18px]" alt="Coke" src={cokeIcon} />
                   </div>
                 </div>
-                <span className="text-white text-base font-bold" style={{ fontFamily: 'Roboto Condensed' }}>
+                <span className="text-white text-lg font-bold" style={{ fontFamily: 'Roboto Condensed' }}>
                   PRODUCE COKE
                 </span>
               </div>
 
               {/* Requirements */}
               <div 
-                className="flex flex-col items-center gap-3"
+                className="flex flex-col items-center gap-4"
                 style={{
                   background: 'rgba(0, 0, 0, 0.5)',
                   border: '0.5px solid rgba(110, 107, 103, 0.4)',
                   borderRadius: '4px',
-                  padding: '16px'
+                  padding: '20px'
                 }}
               >
-                <div className="text-center text-[#AEAEAE] text-xs font-semibold" style={{ fontFamily: 'Roboto Condensed' }}>REQUIRES</div>
-                <div className="relative w-6 h-6">
-                  <div className="absolute w-6 h-6 bg-gradient-to-b from-black to-[#666666] rounded-full" />
+                <div className="text-center text-[#AEAEAE] text-sm font-semibold" style={{ fontFamily: 'Roboto Condensed' }}>REQUIRES</div>
+                <div className="relative w-7 h-7">
+                  <div className="absolute w-7 h-7 bg-gradient-to-b from-black to-[#666666] rounded-full" />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <img className="w-[10px] h-[12px]" alt="Chemicals" src={chemicalsDetailedIcon} />
+                    <img className="w-[12px] h-[14px]" alt="Chemicals" src={chemicalsDetailedIcon} />
                   </div>
                 </div>
-                <div className="text-center text-white text-sm font-bold" style={{ fontFamily: 'Roboto Condensed' }}>20 CHEMICALS</div>
-                <div className="text-center text-[#AEAEAE] text-xs" style={{ fontFamily: 'Roboto Condensed' }}>20 available</div>
+                <div className="text-center text-white text-base font-bold" style={{ fontFamily: 'Roboto Condensed' }}>20 CHEMICALS</div>
+                <div className="text-center text-[#AEAEAE] text-sm" style={{ fontFamily: 'Roboto Condensed' }}>20 available</div>
               </div>
 
               {/* Stats */}
               <div className="flex justify-between">
-                <div className="text-[#AEAEAE] text-xs font-semibold" style={{ fontFamily: 'Roboto Condensed' }}>
+                <div className="text-[#AEAEAE] text-sm font-semibold" style={{ fontFamily: 'Roboto Condensed' }}>
                   <div>Max Yield:</div>
                   <div>Time:</div>
                   <div>Cost:</div>
                 </div>
-                <div className="text-white text-xs font-bold text-right" style={{ fontFamily: 'Roboto Condensed' }}>
+                <div className="text-white text-sm font-bold text-right" style={{ fontFamily: 'Roboto Condensed' }}>
                   <div>15oZ</div>
                   <div>3 Minutes</div>
                   <div>$0.25</div>
@@ -400,10 +400,10 @@ export const ProductionScreen = (): JSX.Element => {
                 className="flex items-center justify-center bg-gradient-to-t from-[#10341D] to-[#318952] hover:scale-105 transition-transform"
                 style={{
                   borderRadius: '74px',
-                  height: '35px'
+                  height: '42px'
                 }}
               >
-                <span className="text-white text-base font-semibold" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
+                <span className="text-white text-lg font-semibold" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
                   PRODUCE
                 </span>
               </button>
