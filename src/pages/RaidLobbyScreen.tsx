@@ -82,7 +82,7 @@ export const RaidLobbyScreen = (): JSX.Element => {
 
         {/* Bottom Navigation for Desktop */}
         <div className="fixed bottom-0 left-0 right-0 z-30">
-          <div className="flex justify-center pb-4">
+          <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-30">
             <div className="scale-90 lg:scale-100 origin-bottom">
               <BottomNav3 />
             </div>
