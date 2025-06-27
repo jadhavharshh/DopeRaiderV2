@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 // Import all images using Vite's static imports
 import elementHga from "@/static/img/9athga-12.png";
@@ -15,6 +15,8 @@ import iconRaid from "@/static/img/icon-47.svg";
 import type { JSX } from "react";
 
 export const BottomNav3 = (): JSX.Element => {
+  const { pathname } = useLocation();
+
   return (
     <div className="md:relative md:w-auto md:h-20 md:top-0 md:left-0 w-full min-w-[390px] bg-black">
       {/* Top stats bar - Hide on desktop */}
@@ -95,8 +97,8 @@ export const BottomNav3 = (): JSX.Element => {
       <div className="md:w-auto md:relative md:top-0 md:left-0 bg-black w-full min-w-[390px]">
         <div className="w-full px-2 py-2">
           <div className="flex items-center justify-between w-full">
-            {/* YOU - Active */}
-            <Link className="bg-gradient-to-b from-[#1c1c1c] to-black border-r border-transparent h-16 flex-1 flex flex-col items-center justify-center" to="/player/inventory" style={{
+            {/* YOU */}
+            <Link className={`h-16 flex-1 flex flex-col items-center justify-center border-r border-transparent ${pathname.startsWith("/player") ? "bg-gradient-to-b from-[#1c1c1c] to-black" : ""}`} to="/player/inventory" style={{
               borderImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 153, 153, 0.43) 100%) 1',
               borderRightStyle: 'solid',
               borderRightWidth: '1px'
@@ -106,25 +108,25 @@ export const BottomNav3 = (): JSX.Element => {
                 alt="Union"
                 src={unionYou}
               />
-              <div className="font-['Roboto_Condensed'] text-xs font-black text-white tracking-0 leading-normal whitespace-nowrap">
+              <div className={`font-['Roboto_Condensed'] text-xs font-black tracking-0 leading-normal whitespace-nowrap ${pathname.startsWith("/player") ? "text-white" : "text-[#aaaaaa]"}`}>
                 YOU
               </div>
             </Link>
 
             {/* MARKET */}
-            <Link className="border-r border-transparent h-16 flex-1 flex flex-col items-center justify-center" to="/market" style={{
+            <Link className={`h-16 flex-1 flex flex-col items-center justify-center border-r border-transparent ${pathname.startsWith("/market") ? "bg-gradient-to-b from-[#1c1c1c] to-black" : ""}`} to="/market" style={{
               borderImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 153, 153, 0.43) 100%) 1',
               borderRightStyle: 'solid',
               borderRightWidth: '1px'
             }}>
               <img className="h-8 w-8 mb-1" alt="Layer" src={layerMarket} />
-              <div className="font-['Roboto_Condensed'] text-xs font-black text-[#aaaaaa] tracking-0 leading-normal whitespace-nowrap">
+              <div className={`font-['Roboto_Condensed'] text-xs font-black tracking-0 leading-normal whitespace-nowrap ${pathname.startsWith("/market") ? "text-white" : "text-[#aaaaaa]"}`}>
                 MARKET
               </div>
             </Link>
 
             {/* PRODUCE */}
-            <Link className="border-r border-transparent h-16 flex-1 flex flex-col items-center justify-center" to="/production" style={{
+            <Link className={`h-16 flex-1 flex flex-col items-center justify-center border-r border-transparent ${pathname.startsWith("/production") ? "bg-gradient-to-b from-[#1c1c1c] to-black" : ""}`} to="/production" style={{
               borderImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 153, 153, 0.43) 100%) 1',
               borderRightStyle: 'solid',
               borderRightWidth: '1px'
@@ -134,27 +136,27 @@ export const BottomNav3 = (): JSX.Element => {
                 alt="Layer"
                 src={layerProduce}
               />
-              <div className="font-['Roboto_Condensed'] text-xs font-black text-[#aaaaaa] tracking-0 leading-normal whitespace-nowrap">
+              <div className={`font-['Roboto_Condensed'] text-xs font-black tracking-0 leading-normal whitespace-nowrap ${pathname.startsWith("/production") ? "text-white" : "text-[#aaaaaa]"}`}>
                 PRODUCE
               </div>
             </Link>
 
             {/* MAP */}
-            <Link className="border-r border-transparent h-16 flex-1 flex flex-col items-center justify-center" to="/map" style={{
+            <Link className={`h-16 flex-1 flex flex-col items-center justify-center border-r border-transparent ${pathname.startsWith("/map") ? "bg-gradient-to-b from-[#1c1c1c] to-black" : ""}`} to="/map" style={{
               borderImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 153, 153, 0.43) 100%) 1',
               borderRightStyle: 'solid',
               borderRightWidth: '1px'
             }}>
               <img className="h-8 w-8 mb-1" alt="Icon" src={iconMap} />
-              <div className="font-['Roboto_Condensed'] text-xs font-black text-[#aaaaaa] tracking-0 leading-normal whitespace-nowrap">
+              <div className={`font-['Roboto_Condensed'] text-xs font-black tracking-0 leading-normal whitespace-nowrap ${pathname.startsWith("/map") ? "text-white" : "text-[#aaaaaa]"}`}>
                 MAP
               </div>
             </Link>
 
             {/* RAID */}
-            <Link className="h-16 flex-1 flex flex-col items-center justify-center" to="/raid">
+            <Link className={`h-16 flex-1 flex flex-col items-center justify-center ${pathname.startsWith("/raid") ? "bg-gradient-to-b from-[#1c1c1c] to-black" : ""}`} to="/raid">
               <img className="h-8 w-8 mb-1" alt="Icon" src={iconRaid} />
-              <div className="font-['Roboto_Condensed'] text-xs font-black text-[#aaaaaa] tracking-0 leading-normal whitespace-nowrap">
+              <div className={`font-['Roboto_Condensed'] text-xs font-black tracking-0 leading-normal whitespace-nowrap ${pathname.startsWith("/raid") ? "text-white" : "text-[#aaaaaa]"}`}>
                 RAID
               </div>
             </Link>
