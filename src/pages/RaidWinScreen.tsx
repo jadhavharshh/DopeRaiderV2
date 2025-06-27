@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 // Import images using Vite paths
-import bgImage from "@/static/img/image-1.png";
+import bgImage from "@/static/img/5-1-1.png";
 import profilePicTony from "@/static/img/telegram-peer-photo-size-4-2140046577575765933-1-0-0-2.png";
 import profilePicRada from "@/static/img/telegram-peer-photo-size-4-2140046577575765933-1-0-0-11.png"; // UPDATED: Correct avatar for RADA
 import nameTagBg from "@/static/img/name-tag.svg";
@@ -10,7 +10,7 @@ import winnerBg from "@/static/img/organic-grunge-bold-shapes-4.svg";
 import resultBg from "@/static/img/organic-grunge-bold-shapes-5.svg";
 import weaponPistol from "@/static/img/pistol-1.png";
 import weaponRifle from "@/static/img/pistol-1-1.png"; // UPDATED: Correct rifle image
-import weaponCardBg from "@/static/img/5-1.png"; // NEW: Background for weapon display
+import weaponCardBg from "@/static/img/mask-group-1.png"; // NEW: Background for weapon display
 
 import respectIcon from "@/static/img/vector-5.svg"; // Respect icon
 import cokeIcon from "@/static/img/vector-6.svg"; // Coke icon
@@ -86,14 +86,14 @@ export const RaidWinScreen = (): JSX.Element => {
   const navigate = useNavigate();
   const [countdown, setCountdown] = useState(5);
 
-  useEffect(() => {
-    if (countdown > 0) {
-      const timer = setTimeout(() => setCountdown(countdown - 1), 1000);
-      return () => clearTimeout(timer);
-    } else {
-      navigate('/raid'); // Or wherever it should go
-    }
-  }, [countdown, navigate]);
+  // useEffect(() => {
+  //   if (countdown > 0) {
+  //     const timer = setTimeout(() => setCountdown(countdown - 1), 1000);
+  //     return () => clearTimeout(timer);
+  //   } else {
+  //     navigate('/raid'); // Or wherever it should go
+  //   }
+  // }, [countdown, navigate]);
 
   const defeatedPlayer = { 
     name: "TONY MONTNA", 
