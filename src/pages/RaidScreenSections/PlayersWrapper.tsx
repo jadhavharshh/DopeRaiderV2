@@ -41,7 +41,8 @@ const allPlayersData = [
     stats: [94, 0, 49],
     ellipseSrc: ellipse159Svg,
     headerGrungeSrc: organicGrungeBoldShapes71Svg,
-    // No bodyGrungeSrc, no hasExpandedDetails for Tony unless specified
+    bodyGrungeSrc: organicGrungeBoldShapes26Svg,
+    hasExpandedDetails: true,
   },
   {
     id: 'sonny-black',
@@ -60,6 +61,8 @@ const allPlayersData = [
     stats: [87, 17, 43],
     ellipseSrc: ellipse1511Svg,
     headerGrungeSrc: organicGrungeBoldShapes51Svg,
+    bodyGrungeSrc: organicGrungeBoldShapes26Svg,
+    hasExpandedDetails: true,
   },
   {
     id: 'vito-corleone',
@@ -68,6 +71,8 @@ const allPlayersData = [
     stats: [71, 4, 50],
     ellipseSrc: ellipse1512Svg,
     headerGrungeSrc: organicGrungeBoldShapes76Svg,
+    bodyGrungeSrc: organicGrungeBoldShapes26Svg,
+    hasExpandedDetails: true,
   },
   {
     id: 'el-chapo',
@@ -76,6 +81,8 @@ const allPlayersData = [
     stats: [67, 9, 12],
     ellipseSrc: ellipse1513Svg,
     headerGrungeSrc: organicGrungeBoldShapes80Svg,
+    bodyGrungeSrc: organicGrungeBoldShapes26Svg,
+    hasExpandedDetails: true,
   },
   {
     id: 'lucky-mary',
@@ -84,6 +91,8 @@ const allPlayersData = [
     stats: [60, 12, 48],
     ellipseSrc: ellipse1514Svg,
     headerGrungeSrc: organicGrungeBoldShapes80Svg, // Re-using grunge as per original
+    bodyGrungeSrc: organicGrungeBoldShapes26Svg,
+    hasExpandedDetails: true,
   },
 ];
 

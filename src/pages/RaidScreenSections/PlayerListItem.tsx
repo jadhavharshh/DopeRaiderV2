@@ -55,23 +55,22 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
   commonStyles,
 }) => {
   const { playerStatCommonClasses, profilePicShadowStyle, textShadowStyle } = commonStyles;
-  const isSonnyBlack = player.name === 'SONNY BLACK' && player.hasExpandedDetails; // Example identifier
 
   return (
     <div
       onClick={onClick}
-      className={`self-stretch w-full relative cursor-pointer overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'h-[132px]' : 'h-[52px]'}`}
+      className={`self-stretch w-full relative cursor-pointer overflow-hidden transition-all duration-300 ease-in-out ${isOpen && player.hasExpandedDetails ? 'h-[132px]' : 'h-[52px]'}`}
     >
       {/* Backgrounds */}
       {player.bodyGrungeSrc && (
         <img
-          className={`absolute left-[2px] top-0 w-[360px] transition-opacity duration-300 ${isOpen ? 'h-[130px] opacity-100' : 'h-0 opacity-0'}`}
+          className={`absolute left-[2px] top-0 w-[360px] transition-opacity duration-300  ${isOpen && player.hasExpandedDetails ? 'h-[130px] opacity-100' : 'h-0 opacity-0'}`}
           alt={`${player.name} expanded background`}
           src={player.bodyGrungeSrc}
         />
       )}
       <img
-        className="h-12 w-[362px] absolute left-0 top-0"
+        className={`h-12 w-[362px] absolute left-0 top-0 transition-opacity duration-300 ${isOpen && player.hasExpandedDetails ? 'opacity-0' : 'opacity-100'}`}
         alt={`${player.name} header background`}
         src={player.headerGrungeSrc}
       />
@@ -97,8 +96,8 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
         </div>
       </div>
 
-      {/* Expandable Details - Only for Sonny Black in this example */}
-      {isOpen && isSonnyBlack && (
+      {/* Expandable Details */}
+      {isOpen && player.hasExpandedDetails && (
         <div className="absolute top-[48px] left-0 w-full h-[calc(132px-52px)] px-1 pt-1 z-0"> {/* Ensure details are below header grunge if it overlaps */}
           {/* Protected section */}
           <div className="absolute left-[32px] top-[2px] p-px rounded-[74px] bg-gradient-to-b from-[rgba(0,0,0,1)] to-[rgba(102,102,102,1)] w-fit">
@@ -156,7 +155,6 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
           </div>
         </div>
       )}
-      {/* If isOpen and not SonnyBlack, the space will be empty, fulfilling the "opens a height but that has nothing to display" */}
     </div>
   );
 };
