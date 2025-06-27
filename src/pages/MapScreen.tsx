@@ -197,7 +197,7 @@ export const DoperaiderMap = (): JSX.Element => {
             {/* Map Pins Container - Keep same positions */}
             <div className="absolute inset-0 pt-24 pb-32">
               {/* PIN-4 - Jamaica Village */}
-              <div className="absolute" style={{ left: '65%', top: '20%' }}>
+              <div className="absolute" style={{ left: '62%', top: '26%' }}>
                 <div className="relative">
                   <div 
                     className="bg-cover bg-center rounded-[40px] h-[32px] w-[32px] absolute left-[10px] top-0"
@@ -227,7 +227,7 @@ export const DoperaiderMap = (): JSX.Element => {
               </div>
 
               {/* PIN-5 - Novo Moskovo */}
-              <div className="absolute" style={{ left: '70%', top: '40%' }}>
+              <div className="absolute" style={{ left: '66%', top: '42%' }}>
                 <div className="h-[74px] relative w-[109px]">
                   <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[42px] absolute top-[56px] w-[28px]"></div>
                   <img className="h-[69px] left-[35px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract1Svg} />
@@ -241,7 +241,7 @@ export const DoperaiderMap = (): JSX.Element => {
               </div>
 
               {/* PIN-6 - Little Italy */}
-              <div className="absolute" style={{ left: '65%', top: '70%' }}>
+              <div className="absolute" style={{ left: '62%', top: '66%' }}>
                 <div className="h-[74px] relative w-[77px]">
                   <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[25px] absolute top-[56px] w-[28px]"></div>
                   <img className="h-[69px] left-[18px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract2Svg} />
@@ -255,7 +255,7 @@ export const DoperaiderMap = (): JSX.Element => {
               </div>
 
               {/* PIN-7 - Cartagena */}
-              <div className="absolute" style={{ left: '25%', top: '70%' }}>
+              <div className="absolute" style={{ left: '30%', top: '66%' }}>
                 <div className="h-[74px] relative w-[77px]">
                   <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[25px] absolute top-[56px] w-[28px]"></div>
                   <img className="h-[69px] left-[18px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract3Svg} />
@@ -269,7 +269,7 @@ export const DoperaiderMap = (): JSX.Element => {
               </div>
 
               {/* PIN-8 - Baltimore */}
-              <div className="absolute" style={{ left: '15%', top: '45%' }}>
+              <div className="absolute" style={{ left: '22%', top: '46%' }}>
                 <div className="h-[74px] relative w-[76px]">
                   <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[26px] absolute top-[56px] w-[28px]"></div>
                   <img className="h-[69px] left-[19px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract4Svg} />
@@ -303,7 +303,7 @@ export const DoperaiderMap = (): JSX.Element => {
               </div>
 
               {/* PIN-10 - Chinatown (Link) */}
-              <Link className="block absolute" style={{ left: '20%', top: '25%' }} to="/map/chinatown">
+              <Link className="block absolute" style={{ left: '26%', top: '30%' }} to="/map/chinatown">
                 <div className="h-[74px] relative w-[78px]">
                   <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[27px] absolute top-[56px] w-[28px]"></div>
                   <img className="h-[69px] left-[20px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract6Svg} />
@@ -357,7 +357,7 @@ export const DoperaiderMap = (): JSX.Element => {
           {/* Desktop Map Pins - Keep EXACT SAME positions as mobile */}
           <div className="absolute inset-0 pt-32 pb-32">
             {/* Jamaica Village - Desktop - Same position */}
-            <div className="absolute" style={{ left: '65%', top: '20%' }}>
+            <div className="absolute" style={{ left: '62%', top: '26%' }}>
               <div className="relative">
                 <div 
                   className="bg-cover bg-center rounded-[40px] h-[32px] w-[32px] absolute left-[10px] top-0"
@@ -387,7 +387,7 @@ export const DoperaiderMap = (): JSX.Element => {
             </div>
 
             {/* Novo Moskovo - Desktop - Same position */}
-            <div className="absolute" style={{ left: '70%', top: '40%' }}>
+            <div className="absolute" style={{ left: '66%', top: '42%' }}>
               <div className="h-[74px] relative w-[109px]">
                 <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[42px] absolute top-[56px] w-[28px]"></div>
                 <img className="h-[69px] left-[35px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract1Svg} />
@@ -401,7 +401,7 @@ export const DoperaiderMap = (): JSX.Element => {
             </div>
 
             {/* Little Italy - Desktop - Same position */}
-            <div className="absolute" style={{ left: '65%', top: '70%' }}>
+            <div className="absolute" style={{ left: '62%', top: '66%' }}>
               <div className="h-[74px] relative w-[77px]">
                 <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[25px] absolute top-[56px] w-[28px]"></div>
                 <img className="h-[69px] left-[18px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract2Svg} />
@@ -415,7 +415,7 @@ export const DoperaiderMap = (): JSX.Element => {
             </div>
 
             {/* Cartagena - Desktop - Same position */}
-            <div className="absolute" style={{ left: '25%', top: '70%' }}>
+            <div className="absolute" style={{ left: '30%', top: '66%' }}>
               <div className="h-[74px] relative w-[77px]">
                 <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[25px] absolute top-[56px] w-[28px]"></div>
                 <img className="h-[69px] left-[18px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract3Svg} />
@@ -429,7 +429,7 @@ export const DoperaiderMap = (): JSX.Element => {
             </div>
 
             {/* Baltimore - Desktop - Same position */}
-            <div className="absolute" style={{ left: '15%', top: '45%' }}>
+            <div className="absolute" style={{ left: '22%', top: '46%' }}>
               <div className="h-[74px] relative w-[76px]">
                 <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[26px] absolute top-[56px] w-[28px]"></div>
                 <img className="h-[69px] left-[19px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract4Svg} />
@@ -463,7 +463,7 @@ export const DoperaiderMap = (): JSX.Element => {
             </div>
 
             {/* Chinatown - Desktop - Same position (Link) */}
-            <Link className="block absolute" style={{ left: '20%', top: '25%' }} to="/map/chinatown">
+            <Link className="block absolute" style={{ left: '26%', top: '30%' }} to="/map/chinatown">
               <div className="h-[74px] relative w-[78px]">
                 <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[27px] absolute top-[56px] w-[28px]"></div>
                 <img className="h-[69px] left-[20px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract6Svg} />

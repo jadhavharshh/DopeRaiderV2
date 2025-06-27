@@ -68,6 +68,10 @@ const router = createBrowserRouter([
     element: <ActiveRaidScreen />,
   },
   {
+    path : "/raid/win",
+    element: <RaidWinScreen />,
+  },
+  {
     path: "/raid/players",
     element: <RaidPlayersScreen />,
   },
