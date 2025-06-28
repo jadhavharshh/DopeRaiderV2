@@ -95,7 +95,7 @@ export const ProductionScreen = (): JSX.Element => {
         </div>
 
         {/* Left Production Card - GROW WEED */}
-        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2-92.5px)] top-[277px] bg-black bg-opacity-45 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center pt-[15px] px-[15px] pb-0 z-20" style={{ backdropFilter: 'blur(10px)' }}>
+        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2-92.5px)] top-[277px] bg-black bg-opacity-45 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center pt-[15px] px-[15px] pb-[15px] z-20" style={{ backdropFilter: 'blur(10px)' }}>
           {/* WEED Header */}
           <div className="flex items-center justify-center gap-[8px] w-full h-[24px]">
             {/* Icon */}
@@ -146,17 +146,17 @@ export const ProductionScreen = (): JSX.Element => {
           {/* Stats Frame */}
           <div className="w-[144px] h-[36px] relative">
             {/* Left column - labels */}
-            <div className="absolute w-[51px] h-[36px] left-[calc(50%-51px/2-41.5px)] top-0">
-              <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[12px]" style={{ fontFamily: 'Roboto Condensed' }}>
-                Max Yield:<br/>Time:<br/>Cost:
-              </span>
+            <div className="absolute w-[51px] h-[36px] left-[calc(50%-51px/2-41.5px)] top-0 flex flex-col gap-[5px]">
+              <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[12px]" style={{ fontFamily: 'Roboto Condensed' }}>Max Yield:</span>
+              <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[12px]" style={{ fontFamily: 'Roboto Condensed' }}>Time:</span>
+              <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[12px]" style={{ fontFamily: 'Roboto Condensed' }}>Cost:</span>
             </div>
             
             {/* Right column - values */}
-            <div className="absolute w-[48px] h-[36px] left-[calc(50%-48px/2+43px)] top-0">
-              <span className="text-white text-[12px] font-bold leading-[12px] text-right" style={{ fontFamily: 'Roboto Condensed' }}>
-                15oZ<br/>3 Minutes<br/>$0.25
-              </span>
+            <div className="absolute w-[48px] h-[36px] left-[calc(50%-48px/2+43px)] top-0 flex flex-col gap-[5px] items-end">
+              <span className="text-white text-[12px] font-bold leading-[12px]" style={{ fontFamily: 'Roboto Condensed' }}>15oZ</span>
+              <span className="text-white text-[12px] font-bold leading-[12px]" style={{ fontFamily: 'Roboto Condensed' }}>3 Minutes</span>
+              <span className="text-white text-[12px] font-bold leading-[12px]" style={{ fontFamily: 'Roboto Condensed' }}>$0.25</span>
             </div>
           </div>
 
@@ -164,14 +164,14 @@ export const ProductionScreen = (): JSX.Element => {
           {!isGrowActive ? (
             <button 
               onClick={handleGrowClick}
-              className="w-[144px] h-[35px] bg-gradient-to-t from-[#10341D] to-[#318952] rounded-[74px] flex items-center justify-center mb-[15px] mt-auto"
+              className="w-[144px] h-[35px] bg-gradient-to-t from-[#10341D] to-[#318952] rounded-[74px] flex items-center justify-center mt-auto"
             >
               <span className="text-white text-[16px] font-semibold leading-[19px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
                 GROW
               </span>
             </button>
           ) : (
-            <div className="w-[144px] h-[35px] bg-gradient-to-b from-black to-[#666666] rounded-[74px] flex items-center justify-center gap-[8px] px-[8px] mb-[15px] mt-auto">
+            <div className="w-[144px] h-[35px] bg-gradient-to-b from-black to-[#666666] rounded-[74px] flex items-center justify-center gap-[8px] px-[8px] mt-auto">
               {/* Animated Spinning Circle - Group 13 */}
               <div className="relative w-[18px] h-[18px] flex-none">
                 {/* Background circle - Ellipse 9 */}
@@ -203,7 +203,7 @@ export const ProductionScreen = (): JSX.Element => {
         </div>
 
         {/* Right Production Card - PRODUCE COKE */}
-        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2+92.5px)] top-[277px] bg-black bg-opacity-45 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center pt-[15px] px-[15px] pb-0 z-20" style={{ backdropFilter: 'blur(10px)' }}>
+        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2+92.5px)] top-[277px] bg-black bg-opacity-45 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center pt-[15px] px-[15px] pb-[15px] z-20" style={{ backdropFilter: 'blur(10px)' }}>
           {/* COKE Header */}
           <div className="flex items-center justify-center gap-[8px] w-full h-[24px]">
             {/* Icon */}
@@ -254,22 +254,22 @@ export const ProductionScreen = (): JSX.Element => {
           {/* Stats Frame */}
           <div className="w-[144px] h-[36px] flex items-center px-[5px] gap-[35px]">
             {/* Left column - labels */}
-            <div className="w-[51px] h-[36px]">
-              <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[12px]" style={{ fontFamily: 'Roboto Condensed' }}>
-                Max Yield:<br/>Time:<br/>Cost:
-              </span>
+            <div className="w-[51px] h-[36px] flex flex-col gap-[5px]">
+              <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[12px]" style={{ fontFamily: 'Roboto Condensed' }}>Max Yield:</span>
+              <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[12px]" style={{ fontFamily: 'Roboto Condensed' }}>Time:</span>
+              <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[12px]" style={{ fontFamily: 'Roboto Condensed' }}>Cost:</span>
             </div>
             
             {/* Right column - values */}
-            <div className="w-[48px] h-[36px]">
-              <span className="text-white text-[12px] font-bold leading-[12px] text-right" style={{ fontFamily: 'Roboto Condensed' }}>
-                15oZ<br/>3 Minutes<br/>$0.25
-              </span>
+            <div className="w-[48px] h-[36px] flex flex-col gap-[5px] items-end">
+              <span className="text-white text-[12px] font-bold leading-[12px]" style={{ fontFamily: 'Roboto Condensed' }}>15oZ</span>
+              <span className="text-white text-[12px] font-bold leading-[12px]" style={{ fontFamily: 'Roboto Condensed' }}>3 Minutes</span>
+              <span className="text-white text-[12px] font-bold leading-[12px]" style={{ fontFamily: 'Roboto Condensed' }}>$0.25</span>
             </div>
           </div>
 
           {/* PRODUCE Button */}
-          <button className="w-[144px] h-[35px] bg-gradient-to-t from-[#10341D] to-[#318952] rounded-[74px] flex items-center justify-center mb-[15px] mt-auto">
+          <button className="w-[144px] h-[35px] bg-gradient-to-t from-[#10341D] to-[#318952] rounded-[74px] flex items-center justify-center mt-auto">
             <span className="text-white text-[16px] font-semibold leading-[19px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
               PRODUCE
             </span>
