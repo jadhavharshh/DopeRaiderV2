@@ -161,7 +161,7 @@ export const ProductionScreen = (): JSX.Element => {
         </div>
 
         {/* Left Production Card - GROW WEED */}
-        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2-92.5px)] top-[277px] bg-black bg-opacity-45 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center pt-[15px] px-[15px] pb-0 z-20" style={{ backdropFilter: 'blur(10px)' }}>
+        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2-92.5px)] top-[277px] border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center pt-[15px] px-[15px] pb-0 z-20" style={{ background: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(10px)' }}>
           {/* WEED Header */}
           <div className="flex items-center justify-center gap-[8px] w-full h-[24px] mb-[15px]">
             {/* Icon */}
@@ -178,7 +178,7 @@ export const ProductionScreen = (): JSX.Element => {
           </div>
 
           {/* Requirements Frame */}
-          <div className="w-[144px] h-[111px] bg-black bg-opacity-50 border border-[#6e6b67] border-opacity-40 rounded-[4px] relative">
+          <div className="w-[144px] h-[111px] rounded-[4px] relative" style={{ background: 'rgba(255, 255, 255, 0)', border: '1px solid rgba(255, 255, 255, 0.2)', boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.1)' }}>
             {/* REQUIRES text */}
             <div className="absolute w-[49px] h-[14px] left-[calc(50%-49px/2+0.5px)] top-[5px]">
               <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[14px]" style={{ fontFamily: 'Roboto Condensed' }}>
@@ -195,7 +195,7 @@ export const ProductionScreen = (): JSX.Element => {
             </div>
             
             {/* 20 SEEDS */}
-            <div className="absolute w-[55px] h-[16px] left-[calc(50%-55px/2+0.5px)] top-[76px]">
+            <div className="absolute w-[55px] h-[16px] left-[calc(50%-55px/2+0.5px)] top-[70px]">
               <span className="text-white text-[14px] font-bold leading-[16px]" style={{ fontFamily: 'Roboto Condensed' }}>
                 20 SEEDS
               </span>
@@ -269,7 +269,7 @@ export const ProductionScreen = (): JSX.Element => {
         </div>
 
         {/* Right Production Card - PRODUCE COKE */}
-        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2+92.5px)] top-[277px] bg-black bg-opacity-45 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center pt-[15px] px-[15px] pb-0 z-20" style={{ backdropFilter: 'blur(10px)' }}>
+        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2+92.5px)] top-[277px] border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center pt-[15px] px-[15px] pb-0 z-20" style={{ background: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(10px)' }}>
           {/* COKE Header */}
           <div className="flex items-center justify-center gap-[8px] w-full h-[24px] mb-[15px]">
             {/* Icon */}
@@ -286,7 +286,7 @@ export const ProductionScreen = (): JSX.Element => {
           </div>
 
           {/* Requirements Frame */}
-          <div className="w-[144px] h-[111px] bg-black bg-opacity-50 border border-[#6e6b67] border-opacity-40 rounded-[4px] relative">
+          <div className="w-[144px] h-[111px] rounded-[4px] relative" style={{ background: 'rgba(255, 255, 255, 0)', border: '1px solid rgba(255, 255, 255, 0.2)', boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.1)' }}>
             {/* REQUIRES text */}
             <div className="absolute w-[49px] h-[14px] left-[calc(50%-49px/2+0.5px)] top-[5px]">
               <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[14px]" style={{ fontFamily: 'Roboto Condensed' }}>
@@ -303,7 +303,7 @@ export const ProductionScreen = (): JSX.Element => {
             </div>
             
             {/* 20 CHEMICALS */}
-            <div className="absolute w-[86px] h-[16px] left-[calc(50%-86px/2)] top-[76px]">
+            <div className="absolute w-[86px] h-[16px] left-[calc(50%-86px/2)] top-[70px]">
               <span className="text-white text-[14px] font-bold leading-[16px]" style={{ fontFamily: 'Roboto Condensed' }}>
                 20 CHEMICALS
               </span>
