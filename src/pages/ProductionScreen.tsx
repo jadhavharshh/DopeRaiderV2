@@ -267,7 +267,13 @@ export const ProductionScreen = (): JSX.Element => {
             <button 
               onClick={handleGrowClick}
               className="w-[144px] h-[35px] rounded-[74px] flex items-center justify-center mb-[15px] mt-auto"
-              style={{ background: 'linear-gradient(to top, rgba(0, 196, 61, 1), rgba(0, 255, 79, 1))' }}
+              style={{ 
+                background: 'linear-gradient(to top, #10341D, #318952)',
+                border: '1px solid transparent',
+                backgroundImage: 'linear-gradient(to top, #10341D, #318952), linear-gradient(to top, #76E39D, #6BBA1C)',
+                backgroundOrigin: 'border-box',
+                backgroundClip: 'content-box, border-box'
+              }}
             >
               <span className="text-white text-[16px] font-semibold leading-[19px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
                 GROW
@@ -385,7 +391,16 @@ export const ProductionScreen = (): JSX.Element => {
           </div>
 
           {/* PRODUCE Button */}
-          <button className="w-[144px] h-[35px] bg-gradient-to-t from-[#10341D] to-[#318952] rounded-[74px] flex items-center justify-center mb-[15px] mt-auto">
+          <button 
+            className="w-[144px] h-[35px] rounded-[74px] flex items-center justify-center mb-[15px] mt-auto"
+            style={{ 
+              background: 'linear-gradient(to top, #10341D, #318952)',
+              border: '1px solid transparent',
+              backgroundImage: 'linear-gradient(to top, #10341D, #318952), linear-gradient(to top, #76E39D, #6BBA1C)',
+              backgroundOrigin: 'border-box',
+              backgroundClip: 'content-box, border-box'
+            }}
+          >
             <span className="text-white text-[16px] font-semibold leading-[19px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
               PRODUCE
             </span>
@@ -540,7 +555,11 @@ export const ProductionScreen = (): JSX.Element => {
                   style={{
                     borderRadius: '74px',
                     height: '42px',
-                    background: 'linear-gradient(to top, rgba(0, 196, 61, 1), rgba(0, 255, 79, 1))'
+                    background: 'linear-gradient(to top, #10341D, #318952)',
+                    border: '1px solid transparent',
+                    backgroundImage: 'linear-gradient(to top, #10341D, #318952), linear-gradient(to top, #76E39D, #6BBA1C)',
+                    backgroundOrigin: 'border-box',
+                    backgroundClip: 'content-box, border-box'
                   }}
                 >
                   <span className="text-white text-lg font-semibold" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
@@ -662,10 +681,15 @@ export const ProductionScreen = (): JSX.Element => {
 
               {/* Produce Button */}
               <button 
-                className="flex items-center justify-center bg-gradient-to-t from-[#10341D] to-[#318952] hover:scale-105 transition-transform"
+                className="flex items-center justify-center hover:scale-105 transition-transform"
                 style={{
                   borderRadius: '74px',
-                  height: '42px'
+                  height: '42px',
+                  background: 'linear-gradient(to top, #10341D, #318952)',
+                  border: '1px solid transparent',
+                  backgroundImage: 'linear-gradient(to top, #10341D, #318952), linear-gradient(to top, #76E39D, #6BBA1C)',
+                  backgroundOrigin: 'border-box',
+                  backgroundClip: 'content-box, border-box'
                 }}
               >
                 <span className="text-white text-lg font-semibold" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
