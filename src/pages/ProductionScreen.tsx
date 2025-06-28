@@ -5,7 +5,8 @@ import { BottomNav3 } from "./InventoryScreenSections/BottomNav3";
 
 // Import images using Vite's path configuration
 import backgroundImg from "@/static/img/image-2.png";
-import WeedBgIMG from "@/static/img/weed.png";
+import WeedBgIMG from "@/static/img/weedimg.jpg";
+import WeedBgMobile from "@/static/img/weedimgm.png";
 import weedIcon from "@/static/img/weed-icon.svg";
 import cokeIcon from "@/static/img/coke-icon.svg";
 import seedsIcon from "@/static/img/seeds-icon.svg";
@@ -49,37 +50,25 @@ export const ProductionScreen = (): JSX.Element => {
   return (
     <div className="min-h-screen w-full bg-black overflow-hidden">
       {/* Mobile Layout - Exact Figma Dimensions (393x852) - up to 767px */}
-      <div className="relative w-full h-screen bg-white overflow-hidden md:hidden">
-        {/* BG Container - Exact positioning from Figma */}
-        <div className="absolute w-[906px] h-[944px] left-[-277px] top-[-78px]">
-          {/* Background Image with blur */}
-          <img
-            className="absolute w-[429px] h-[751px] left-[-27px] top-[-12px] object-cover"
-            style={{ filter: 'blur(1px)' }}
-            alt="Background"
-            src={backgroundImg}
-          />
-          
-          {/* Dark overlay */}
-          <div className="absolute w-[426px] h-[874px] left-[-15px] top-[-8px] bg-black bg-opacity-60" />
-          
-          {/* Ellipse blur effects - Exact Figma positioning */}
-          <div className="absolute w-[229px] h-[433px] left-[calc(50%-229px/2)] top-[calc(50%-433px/2+1.5px)] bg-white rounded-[114.5px] blur-[27px] mix-blend-soft-light" />
-          <div className="absolute w-[117px] h-[333px] left-[calc(50%-117px/2-109px)] top-[calc(50%-333px/2-135.5px)] bg-white rounded-[58.5px] blur-[27px] mix-blend-soft-light" />
-          <div className="absolute w-[127px] h-[433px] left-[calc(50%-127px/2+114px)] top-[calc(50%-433px/2-161.5px)] bg-white rounded-[63.5px] blur-[27px] mix-blend-soft-light" />
-          <div className="absolute w-[406px] h-[906px] left-[calc(50%-406px/2+635.92px)] top-[calc(50%-906px/2-50.91px)] bg-black opacity-30 blur-[27px] mix-blend-soft-light rotate-90" />
-          <div className="absolute w-[250px] h-[558px] left-[calc(50%-250px/2+393.5px)] top-[calc(50%-558px/2-216px)] bg-black opacity-60 blur-[27px] mix-blend-soft-light rotate-90" />
-        </div>
+      <div 
+        className="relative w-full h-screen overflow-hidden md:hidden"
+        style={{
+          backgroundImage: `url('/weedimgm.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
 
         {/* PRODUCTION Title */}
-        <div className="absolute w-[137px] h-[34px] left-[128px] top-[59px]">
+        <div className="absolute w-[137px] h-[34px] left-[128px] top-[59px] z-20">
           <h1 className="text-white text-[32px] font-normal leading-[34px] text-center tracking-[0.02em]" style={{ fontFamily: 'Bangers' }}>
             PRODUCTION
           </h1>
         </div>
 
         {/* Status Message Frame */}
-        <div className="absolute w-[208px] h-[42px] left-[calc(50%-208px/2+1.5px)] top-[211px]">
+        <div className="absolute w-[208px] h-[42px] left-[calc(50%-208px/2+1.5px)] top-[211px] z-20">
           <svg width="208" height="42" viewBox="0 0 208 42" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0">
             <path d="M8.67885 37.9189C7.91783 37.6209 11.204 35.5547 9.75117 34.2435C6.3612 31.1641 -9.65462 23.0385 8.54045 22.1047L8.54045 21.1411C7.46811 20.9524 1.51842 21.5285 1.48382 20.5749C1.41464 18.7372 13.66 5.47598 17.2921 4.25415C21.3047 2.90319 28.7072 3.03237 33.8614 2.24762C35.8331 1.94962 36.0752 0.668161 37.0783 0.539026C43.6161 -0.285457 112.107 0.0125423 124.422 0.280748C133.934 0.479419 198.585 3.54892 201.491 4.48267C209.067 8.76402 203.913 13.095 204.224 17.3068C204.328 18.8763 208.167 20.5253 207.994 22.4424C207.718 25.2934 198.758 38.1076 191.84 39.4685C186.824 40.4519 146.456 41.9519 138.362 41.9916C108.717 42.1207 69.4213 40.74 40.7104 39.2401C34.0689 38.8924 11.7228 39.101 8.74798 37.9288L8.67885 37.9189Z" fill="url(#paint0_linear_117_638)"/>
             <defs>
@@ -97,14 +86,14 @@ export const ProductionScreen = (): JSX.Element => {
         </div>
 
         {/* Left Production Card - GROW WEED */}
-        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2-92.5px)] top-[277px] bg-black bg-opacity-45 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center p-[16px] gap-[16px]" style={{ backdropFilter: 'blur(10px)' }}>
+        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2-92.5px)] top-[277px] bg-black bg-opacity-45 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center pt-[15px] px-[15px] pb-0 z-20" style={{ backdropFilter: 'blur(10px)' }}>
           {/* WEED Header */}
           <div className="flex items-center justify-center gap-[8px] w-full h-[24px]">
             {/* Icon */}
             <div className="relative w-[24px] h-[24px]">
               <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full mix-blend-luminosity" />
-              <div className="absolute" style={{ left: '4.42%', right: '83.19%', top: '16.67%', bottom: '20.83%' }}>
-                <img className="w-full h-full" alt="Weed" src={weedIcon} style={{ filter: 'brightness(0) saturate(100%) invert(85%) sepia(89%) saturate(2092%) hue-rotate(85deg) brightness(102%) contrast(101%)' }} />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <img className="w-[15px] h-[15px]" alt="Weed" src={weedIcon} style={{ filter: 'brightness(0) saturate(100%) invert(85%) sepia(89%) saturate(2092%) hue-rotate(85deg) brightness(102%) contrast(101%)' }} />
               </div>
             </div>
             {/* Title */}
@@ -125,8 +114,8 @@ export const ProductionScreen = (): JSX.Element => {
             {/* Icon Frame */}
             <div className="absolute w-[24px] h-[24px] left-[calc(50%-24px/2)] top-[36px]">
               <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full mix-blend-luminosity" />
-              <div className="absolute" style={{ left: '4.42%', right: '83.19%', top: '16.67%', bottom: '20.83%' }}>
-                <img className="w-full h-full" alt="Seeds" src={seedsIcon} style={{ filter: 'brightness(0) saturate(100%) invert(85%) sepia(89%) saturate(2092%) hue-rotate(85deg) brightness(102%) contrast(101%)' }} />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <img className="w-[12px] h-[13px]" alt="Seeds" src={seedsIcon} style={{ filter: 'brightness(0) saturate(100%) invert(85%) sepia(89%) saturate(2092%) hue-rotate(85deg) brightness(102%) contrast(101%)' }} />
               </div>
             </div>
             
@@ -146,17 +135,17 @@ export const ProductionScreen = (): JSX.Element => {
           </div>
 
           {/* Stats Frame */}
-          <div className="w-[144px] h-[48px] relative">
+          <div className="w-[144px] h-[36px] relative">
             {/* Left column - labels */}
-            <div className="absolute w-[51px] h-[48px] left-[calc(50%-51px/2-41.5px)] top-0">
-              <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[16px]" style={{ fontFamily: 'Roboto Condensed' }}>
+            <div className="absolute w-[51px] h-[36px] left-[calc(50%-51px/2-41.5px)] top-0">
+              <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[12px]" style={{ fontFamily: 'Roboto Condensed' }}>
                 Max Yield:<br/>Time:<br/>Cost:
               </span>
             </div>
             
             {/* Right column - values */}
-            <div className="absolute w-[48px] h-[48px] left-[calc(50%-48px/2+43px)] top-0">
-              <span className="text-white text-[12px] font-bold leading-[16px] text-right" style={{ fontFamily: 'Roboto Condensed' }}>
+            <div className="absolute w-[48px] h-[36px] left-[calc(50%-48px/2+43px)] top-0">
+              <span className="text-white text-[12px] font-bold leading-[12px] text-right" style={{ fontFamily: 'Roboto Condensed' }}>
                 15oZ<br/>3 Minutes<br/>$0.25
               </span>
             </div>
@@ -166,14 +155,14 @@ export const ProductionScreen = (): JSX.Element => {
           {!isGrowActive ? (
             <button 
               onClick={handleGrowClick}
-              className="w-[144px] h-[35px] bg-gradient-to-t from-[#10341D] to-[#318952] rounded-[74px] flex items-center justify-center"
+              className="w-[144px] h-[35px] bg-gradient-to-t from-[#10341D] to-[#318952] rounded-[74px] flex items-center justify-center mb-[15px] mt-auto"
             >
               <span className="text-white text-[16px] font-semibold leading-[19px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
                 GROW
               </span>
             </button>
           ) : (
-            <div className="w-[144px] h-[35px] bg-gradient-to-b from-black to-[#666666] rounded-[74px] flex items-center justify-center gap-[8px] px-[8px]">
+            <div className="w-[144px] h-[35px] bg-gradient-to-b from-black to-[#666666] rounded-[74px] flex items-center justify-center gap-[8px] px-[8px] mb-[15px] mt-auto">
               {/* Animated Spinning Circle - Group 13 */}
               <div className="relative w-[18px] h-[18px] flex-none">
                 {/* Background circle - Ellipse 9 */}
@@ -205,14 +194,14 @@ export const ProductionScreen = (): JSX.Element => {
         </div>
 
         {/* Right Production Card - PRODUCE COKE */}
-        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2+92.5px)] top-[277px] bg-black bg-opacity-45 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center p-[16px] gap-[16px]" style={{ backdropFilter: 'blur(10px)' }}>
+        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2+92.5px)] top-[277px] bg-black bg-opacity-45 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center pt-[15px] px-[15px] pb-0 z-20" style={{ backdropFilter: 'blur(10px)' }}>
           {/* COKE Header */}
           <div className="flex items-center justify-center gap-[8px] w-full h-[24px]">
             {/* Icon */}
             <div className="relative w-[24px] h-[24px]">
               <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full mix-blend-luminosity" />
-              <div className="absolute" style={{ left: '4.41%', right: '86.03%', top: '20.83%', bottom: '16.67%' }}>
-                <img className="w-full h-full" alt="Coke" src={cokeIcon} style={{ filter: 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)' }} />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <img className="w-[13px] h-[15px]" alt="Coke" src={cokeIcon} style={{ filter: 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)' }} />
               </div>
             </div>
             {/* Title */}
@@ -233,8 +222,8 @@ export const ProductionScreen = (): JSX.Element => {
             {/* Icon Frame */}
             <div className="absolute w-[24px] h-[24px] left-[calc(50%-24px/2)] top-[36px]">
               <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full mix-blend-luminosity" />
-              <div className="absolute" style={{ left: '4.41%', right: '86.03%', top: '20.83%', bottom: '16.67%' }}>
-                <img className="w-full h-full" alt="Chemicals" src={chemicalsDetailedIcon} style={{ filter: 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)' }} />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <img className="w-[10px] h-[12px]" alt="Chemicals" src={chemicalsDetailedIcon} style={{ filter: 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)' }} />
               </div>
             </div>
             
@@ -254,24 +243,24 @@ export const ProductionScreen = (): JSX.Element => {
           </div>
 
           {/* Stats Frame */}
-          <div className="w-[144px] h-[48px] flex items-center px-[5px] gap-[35px]">
+          <div className="w-[144px] h-[36px] flex items-center px-[5px] gap-[35px]">
             {/* Left column - labels */}
-            <div className="w-[51px] h-[48px]">
-              <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[16px]" style={{ fontFamily: 'Roboto Condensed' }}>
+            <div className="w-[51px] h-[36px]">
+              <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[12px]" style={{ fontFamily: 'Roboto Condensed' }}>
                 Max Yield:<br/>Time:<br/>Cost:
               </span>
             </div>
             
             {/* Right column - values */}
-            <div className="w-[48px] h-[48px]">
-              <span className="text-white text-[12px] font-bold leading-[16px] text-right" style={{ fontFamily: 'Roboto Condensed' }}>
+            <div className="w-[48px] h-[36px]">
+              <span className="text-white text-[12px] font-bold leading-[12px] text-right" style={{ fontFamily: 'Roboto Condensed' }}>
                 15oZ<br/>3 Minutes<br/>$0.25
               </span>
             </div>
           </div>
 
           {/* PRODUCE Button */}
-          <button className="w-[144px] h-[35px] bg-gradient-to-t from-[#10341D] to-[#318952] rounded-[74px] flex items-center justify-center">
+          <button className="w-[144px] h-[35px] bg-gradient-to-t from-[#10341D] to-[#318952] rounded-[74px] flex items-center justify-center mb-[15px] mt-auto">
             <span className="text-white text-[16px] font-semibold leading-[19px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
               PRODUCE
             </span>
@@ -279,7 +268,7 @@ export const ProductionScreen = (): JSX.Element => {
         </div>
 
         {/* Bottom Navigation */}
-        <div className="absolute bottom-0 left-0 right-0 z-10">
+        <div className="absolute bottom-0 left-0 right-0 z-30">
           <BottomNav3 />
         </div>
       </div>
