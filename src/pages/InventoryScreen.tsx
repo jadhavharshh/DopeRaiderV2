@@ -6,6 +6,7 @@ import { YourStatsWrapper } from "./InventoryScreenSections/YourStatsWrapper";
 import { UpgradesContent } from "@/components/UpgradesContent";
 import { TrophiesContent } from "@/components/TrophiesContent";
 import { SocialContent } from "@/components/SocialContent";
+import { Notifications } from "@/mini-components/Notifications";
 import type { JSX } from "react";
 import TelegramIMG from "@/static/img/telegram-cloud-photo-size-4-5809685116522448568-y-1.png";
 import TelegramChairIMG from "@/static/img/telegram-chair.png";
@@ -13,6 +14,7 @@ import Logo from "@/static/img/logo-1.svg";
 
 export const InventoryScreen = (): JSX.Element => {
   const [activeTab, setActiveTab] = useState("inventory");
+  const [showNotifications, setShowNotifications] = useState(false);
 
   const renderTabContent = () => {
     switch (activeTab) {
@@ -66,7 +68,7 @@ export const InventoryScreen = (): JSX.Element => {
 
           {/* Bottom Navigation */}
           <div className="relative z-10 flex-shrink-0">
-            <BottomNav3 />
+            <BottomNav3 onNotificationClick={() => setShowNotifications(true)} />
           </div>
         </div>
       </div>
@@ -94,7 +96,7 @@ export const InventoryScreen = (): JSX.Element => {
                      origin-top-left"
         >
           <div className="bg-black/40 backdrop-blur-sm rounded-lg border border-gray-600/30">
-            <TopWrapper />
+            <TopWrapper onNotificationClick={() => setShowNotifications(true)} />
           </div>
         </div>
 
@@ -124,6 +126,7 @@ export const InventoryScreen = (): JSX.Element => {
           </div>
         </div>
       </div>
+      {showNotifications && <Notifications onClose={() => setShowNotifications(false)} />}
     </div>
   );
 };

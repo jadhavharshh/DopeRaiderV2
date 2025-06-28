@@ -21,7 +21,7 @@ import iconWeed from "@/static/img/icon-58.png";
 import iconEnergy from "@/static/img/icon-50.svg";
 import notificationIcon from "@/static/img/xthfgl-10.png";
 
-export const TopWrapper = (): JSX.Element => {
+export const TopWrapper = ({ onNotificationClick }: { onNotificationClick?: () => void }): JSX.Element => {
   return (
     <>
       {/* Mobile Layout - Responsive width with centered content */}
@@ -297,7 +297,7 @@ export const TopWrapper = (): JSX.Element => {
         <div className="px-4 py-2">
           <div className="flex items-center justify-between">
             {/* Notification icon */}
-            <div className="h-[35px] w-[35px] relative">
+            <div className="h-[35px] w-[35px] relative" onClick={onNotificationClick}>
               <div className="bg-gradient-to-b from-black to-[#414141] border-none rounded-[74px] h-[33px] w-[33px] flex items-center justify-center overflow-hidden relative before:absolute before:inset-0 before:rounded-[74px] before:p-[1px] before:bg-gradient-to-b before:from-black before:to-[#666666] before:mask-composite-exclude before:pointer-events-none before:z-[1]">
                 <div className="h-[15px] w-3 transform rotate-180 relative z-10">
                   <img
