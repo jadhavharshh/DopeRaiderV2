@@ -213,7 +213,20 @@ export const ProductionScreen = (): JSX.Element => {
             <div className="absolute w-[24px] h-[24px] left-[calc(50%-24px/2)] top-[36px]">
               <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full mix-blend-luminosity" />
               <div className="absolute inset-0 flex items-center justify-center">
-                <img className="w-[12px] h-[13px]" alt="Seeds" src={seedsIcon} style={{ filter: 'brightness(0) saturate(100%) invert(85%) sepia(89%) saturate(2092%) hue-rotate(85deg) brightness(102%) contrast(101%)' }} />
+                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clipPath="url(#clip0_1_2946_mobile)">
+                    <path d="M11.07 6.78247C11.0781 8.7313 10.3875 10.3939 8.92309 11.713C8.16388 12.3969 7.3014 12.8865 6.26424 12.9796C5.10445 13.0841 4.05883 12.7727 3.15157 12.0329C2.01033 11.1024 1.32777 9.88934 1.06516 8.4515C0.560495 5.68436 1.4855 3.40918 3.51181 1.53809C4.23754 0.867968 5.07501 0.374789 6.02422 0.108359C6.37841 0.00875156 6.76527 -0.00218098 7.13681 -0.000156433C7.42081 0.0014632 7.69391 0.130224 7.88674 0.34766C8.50637 1.04694 9.1615 1.72233 9.71215 2.47424C10.6384 3.73958 11.0708 5.18996 11.07 6.78247ZM6.42803 1.32875C6.33726 1.33564 6.32193 1.3328 6.31185 1.33847C6.27675 1.35831 6.24286 1.37977 6.20979 1.40285C5.25977 2.06771 4.58648 2.96378 4.0911 3.99872C3.35004 5.54628 3.11849 7.17766 3.36578 8.87301C3.50213 9.80592 3.83413 10.6647 4.43924 11.4013C4.50701 11.4839 4.58971 11.5547 4.66555 11.6313C3.50616 7.89759 4.01284 4.47004 6.42803 1.32916V1.32875Z" fill="url(#paint0_linear_1_2946_mobile)"/>
+                  </g>
+                  <defs>
+                    <linearGradient id="paint0_linear_1_2946_mobile" x1="5.99989" y1="-0.000366211" x2="6" y2="13" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#FFE1CB"/>
+                      <stop offset="1" stopColor="#85622A"/>
+                    </linearGradient>
+                    <clipPath id="clip0_1_2946_mobile">
+                      <rect width="10.14" height="13" fill="white" transform="translate(0.930176)"/>
+                    </clipPath>
+                  </defs>
+                </svg>
               </div>
             </div>
             
@@ -472,7 +485,20 @@ export const ProductionScreen = (): JSX.Element => {
                 <div className="relative w-7 h-7">
                   <div className="absolute w-7 h-7 bg-gradient-to-b from-black to-[#666666] rounded-full" />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <img className="w-[14px] h-[16px]" alt="Seeds" src={seedsIcon} />
+                    <svg width="14" height="16" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clipPath="url(#clip0_1_2946_desktop)">
+                        <path d="M11.07 6.78247C11.0781 8.7313 10.3875 10.3939 8.92309 11.713C8.16388 12.3969 7.3014 12.8865 6.26424 12.9796C5.10445 13.0841 4.05883 12.7727 3.15157 12.0329C2.01033 11.1024 1.32777 9.88934 1.06516 8.4515C0.560495 5.68436 1.4855 3.40918 3.51181 1.53809C4.23754 0.867968 5.07501 0.374789 6.02422 0.108359C6.37841 0.00875156 6.76527 -0.00218098 7.13681 -0.000156433C7.42081 0.0014632 7.69391 0.130224 7.88674 0.34766C8.50637 1.04694 9.1615 1.72233 9.71215 2.47424C10.6384 3.73958 11.0708 5.18996 11.07 6.78247ZM6.42803 1.32875C6.33726 1.33564 6.32193 1.3328 6.31185 1.33847C6.27675 1.35831 6.24286 1.37977 6.20979 1.40285C5.25977 2.06771 4.58648 2.96378 4.0911 3.99872C3.35004 5.54628 3.11849 7.17766 3.36578 8.87301C3.50213 9.80592 3.83413 10.6647 4.43924 11.4013C4.50701 11.4839 4.58971 11.5547 4.66555 11.6313C3.50616 7.89759 4.01284 4.47004 6.42803 1.32916V1.32875Z" fill="url(#paint0_linear_1_2946_desktop)"/>
+                      </g>
+                      <defs>
+                        <linearGradient id="paint0_linear_1_2946_desktop" x1="5.99989" y1="-0.000366211" x2="6" y2="13" gradientUnits="userSpaceOnUse">
+                          <stop stopColor="#FFE1CB"/>
+                          <stop offset="1" stopColor="#85622A"/>
+                        </linearGradient>
+                        <clipPath id="clip0_1_2946_desktop">
+                          <rect width="10.14" height="13" fill="white" transform="translate(0.930176)"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
                   </div>
                 </div>
                 <div className="text-center text-white text-base font-bold mb-0" style={{ fontFamily: 'Roboto Condensed' }}>20 SEEDS</div>
