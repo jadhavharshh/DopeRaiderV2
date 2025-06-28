@@ -95,9 +95,9 @@ export const ProductionScreen = (): JSX.Element => {
         </div>
 
         {/* Left Production Card - GROW WEED */}
-        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2-92.5px)] top-[277px] bg-black bg-opacity-45 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center pt-[15px] px-[15px] pb-[15px] z-20" style={{ backdropFilter: 'blur(10px)' }}>
+        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2-92.5px)] top-[277px] bg-black bg-opacity-45 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center pt-[15px] px-[15px] pb-0 z-20" style={{ backdropFilter: 'blur(10px)' }}>
           {/* WEED Header */}
-          <div className="flex items-center justify-center gap-[8px] w-full h-[24px]">
+          <div className="flex items-center justify-center gap-[8px] w-full h-[24px] mb-[15px]">
             {/* Icon */}
             <div className="relative w-[24px] h-[24px]">
               <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full mix-blend-luminosity" />
@@ -144,7 +144,7 @@ export const ProductionScreen = (): JSX.Element => {
           </div>
 
           {/* Stats Frame */}
-          <div className="w-[144px] h-[36px] relative">
+          <div className="w-[144px] h-[36px] relative py-[15px]">
             {/* Left column - labels */}
             <div className="absolute w-[51px] h-[36px] left-[calc(50%-51px/2-41.5px)] top-0 flex flex-col gap-[5px]">
               <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[12px]" style={{ fontFamily: 'Roboto Condensed' }}>Max Yield:</span>
@@ -164,14 +164,14 @@ export const ProductionScreen = (): JSX.Element => {
           {!isGrowActive ? (
             <button 
               onClick={handleGrowClick}
-              className="w-[144px] h-[35px] bg-gradient-to-t from-[#10341D] to-[#318952] rounded-[74px] flex items-center justify-center mt-auto"
+              className="w-[144px] h-[35px] bg-gradient-to-t from-[#10341D] to-[#318952] rounded-[74px] flex items-center justify-center mb-[15px] mt-auto"
             >
               <span className="text-white text-[16px] font-semibold leading-[19px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
                 GROW
               </span>
             </button>
           ) : (
-            <div className="w-[144px] h-[35px] bg-gradient-to-b from-black to-[#666666] rounded-[74px] flex items-center justify-center gap-[8px] px-[8px] mt-auto">
+            <div className="w-[144px] h-[35px] bg-gradient-to-b from-black to-[#666666] rounded-[74px] flex items-center justify-center gap-[8px] px-[8px] mb-[15px] mt-auto">
               {/* Animated Spinning Circle - Group 13 */}
               <div className="relative w-[18px] h-[18px] flex-none">
                 {/* Background circle - Ellipse 9 */}
@@ -203,9 +203,9 @@ export const ProductionScreen = (): JSX.Element => {
         </div>
 
         {/* Right Production Card - PRODUCE COKE */}
-        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2+92.5px)] top-[277px] bg-black bg-opacity-45 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center pt-[15px] px-[15px] pb-[15px] z-20" style={{ backdropFilter: 'blur(10px)' }}>
+        <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2+92.5px)] top-[277px] bg-black bg-opacity-45 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center pt-[15px] px-[15px] pb-0 z-20" style={{ backdropFilter: 'blur(10px)' }}>
           {/* COKE Header */}
-          <div className="flex items-center justify-center gap-[8px] w-full h-[24px]">
+          <div className="flex items-center justify-center gap-[8px] w-full h-[24px] mb-[15px]">
             {/* Icon */}
             <div className="relative w-[24px] h-[24px]">
               <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full mix-blend-luminosity" />
@@ -252,7 +252,7 @@ export const ProductionScreen = (): JSX.Element => {
           </div>
 
           {/* Stats Frame */}
-          <div className="w-[144px] h-[36px] flex items-center px-[5px] gap-[35px]">
+          <div className="w-[144px] h-[36px] flex items-center px-[5px] gap-[35px] py-[15px]">
             {/* Left column - labels */}
             <div className="w-[51px] h-[36px] flex flex-col gap-[5px]">
               <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[12px]" style={{ fontFamily: 'Roboto Condensed' }}>Max Yield:</span>
@@ -269,7 +269,7 @@ export const ProductionScreen = (): JSX.Element => {
           </div>
 
           {/* PRODUCE Button */}
-          <button className="w-[144px] h-[35px] bg-gradient-to-t from-[#10341D] to-[#318952] rounded-[74px] flex items-center justify-center mt-auto">
+          <button className="w-[144px] h-[35px] bg-gradient-to-t from-[#10341D] to-[#318952] rounded-[74px] flex items-center justify-center mb-[15px] mt-auto">
             <span className="text-white text-[16px] font-semibold leading-[19px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
               PRODUCE
             </span>
