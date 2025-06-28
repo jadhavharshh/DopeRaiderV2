@@ -117,9 +117,27 @@ export const ProductionScreen = (): JSX.Element => {
             }}
           >
             <BagIcon className="w-4 h-[14px]" />
-            <span className="text-white text-[14px] font-bold" style={{ fontFamily: 'Roboto Condensed' }}>
-              70/70
-            </span>
+            <div 
+              className="flex items-center justify-center"
+              style={{
+                width: '57px',
+                height: '28px'
+              }}
+            >
+              <span 
+                style={{ 
+                  fontFamily: 'Roboto Condensed',
+                  fontWeight: 700,
+                  fontSize: '24px',
+                  lineHeight: '100%',
+                  letterSpacing: '0%',
+                  textAlign: 'center'
+                }}
+              >
+                <span style={{ color: '#FFFFFF' }}>70</span>
+                <span style={{ color: '#ABABAB' }}>/70</span>
+              </span>
+            </div>
           </div>
           
           {/* Info Icon and Warning Text Container */}
@@ -191,8 +209,8 @@ export const ProductionScreen = (): JSX.Element => {
             </div>
           </div>
 
-          {/* Stats Frame */}
-          <div className="w-[144px] h-[36px] relative py-[15px]">
+          {/* Stats Container */}
+          <div className="w-[144px] h-[36px] relative" style={{ marginTop: '15px', marginBottom: '15px' }}>
             {/* Left column - labels */}
             <div className="absolute w-[51px] h-[36px] left-[calc(50%-51px/2-41.5px)] top-0 flex flex-col gap-[5px]">
               <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[12px]" style={{ fontFamily: 'Roboto Condensed' }}>Max Yield:</span>
@@ -299,8 +317,8 @@ export const ProductionScreen = (): JSX.Element => {
             </div>
           </div>
 
-          {/* Stats Frame */}
-          <div className="w-[144px] h-[36px] flex items-center px-[5px] gap-[35px] py-[15px]">
+          {/* Stats Container */}
+          <div className="w-[144px] h-[36px] flex items-center px-[5px] gap-[35px]" style={{ marginTop: '15px', marginBottom: '15px' }}>
             {/* Left column - labels */}
             <div className="w-[51px] h-[36px] flex flex-col gap-[5px]">
               <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[12px]" style={{ fontFamily: 'Roboto Condensed' }}>Max Yield:</span>
