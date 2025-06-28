@@ -78,8 +78,17 @@ export const ProductionScreen = (): JSX.Element => {
               </linearGradient>
             </defs>
           </svg>
-          <div className="absolute w-[145px] h-[19px] left-[calc(50%-145px/2+0.5px)] top-[11px]">
-            <span className="text-white text-[16px] font-bold leading-[19px]" style={{ fontFamily: 'Roboto Condensed' }}>
+          <div className="absolute w-[180px] h-[22px] left-[calc(50%-180px/2)] top-[10px] flex items-center justify-center">
+            <span 
+              className="text-[22px] font-normal leading-[100%] whitespace-nowrap" 
+              style={{ 
+                fontFamily: 'Bangers',
+                background: 'linear-gradient(90.74deg, #FFDCA5 8.37%, #D6B786 90.08%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                letterSpacing: '0%'
+              }}
+            >
               LET'S GET TO WORK...
             </span>
           </div>
