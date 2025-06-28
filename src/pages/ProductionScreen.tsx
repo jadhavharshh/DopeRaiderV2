@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import type { JSX } from "react";
 import { BottomNav3 } from "./InventoryScreenSections/BottomNav3";
+import { BagIcon } from "@/icons/BagIcon";
+import { InfoIcon } from "@/icons/InfoIcon";
 
 // Import images using Vite's path configuration
 import backgroundImg from "@/static/img/image-2.png";
@@ -94,6 +96,52 @@ export const ProductionScreen = (): JSX.Element => {
           </div>
         </div>
 
+        {/* Yield Limitation Element */}
+        <div className="absolute flex items-center z-20" style={{ top: '591px', left: '25px', gap: '8px' }}>
+          {/* 70/70 Element */}
+          <div 
+            className="flex items-center"
+            style={{
+              width: '97px',
+              height: '32px',
+              gap: '8px',
+              borderRadius: '4px',
+              border: '1px solid',
+              borderImage: 'linear-gradient(360deg, #000000 0%, #666666 100%)',
+              background: 'linear-gradient(180deg, #666666 0%, #454545 100%)',
+              paddingTop: '4px',
+              paddingRight: '8px',
+              paddingBottom: '4px',
+              paddingLeft: '8px',
+              boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)'
+            }}
+          >
+            <BagIcon className="w-4 h-[14px]" />
+            <span className="text-white text-[14px] font-bold" style={{ fontFamily: 'Roboto Condensed' }}>
+              70/70
+            </span>
+          </div>
+          
+          {/* Info Icon and Warning Text Container */}
+          <div 
+            className="flex items-center"
+            style={{
+              width: '238px',
+              height: '32px',
+              gap: '8px',
+              borderRadius: '4px',
+              paddingRight: '8px',
+              paddingLeft: '8px',
+              background: 'rgba(0, 0, 0, 0.4)'
+            }}
+          >
+            <InfoIcon className="w-5 h-5 flex-shrink-0" />
+            <span className="text-white text-[12px] font-medium" style={{ fontFamily: 'Roboto Condensed', lineHeight: '1' }}>
+              YOUR MAX YIELD WILL BE LIMITED TO 15 DUE TO CARRY SIZE
+            </span>
+          </div>
+        </div>
+
         {/* Left Production Card - GROW WEED */}
         <div className="absolute w-[176px] h-[298px] left-[calc(50%-176px/2-92.5px)] top-[277px] bg-black bg-opacity-45 border border-[#6e6b67] border-opacity-40 rounded-[4px] flex flex-col items-center pt-[15px] px-[15px] pb-0 z-20" style={{ backdropFilter: 'blur(10px)' }}>
           {/* WEED Header */}
@@ -114,7 +162,7 @@ export const ProductionScreen = (): JSX.Element => {
           {/* Requirements Frame */}
           <div className="w-[144px] h-[111px] bg-black bg-opacity-50 border border-[#6e6b67] border-opacity-40 rounded-[4px] relative">
             {/* REQUIRES text */}
-            <div className="absolute w-[49px] h-[14px] left-[calc(50%-49px/2+0.5px)] top-[16px]">
+            <div className="absolute w-[49px] h-[14px] left-[calc(50%-49px/2+0.5px)] top-[5px]">
               <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[14px]" style={{ fontFamily: 'Roboto Condensed' }}>
                 REQUIRES
               </span>
@@ -222,7 +270,7 @@ export const ProductionScreen = (): JSX.Element => {
           {/* Requirements Frame */}
           <div className="w-[144px] h-[111px] bg-black bg-opacity-50 border border-[#6e6b67] border-opacity-40 rounded-[4px] relative">
             {/* REQUIRES text */}
-            <div className="absolute w-[49px] h-[14px] left-[calc(50%-49px/2+0.5px)] top-[16px]">
+            <div className="absolute w-[49px] h-[14px] left-[calc(50%-49px/2+0.5px)] top-[5px]">
               <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[14px]" style={{ fontFamily: 'Roboto Condensed' }}>
                 REQUIRES
               </span>
