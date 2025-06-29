@@ -62,7 +62,8 @@ export const ProductionScreen = (): JSX.Element => {
             width: '429px',
             height: '751px',
             top: '-12px',
-            left: '-27px'
+            left: '-27px',
+            filter: 'blur(2px)'
           }}
         />
 
