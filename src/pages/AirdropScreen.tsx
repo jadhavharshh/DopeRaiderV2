@@ -29,7 +29,7 @@ const SliderKnob = ({ style }: { style?: React.CSSProperties }) => (
 const ItemCard = ({ title, titleColor, itemCount, iconUrl, iconBgUrl, iconAlt, value, max, gradientClass, onValueChange, onSetAll }: { title: string; titleColor: string; itemCount: number; iconUrl: string; iconBgUrl: string; iconAlt: string; value: number; max: number; gradientClass: string; onValueChange: (value: number) => void; onSetAll: () => void; }) => {
   const sliderPercentage = (value / max) * 100;
   return (
-    <div className="w-[160px] p-px rounded bg-gradient-to-b from-[#4a4a4a] to-black">
+    <div className="w-[160px] p-px z-100 rounded bg-gradient-to-b from-[#4a4a4a] to-black">
       <div className={`flex flex-col items-center gap-2 pt-2 pb-0 rounded overflow-hidden ${gradientClass}`}>
         <div className="relative w-full h-[44px]">
           <div className={`absolute top-0 left-1/2 -translate-x-1/2 whitespace-nowrap font-['Roboto_Condensed'] text-sm font-bold ${titleColor}`}>{title}</div>
@@ -114,7 +114,7 @@ const AirdropContent = (): JSX.Element => {
         ))}
       </div>
 
-      <div className="flex items-center gap-2 w-full max-w-[328px]">
+      <div className="flex items-center gap-2 w-full z-100 max-w-[328px]">
         <div className="inline-flex items-center gap-2 h-8 px-3 rounded bg-black/50 border border-white/20">
           <BagIcon className="w-5 h-5 text-amber-300" />
           <p className="font-['Roboto_Condensed'] text-lg font-bold">
@@ -131,7 +131,7 @@ const AirdropContent = (): JSX.Element => {
       </div>
 
       <div className="flex flex-col items-center gap-4 w-full mt-4">
-        <button className="w-[220px] p-px rounded-full bg-gradient-to-b from-[#76e39d] to-[#6bba1c] shadow-lg shadow-green-500/30 hover:shadow-green-400/40 transition-shadow">
+        <button className="w-[220px] z-100 p-px rounded-full bg-gradient-to-b from-[#76e39d] to-[#6bba1c] shadow-lg shadow-green-500/30 hover:shadow-green-400/40 transition-shadow">
           <div className="flex items-center justify-center w-full h-full py-3 rounded-full bg-gradient-to-b from-[#318952] to-[#10341d]">
             <p className="text-white font-['Roboto_Condensed'] text-base font-semibold tracking-tight" style={{ textShadow: '0px 2px 4px #00000060' }}>
               REDEEM SELECTED ( {totalSelected} )
