@@ -54,16 +54,17 @@ export const ProductionScreen = (): JSX.Element => {
       {/* Mobile Layout - Exact Figma Dimensions (393x852) - up to 767px */}
       <div className="relative w-full h-screen overflow-hidden md:hidden">
         {/* Background Image */}
-        <img 
-          src={WeedBgMobile}
-          alt="Background"
+        <div 
           className="absolute"
           style={{
             width: '429px',
             height: '751px',
             top: '-12px',
             left: '-27px',
-            filter: 'blur(2px)'
+            filter: 'blur(2px)',
+            backgroundImage: `url(${WeedBgMobile})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
           }}
         />
 
