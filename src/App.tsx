@@ -18,6 +18,7 @@ import { IntroScreen } from "./pages/IntroScreen";
 import { RaidLobbyScreen } from "./pages/RaidLobbyScreen";
 import { RaidWinScreen } from "./pages/RaidWinScreen";
 import {ErrorComp} from "./mini-components/ErrorComp";
+import {ShareScreen} from "./pages/ShareScreen"
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
   {
     path: "/production",
     element: <ProductionScreen />,
+  },
+  {
+    path : "/share",
+    element: <ShareScreen />,
   },
   {
     path: "/raid",
