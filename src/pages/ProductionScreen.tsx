@@ -210,7 +210,7 @@ export const ProductionScreen = (): JSX.Element => {
             </div>
             
             {/* Icon Frame */}
-            <div className="absolute w-[24px] h-[24px] left-[calc(50%-24px/2)] top-[31px]">
+            <div className="absolute w-[24px] h-[24px] left-[calc(50%-24px/2)] top-[36px]">
               <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full mix-blend-luminosity" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -238,7 +238,7 @@ export const ProductionScreen = (): JSX.Element => {
             </div>
             
             {/* 20 available */}
-            <div className="absolute w-[57px] h-[14px] left-[calc(50%-57px/2+0.5px)] top-[83px]">
+            <div className="absolute w-[57px] h-[14px] left-[calc(50%-57px/2+0.5px)] top-[81px]">
               <span className="text-[#AEAEAE] text-[12px] font-normal leading-[14px] text-center" style={{ fontFamily: 'Roboto Condensed' }}>
                 20 available
               </span>
@@ -338,7 +338,7 @@ export const ProductionScreen = (): JSX.Element => {
             </div>
             
             {/* Icon Frame */}
-            <div className="absolute w-[24px] h-[24px] left-[calc(50%-24px/2)] top-[31px]">
+            <div className="absolute w-[24px] h-[24px] left-[calc(50%-24px/2)] top-[36px]">
               <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full mix-blend-luminosity" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -366,7 +366,7 @@ export const ProductionScreen = (): JSX.Element => {
             </div>
             
             {/* 20 available */}
-            <div className="absolute w-[57px] h-[14px] left-[calc(50%-57px/2+0.5px)] top-[83px]">
+            <div className="absolute w-[57px] h-[14px] left-[calc(50%-57px/2+0.5px)] top-[81px]">
               <span className="text-[#AEAEAE] text-[12px] font-normal leading-[14px] text-center" style={{ fontFamily: 'Roboto Condensed' }}>
                 20 available
               </span>
