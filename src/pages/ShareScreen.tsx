@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import type { JSX } from "react";
 
 // Import images and icons from the project
-import bgImage from "@/static/img/5-1-1.png";
+import bgImage from "@/static/img/sharebg.png";
 import logo from "@/static/img/logo-1.svg";
 import profilePic from "@/static/img/telegram-peer-photo-size-4-2140046577575765933-1-0-0-11.png";
 import nameTagBg from "@/static/img/organic-grunge-bold-shapes-26.svg";
@@ -18,10 +18,30 @@ import union from "@/static/img/union.svg";
 import union1 from "@/static/img/union-1.svg";
 import union2 from "@/static/img/union-2.svg";
 
-// Social media icons
-const TelegramIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 10L11 14L17 20L21 4L3 11L7 13L9 19L12 15" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>;
-const XIcon = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6L6 18M6 6L18 18" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>;
-const MessengerIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.8214 2.48697 15.5291 3.33782 17L2.5 21.5L7 20.6622C8.47087 21.513 10.1786 22 12 22Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M8 12H8.01M12 12H12.01M16 12H16.01" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>;
+// Updated Social media icons with proper colors
+const TelegramIcon = () => (
+  <div className="w-8 h-8 rounded-full bg-[#0088cc] flex items-center justify-center">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21.99 4L18.22 20.02C18.22 20.02 17.78 21.26 16.54 20.58L9.5 15.5L7 20L5.5 18.5L6.89 13.89L2.89 11.89C2.89 11.89 2.25 11.61 2.31 11.05C2.37 10.49 3.13 10.21 3.13 10.21L20.75 3.13C20.75 3.13 21.99 2.37 21.99 4Z" fill="white"/>
+    </svg>
+  </div>
+);
+
+const XIcon = () => (
+  <div className="w-8 h-8 rounded-full bg-black flex items-center justify-center border border-gray-600">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="white"/>
+    </svg>
+  </div>
+);
+
+const MessengerIcon = () => (
+  <div className="w-8 h-8 rounded-full bg-gradient-to-b from-[#00B2FF] to-[#006AFF] flex items-center justify-center">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2C6.36 2 2 6.13 2 11.2C2 14.12 3.19 16.84 5.22 18.64C5.22 18.64 5.33 18.75 5.41 18.84L5.22 21.17C5.17 21.69 5.69 22.05 6.15 21.8L8.85 20.35C9.24 20.12 9.73 20.12 10.12 20.35C10.74 20.46 11.37 20.52 12 20.52C17.64 20.52 22 16.39 22 11.32C22 6.13 17.64 2 12 2ZM13.96 14.23L11.26 11.2L6.44 14.23L11.74 8.77L14.44 11.8L19.26 8.77L13.96 14.23Z" fill="white"/>
+    </svg>
+  </div>
+);
 
 // Component from ActiveRaidScreen for stats display
 const RaidStatsDisplay = ({ raids, wins, losses }: { raids: number; wins: number; losses: number }) => (
@@ -123,25 +143,46 @@ const ShareScreenContent = () => {
 
       {/* Share & Close buttons */}
       <div className="w-full flex flex-col items-center gap-3 z-20">
-        <div className="flex items-center gap-2 bg-black/60 border border-white/20 rounded-full px-4 py-1.5">
-          <span className="font-['Roboto_Condensed'] font-bold text-sm text-white/80 uppercase mr-1">Share</span>
-          <button className="w-9 h-9 rounded-full bg-gradient-to-b from-neutral-700 to-black flex items-center justify-center border border-white/10 hover:from-neutral-600 transition-colors"><TelegramIcon /></button>
-          <button className="w-9 h-9 rounded-full bg-gradient-to-b from-neutral-700 to-black flex items-center justify-center border border-white/10 hover:from-neutral-600 transition-colors"><XIcon /></button>
-          <button className="w-9 h-9 rounded-full bg-gradient-to-b from-neutral-700 to-black flex items-center justify-center border border-white/10 hover:from-neutral-600 transition-colors"><MessengerIcon /></button>
+        <div className="flex items-center gap-3 bg-black/70 border border-white/20 rounded-full px-6 py-2">
+          <span className="font-['Roboto_Condensed'] font-bold text-sm text-white/90 uppercase tracking-wide">SHARE</span>
+          <TelegramIcon />
+          <XIcon />
+          <MessengerIcon />
         </div>
         <button onClick={() => navigate(-1)} className="bg-gradient-to-b from-neutral-800 to-black border border-white/20 rounded-full px-10 py-2 font-['Roboto_Condensed'] font-bold text-sm text-white/90 hover:from-neutral-700 transition-colors">
           CLOSE
         </button>
       </div>
 
-      {/* Footer elements */}
+      {/* Footer elements - Updated Trophy Section */}
       <div className="absolute bottom-4 flex justify-between items-end w-full px-4 pointer-events-none">
-        <div className="bg-black/80 rounded-md p-3 flex flex-col items-center gap-1 z-20 border border-white/10">
-          <div className="w-9 h-9 rounded-full bg-gradient-to-b from-amber-400 to-amber-600 flex items-center justify-center border border-amber-200/50">
-            <img src={trophyIcon} alt="Trophy" className="w-6 h-6" />
+        {/* Updated Trophy Section to match the image exactly */}
+        <div className="relative">
+          {/* Main trophy container with rounded corners and glow effect */}
+          <div className="bg-gradient-to-b from-black/90 via-black/80 to-black/70 rounded-xl border border-white/20 shadow-2xl backdrop-blur-sm">
+            <div className="flex items-center gap-3 px-4 py-3">
+              {/* Trophy icon with golden glow */}
+              <div className="relative">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-b from-[#FFD700] via-[#FFA500] to-[#FF8C00] flex items-center justify-center shadow-lg border border-yellow-400/30">
+                  <img src={trophyIcon} alt="Trophy" className="w-6 h-6 filter brightness-110" />
+                </div>
+                {/* Glow effect behind trophy */}
+                <div className="absolute inset-0 w-10 h-10 rounded-full bg-yellow-400/20 blur-md -z-10"></div>
+              </div>
+              
+              {/* Trophy text */}
+              <div className="flex flex-col">
+                <span className="font-['Bangers'] text-xl text-[#FFD700] tracking-wide leading-tight drop-shadow-md">
+                  16 TROPHIES
+                </span>
+              </div>
+            </div>
           </div>
-          <span className="font-['Bangers'] text-lg text-amber-400 tracking-wide">16 TROPHIES</span>
+          
+          {/* Additional glow effect for the entire container */}
+          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/10 via-transparent to-yellow-400/10 rounded-xl blur-xl -z-20"></div>
         </div>
+        
         <img src={mapSnippet} alt="Jamaica Village" className="w-40 h-auto" />
       </div>
     </div>
