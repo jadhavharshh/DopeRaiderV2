@@ -203,14 +203,14 @@ export const ProductionScreen = (): JSX.Element => {
           {/* Requirements Frame */}
           <div className="w-[144px] h-[111px] rounded-[4px] relative" style={{ background: 'rgba(255, 255, 255, 0)', border: '1px solid rgba(255, 255, 255, 0.2)', boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.1)' }}>
             {/* REQUIRES text */}
-            <div className="absolute w-[49px] h-[14px] left-[calc(50%-49px/2+0.5px)] top-[5px]">
+            <div className="absolute w-[49px] h-[14px] left-[calc(50%-49px/2+0.5px)] top-[9px]">
               <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[14px]" style={{ fontFamily: 'Roboto Condensed' }}>
                 REQUIRES
               </span>
             </div>
             
             {/* Icon Frame */}
-            <div className="absolute w-[24px] h-[24px] left-[calc(50%-24px/2)] top-[36px]">
+            <div className="absolute w-[24px] h-[24px] left-[calc(50%-24px/2)] top-[31px]">
               <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full mix-blend-luminosity" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -231,14 +231,14 @@ export const ProductionScreen = (): JSX.Element => {
             </div>
             
             {/* 20 SEEDS */}
-            <div className="absolute w-[55px] h-[16px] left-[calc(50%-55px/2+0.5px)] top-[70px]">
+            <div className="absolute w-[55px] h-[16px] left-[calc(50%-55px/2+0.5px)] top-[61px]">
               <span className="text-white text-[14px] font-bold leading-[16px]" style={{ fontFamily: 'Roboto Condensed' }}>
                 20 SEEDS
               </span>
             </div>
             
             {/* 20 available */}
-            <div className="absolute w-[57px] h-[14px] left-[calc(50%-57px/2+0.5px)] top-[90px]">
+            <div className="absolute w-[57px] h-[14px] left-[calc(50%-57px/2+0.5px)] top-[83px]">
               <span className="text-[#AEAEAE] text-[12px] font-normal leading-[14px] text-center" style={{ fontFamily: 'Roboto Condensed' }}>
                 20 available
               </span>
@@ -331,14 +331,14 @@ export const ProductionScreen = (): JSX.Element => {
           {/* Requirements Frame */}
           <div className="w-[144px] h-[111px] rounded-[4px] relative" style={{ background: 'rgba(255, 255, 255, 0)', border: '1px solid rgba(255, 255, 255, 0.2)', boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.1)' }}>
             {/* REQUIRES text */}
-            <div className="absolute w-[49px] h-[14px] left-[calc(50%-49px/2+0.5px)] top-[5px]">
+            <div className="absolute w-[49px] h-[14px] left-[calc(50%-49px/2+0.5px)] top-[9px]">
               <span className="text-[#AEAEAE] text-[12px] font-semibold leading-[14px]" style={{ fontFamily: 'Roboto Condensed' }}>
                 REQUIRES
               </span>
             </div>
             
             {/* Icon Frame */}
-            <div className="absolute w-[24px] h-[24px] left-[calc(50%-24px/2)] top-[36px]">
+            <div className="absolute w-[24px] h-[24px] left-[calc(50%-24px/2)] top-[31px]">
               <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full mix-blend-luminosity" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -359,14 +359,14 @@ export const ProductionScreen = (): JSX.Element => {
             </div>
             
             {/* 20 CHEMICALS */}
-            <div className="absolute w-[86px] h-[16px] left-[calc(50%-86px/2)] top-[70px]">
+            <div className="absolute w-[86px] h-[16px] left-[calc(50%-86px/2)] top-[61px]">
               <span className="text-white text-[14px] font-bold leading-[16px]" style={{ fontFamily: 'Roboto Condensed' }}>
                 20 CHEMICALS
               </span>
             </div>
             
             {/* 20 available */}
-            <div className="absolute w-[57px] h-[14px] left-[calc(50%-57px/2+0.5px)] top-[90px]">
+            <div className="absolute w-[57px] h-[14px] left-[calc(50%-57px/2+0.5px)] top-[83px]">
               <span className="text-[#AEAEAE] text-[12px] font-normal leading-[14px] text-center" style={{ fontFamily: 'Roboto Condensed' }}>
                 20 available
               </span>
