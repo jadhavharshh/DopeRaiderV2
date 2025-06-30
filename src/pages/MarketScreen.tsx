@@ -233,6 +233,27 @@ export const MarketScreen = (): JSX.Element => {
                 $6.33
               </span>
             </div>
+
+            {/* TRADE Button */}
+            <button 
+              style={{
+                boxSizing: 'border-box',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+                padding: '8px 14px 8px 8px',
+                gap: '8px',
+                position: 'absolute',
+                minWidth: '48px',
+                height: '30px',
+                left: '258px',
+                top: '4px',
+                background: 'linear-gradient(360deg, #10341D 0%, #318952 100%)',
+                borderRadius: '74px'
+              }}
+            >
+            </button>
           </div>
         </div>
 
