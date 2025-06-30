@@ -45,6 +45,78 @@ export const MarketScreen = (): JSX.Element => {
             border: '0.5px solid #FFFFFF66'
           }}
         >
+          {/* ITEM Label */}
+          <div 
+            className="absolute"
+            style={{
+              width: '29px',
+              height: '16px',
+              top: '14px',
+              left: '24px'
+            }}
+          >
+            <span 
+              style={{
+                fontFamily: 'Roboto Condensed',
+                fontWeight: 700,
+                fontSize: '14px',
+                lineHeight: '100%',
+                letterSpacing: '0%',
+                color: '#FFFFFF'
+              }}
+            >
+              ITEM
+            </span>
+          </div>
+
+          {/* BUY Label */}
+          <div 
+            className="absolute"
+            style={{
+              width: '24px',
+              height: '16px',
+              top: '14px',
+              left: '146px'
+            }}
+          >
+            <span 
+              style={{
+                fontFamily: 'Roboto Condensed',
+                fontWeight: 700,
+                fontSize: '14px',
+                lineHeight: '100%',
+                letterSpacing: '0%',
+                color: '#FFFFFF'
+              }}
+            >
+              BUY
+            </span>
+          </div>
+
+          {/* SELL Label */}
+          <div 
+            className="absolute"
+            style={{
+              width: '28px',
+              height: '16px',
+              top: '14px',
+              left: '213px'
+            }}
+          >
+            <span 
+              style={{
+                fontFamily: 'Roboto Condensed',
+                fontWeight: 700,
+                fontSize: '14px',
+                lineHeight: '100%',
+                letterSpacing: '0%',
+                color: '#FFFFFF'
+              }}
+            >
+              SELL
+            </span>
+          </div>
+
           {/* Divider Line */}
           <div 
             className="absolute"
