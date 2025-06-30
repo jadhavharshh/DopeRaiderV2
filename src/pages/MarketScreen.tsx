@@ -31,6 +31,36 @@ export const MarketScreen = (): JSX.Element => {
           </h1>
         </div>
 
+        {/* Middle Element */}
+        <div 
+          className="absolute z-20"
+          style={{
+            width: 'calc(100% - 32px)',
+            height: '136px',
+            top: '317px',
+            left: '16px',
+            right: '16px',
+            borderRadius: '4px',
+            background: '#000000B2',
+            border: '0.5px solid #FFFFFF66'
+          }}
+        />
+
+        {/* Bottom Element */}
+        <div 
+          className="absolute z-20"
+          style={{
+            width: 'calc(100% - 32px)',
+            height: '93px',
+            top: '461px',
+            left: '16px',
+            right: '16px',
+            borderRadius: '4px',
+            background: '#000000B2',
+            border: '0.5px solid #FFFFFF66'
+          }}
+        />
+
         {/* Bottom Navigation */}
         <div className="absolute bottom-0 left-0 right-0 z-30">
           <BottomNav3 />
