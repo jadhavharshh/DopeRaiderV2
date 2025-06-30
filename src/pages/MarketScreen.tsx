@@ -166,7 +166,7 @@ export const MarketScreen = (): JSX.Element => {
               style={{
                 width: '32px',
                 height: '16px',
-                top: '11px',
+                top: '7px',
                 left: '32px'
               }}
             >
@@ -181,6 +181,56 @@ export const MarketScreen = (): JSX.Element => {
                 }}
               >
                 COKE
+              </span>
+            </div>
+
+            {/* BUY Price */}
+            <div 
+              className="absolute"
+              style={{
+                width: '33px',
+                height: '16px',
+                top: '7px',
+                left: '125px'
+              }}
+            >
+              <span 
+                style={{
+                  fontFamily: 'Roboto Condensed',
+                  fontWeight: 700,
+                  fontSize: '14px',
+                  lineHeight: '100%',
+                  letterSpacing: '0%',
+                  textAlign: 'center',
+                  color: '#5BFF8E'
+                }}
+              >
+                $6.66
+              </span>
+            </div>
+
+            {/* SELL Price */}
+            <div 
+              className="absolute"
+              style={{
+                width: '33px',
+                height: '16px',
+                top: '7px',
+                left: '195px'
+              }}
+            >
+              <span 
+                style={{
+                  fontFamily: 'Roboto Condensed',
+                  fontWeight: 700,
+                  fontSize: '14px',
+                  lineHeight: '100%',
+                  letterSpacing: '0%',
+                  textAlign: 'center',
+                  color: '#FFFFFF'
+                }}
+              >
+                $6.33
               </span>
             </div>
           </div>
