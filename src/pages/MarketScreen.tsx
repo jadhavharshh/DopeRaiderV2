@@ -44,7 +44,18 @@ export const MarketScreen = (): JSX.Element => {
             background: '#000000B2',
             border: '0.5px solid #FFFFFF66'
           }}
-        />
+        >
+          {/* Divider Line */}
+          <div 
+            className="absolute"
+            style={{
+              width: '100%',
+              top: '46px',
+              left: '0',
+              borderTop: '0.5px solid #FFFFFF66'
+            }}
+          />
+        </div>
 
         {/* Bottom Element */}
         <div 
