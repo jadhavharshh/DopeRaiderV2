@@ -106,12 +106,12 @@ export const TopWrapper = ({ onNotificationClick }: { onNotificationClick?: () =
         </div>
       </div>
 
-      {/* Desktop Layout - Glass Morphic Container with unified background */}
-      <div className="hidden md:block w-[393px] h-auto bg-black/20 backdrop-blur-sm rounded-lg border border-gray-600/20 overflow-hidden">
-        {/* Single unified background container */}
-        <div className="bg-gradient-to-b from-[#303030] to-black">
+      {/* Desktop Layout - Glass Morphic Container */}
+      <div className="hidden md:block w-[393px] h-auto bg-black/30 backdrop-blur-sm rounded-lg border border-white/20 overflow-hidden shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
+        {/* Single unified background container with glassmorphic effect */}
+        <div className="bg-gradient-to-b from-[#303030]/60 to-black/80 backdrop-blur-md">
           {/* Original TopWrapper Content */}
-          <div className="border-b border-black h-[220px] w-[393px] flex items-center justify-center relative">
+          <div className="border-b border-black/50 h-[220px] w-[393px] flex items-center justify-center relative">
             <div className="h-[119px] left-[200px] absolute top-[50px] w-[149px]">
               <div 
                 className="h-6 left-0 absolute top-7 w-[147px] bg-cover bg-center"
@@ -189,12 +189,12 @@ export const TopWrapper = ({ onNotificationClick }: { onNotificationClick?: () =
             </div>
           </div>
 
-          {/* Desktop Stats Bar at Bottom - Now shares the same background */}
-          <div className="px-4 py-2">
+          {/* Desktop Stats Bar at Bottom - Now shares the same glassmorphic background */}
+          <div className="px-4 py-2 bg-black/20">
             <div className="flex items-center justify-between">
               {/* Notification icon */}
               <div className="h-[35px] w-[35px] relative" onClick={onNotificationClick}>
-                <div className="bg-gradient-to-b from-black to-[#414141] border-none rounded-[74px] h-[33px] w-[33px] flex items-center justify-center overflow-hidden relative before:absolute before:inset-0 before:rounded-[74px] before:p-[1px] before:bg-gradient-to-b before:from-black before:to-[#666666] before:mask-composite-exclude before:pointer-events-none before:z-[1]">
+                <div className="bg-gradient-to-b from-black/80 to-[#414141]/60 backdrop-blur-sm border border-white/10 rounded-[74px] h-[33px] w-[33px] flex items-center justify-center overflow-hidden relative">
                   <div className="h-[15px] w-3 transform rotate-180 relative z-10">
                     <img
                       className="h-[15px] w-3 transform -rotate-180"
@@ -203,7 +203,7 @@ export const TopWrapper = ({ onNotificationClick }: { onNotificationClick?: () =
                     />
                   </div>
                 </div>
-                <div className="bg-gradient-to-b from-black to-[#414141] border-none rounded-[74px] h-4 w-4 absolute -top-1 -right-1 flex items-center justify-center relative before:absolute before:inset-0 before:rounded-[74px] before:p-[1px] before:bg-gradient-to-b before:from-black before:to-[#666666] before:mask-composite-exclude before:pointer-events-none before:z-[1]">
+                <div className="bg-gradient-to-b from-black/80 to-[#414141]/60 backdrop-blur-sm border border-white/10 rounded-[74px] h-4 w-4 absolute -top-1 -right-1 flex items-center justify-center">
                   <div className="font-['Roboto_Condensed'] text-[10px] font-semibold text-[#ffaa22] tracking-0 leading-normal relative z-10">
                     2
                   </div>
@@ -213,14 +213,14 @@ export const TopWrapper = ({ onNotificationClick }: { onNotificationClick?: () =
               {/* Stats */}
               <div className="flex items-center gap-1">
                 {/* Balance */}
-                <div className="flex items-center bg-gradient-to-b from-[#666666] to-[#454545] border-none rounded shadow-[0px_4px_4px_rgba(0,0,0,0.25)] gap-1 h-7 py-1 px-2 relative overflow-hidden before:absolute before:inset-0 before:rounded before:p-[1px] before:bg-gradient-to-b before:from-black before:to-[#666666] before:mask-composite-exclude before:pointer-events-none before:z-[1]">
+                <div className="flex items-center bg-gradient-to-b from-[#666666]/60 to-[#454545]/60 backdrop-blur-sm border border-white/10 rounded shadow-[0px_4px_4px_rgba(0,0,0,0.25)] gap-1 h-7 py-1 px-2 relative overflow-hidden">
                   <div className="font-['Roboto_Condensed'] text-sm font-bold text-white tracking-0 leading-normal text-center drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] whitespace-nowrap relative z-10">
                     $120.64
                   </div>
                 </div>
 
                 {/* Respect */}
-                <div className="flex items-center bg-gradient-to-b from-[#0a0a28] to-[#49497f] border-none rounded gap-1 h-7 py-1 px-2 relative overflow-hidden before:absolute before:inset-0 before:rounded before:p-[1px] before:bg-gradient-to-b before:from-black before:to-[#666666] before:mask-composite-exclude before:pointer-events-none before:z-[1]">
+                <div className="flex items-center bg-gradient-to-b from-[#0a0a28]/60 to-[#49497f]/60 backdrop-blur-sm border border-white/10 rounded gap-1 h-7 py-1 px-2 relative overflow-hidden">
                   <img
                     className="h-[12px] w-[9px] relative z-10"
                     alt="Element hga"
@@ -232,7 +232,7 @@ export const TopWrapper = ({ onNotificationClick }: { onNotificationClick?: () =
                 </div>
 
                 {/* Coke */}
-                <div className="flex items-center bg-gradient-to-b from-black to-[#8992a5] border-none rounded gap-1 h-7 py-1 px-2 relative overflow-hidden before:absolute before:inset-0 before:rounded before:p-[1px] before:bg-gradient-to-b before:from-black before:to-[#666666] before:mask-composite-exclude before:pointer-events-none before:z-[1]">
+                <div className="flex items-center bg-gradient-to-b from-black/80 to-[#8992a5]/60 backdrop-blur-sm border border-white/10 rounded gap-1 h-7 py-1 px-2 relative overflow-hidden">
                   <img className="h-[13px] w-[11px] relative z-10" alt="Icon" src={iconCoke} />
                   <div className="font-['Roboto_Condensed'] text-sm font-bold text-white tracking-0 leading-normal text-center drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] whitespace-nowrap relative z-10">
                     10
@@ -240,7 +240,7 @@ export const TopWrapper = ({ onNotificationClick }: { onNotificationClick?: () =
                 </div>
 
                 {/* Weed */}
-                <div className="flex items-center bg-gradient-to-b from-[#10341d] to-[#318952] border-none rounded gap-1 h-7 py-1 px-2 relative overflow-hidden before:absolute before:inset-0 before:rounded before:p-[1px] before:bg-gradient-to-b before:from-black before:to-[#666666] before:mask-composite-exclude before:pointer-events-none before:z-[1]">
+                <div className="flex items-center bg-gradient-to-b from-[#10341d]/60 to-[#318952]/60 backdrop-blur-sm border border-white/10 rounded gap-1 h-7 py-1 px-2 relative overflow-hidden">
                   <img className="h-[13px] w-[12px] relative z-10" alt="Icon" src={iconWeed} />
                   <div className="font-['Roboto_Condensed'] text-sm font-bold text-white tracking-0 leading-normal text-center drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] whitespace-nowrap relative z-10">
                     20
@@ -248,7 +248,7 @@ export const TopWrapper = ({ onNotificationClick }: { onNotificationClick?: () =
                 </div>
 
                 {/* Energy */}
-                <div className="flex items-center bg-gradient-to-b from-[#666666] to-[#454545] border-none rounded shadow-[0px_4px_4px_rgba(0,0,0,0.25)] gap-1 h-7 py-1 px-2 relative overflow-hidden before:absolute before:inset-0 before:rounded before:p-[1px] before:bg-gradient-to-b before:from-black before:to-[#666666] before:mask-composite-exclude before:pointer-events-none before:z-[1]">
+                <div className="flex items-center bg-gradient-to-b from-[#666666]/60 to-[#454545]/60 backdrop-blur-sm border border-white/10 rounded shadow-[0px_4px_4px_rgba(0,0,0,0.25)] gap-1 h-7 py-1 px-2 relative overflow-hidden">
                   <img
                     className="h-[11px] w-3 relative z-10"
                     alt="Icon"
