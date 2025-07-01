@@ -43,14 +43,9 @@ export const InventoryScreen = (): JSX.Element => {
             src={TelegramIMG}
           />
 
-          {/* Gray Background Container with Logo, TopWrapper, and YourStatsWrapper */}
+          {/* Gray Background Container with TopWrapper and YourStatsWrapper */}
           <div className="relative z-10 flex-shrink-0 bg-gradient-to-b from-[#303030] to-black">
-            {/* Logo - At the top of gray container */}
-            <div className="flex justify-center pt-4 pb-2">
-              <img className="h-6 w-auto" alt="Logo" src={Logo} />
-            </div>
-
-            {/* Top Wrapper - Main profile content */}
+            {/* Top Wrapper - Now includes logo */}
             <div className="px-0">
               <TopWrapper />
             </div>

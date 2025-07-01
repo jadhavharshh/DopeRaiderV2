@@ -17,6 +17,7 @@ import iconCoke from "@/static/img/icon-57.png";
 import iconWeed from "@/static/img/icon-58.png";
 import iconEnergy from "@/static/img/icon-50.svg";
 import notificationIcon from "@/static/img/xthfgl-10.png";
+import Logo from "@/static/img/logo-1.svg";
 
 // Import the new RaidStatsDisplay component
 import { RaidStatsDisplay } from "@/mini-components/RaidStatsDisplay";
@@ -25,10 +26,15 @@ export const TopWrapper = ({ onNotificationClick }: { onNotificationClick?: () =
   return (
     <>
       {/* Mobile Layout - Responsive width with centered content */}
-      <div className="md:hidden bg-gradient-to-b from-[#303030] to-black border-b border-black h-[260px] w-full min-w-[390px] flex items-center justify-center relative">
+      <div className="md:hidden bg-gradient-to-b from-[#303030] to-black border-b border-black w-full min-w-[390px] flex items-center justify-center relative">
+        {/* Logo at the top */}
+        <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
+          <img className="h-8 w-auto" alt="Logo" src={Logo} />
+        </div>
+        
         {/* Container to center the 393px content */}
-        <div className="relative w-[393px] h-full">
-          <div className="h-[119px] left-[200px] absolute top-[90px] w-[149px]">
+        <div className="relative w-[393px] h-[260px] pt-16">
+          <div className="h-[119px] left-[200px] absolute top-[74px] w-[149px]">
             <div 
               className="h-6 left-0 absolute top-7 w-[147px] bg-cover bg-center"
               style={{ backgroundImage: `url(${organicGrunge25Svg})` }}
@@ -70,7 +76,7 @@ export const TopWrapper = ({ onNotificationClick }: { onNotificationClick?: () =
             </div>
           </div>
 
-          <div className="h-[133px] left-[26px] absolute top-[82px] w-[144px]">
+          <div className="h-[133px] left-[26px] absolute top-[66px] w-[144px]">
             <div className="h-9 left-[92px] absolute top-0 w-9" />
 
             <div className="rounded-[160px] shadow-[0px_4px_8px_rgba(0,0,0,0.1),0px_14px_14px_rgba(0,0,0,0.09),0px_32px_19px_rgba(0,0,0,0.05),0px_56px_23px_rgba(0,0,0,0.01),0px_88px_25px_transparent] h-32 left-0 overflow-hidden absolute top-[1px] w-32">
