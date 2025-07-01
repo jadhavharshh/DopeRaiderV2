@@ -13,7 +13,7 @@ import union12Svg from "@/static/img/union-12.svg";
 import organicGrunge26Svg from "@/static/img/organic-grunge-bold-shapes-26.svg";
 import polygon26Svg from "@/static/img/polygon-2-6.svg";
 import og1Svg from "@/static/img/og-1.svg";
-
+import GreenSvg from "@/static/img/polygon-2.svg"
 // Import stats bar images
 import elementHga from "@/static/img/9athga-12.png";
 import iconCoke from "@/static/img/icon-57.png";
@@ -152,7 +152,10 @@ export const TopWrapper = ({ onNotificationClick }: { onNotificationClick?: () =
                 className="h-[37px] left-[3px] relative w-[33px] bg-cover bg-center"
                 style={{ backgroundImage: `url(${polygon26Svg})` }}
               >
-                <img className="h-[23px] left-[2px] absolute top-3 w-7" alt="Og" src={og1Svg} />
+                {/* Green SVG as background - positioned first to be behind */}
+                <img className="h-[30px] left-[1px] absolute top-1 w-[30px] z-10" alt="Green Background" src={GreenSvg} />
+                {/* OG SVG on top */}
+                <img className="h-[23px] left-[2px] absolute top-3 w-7 z-20" alt="Og" src={og1Svg} />
               </div>
             </div>
           </div>
@@ -287,7 +290,10 @@ export const TopWrapper = ({ onNotificationClick }: { onNotificationClick?: () =
                 className="h-[37px] left-[3px] relative w-[33px] bg-cover bg-center"
                 style={{ backgroundImage: `url(${polygon26Svg})` }}
               >
-                <img className="h-[23px] left-[2px] absolute top-3 w-7" alt="Og" src={og1Svg} />
+                {/* Green SVG as background - positioned first to be behind */}
+                <img className="h-[30px] left-[1px] absolute top-1 w-[30px] z-10" alt="Green Background" src={GreenSvg} />
+                {/* OG SVG on top */}
+                <img className="h-[23px] left-[2px] absolute top-3 w-7 z-20" alt="Og" src={og1Svg} />
               </div>
             </div>
           </div>
