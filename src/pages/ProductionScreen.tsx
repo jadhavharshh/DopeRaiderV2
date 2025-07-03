@@ -60,6 +60,7 @@ export const ProductionScreen = (): JSX.Element => {
             height: '751px',
             top: '-12px',
             left: '-27px',
+            opacity: 1,
             filter: 'blur(2px)',
             backgroundImage: `url(${WeedBgMobile})`,
             backgroundSize: 'cover',
@@ -168,7 +169,7 @@ export const ProductionScreen = (): JSX.Element => {
         {/* Left Production Card - GROW WEED */}
         {/* Left Production Card - GROW WEED */}
         <div 
-          className={`absolute w-[176px] h-[298px] left-[calc(50%-176px/2-92.5px)] top-[277px] rounded-[4px] flex flex-col items-center pt-[15px] px-[15px] pb-0 z-20 border ${isGrowActive ? 'border-[#3CE000]' : 'border-[#6e6b67] border-opacity-40'}`}
+          className={`absolute w-[176px] h-[298px] left-[calc(50%-176px/2-92.5px)] top-[210px] rounded-[4px] flex flex-col items-center pt-[15px] px-[15px] pb-0 z-20 border ${isGrowActive ? 'border-[#3CE000]' : 'border-[#6e6b67] border-opacity-40'}`}
           style={{ 
             background: 'rgba(0, 0, 0, 0.7)', 
             backdropFilter: 'blur(10px)'
