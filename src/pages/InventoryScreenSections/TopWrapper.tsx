@@ -33,7 +33,7 @@ export const TopWrapper = ({ onNotificationClick }: { onNotificationClick?: () =
         </div>
         
         {/* Container to center the 393px content */}
-        <div className="relative w-[393px] h-[260px] pt-16">
+        <div className="relative w-[393px] h-[220px] pt-16">
           <div className="h-[119px] left-[200px] absolute top-[74px] w-[149px]">
             <div 
               className="h-6 left-0 absolute top-7 w-[147px] bg-cover bg-center"
