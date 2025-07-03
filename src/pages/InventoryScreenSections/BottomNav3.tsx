@@ -18,7 +18,7 @@ export const BottomNav3 = ({ onNotificationClick }: { onNotificationClick?: () =
   const { pathname } = useLocation();
 
   return (
-    <div className="md:relative md:w-auto md:h-20 md:top-0 md:left-0 w-full min-w-[390px] bg-black">
+    <div className="md:relative md:w-auto md:h-20 md:top-0 md:left-0 w-full bg-black">
       {/* Top stats bar - Hide on desktop */}
       <div className="md:hidden bg-gradient-to-b from-[#303030] to-[#1b1b1b] border-b border-black w-full py-2">
         <div className="flex items-center gap-1 justify-end px-4">
@@ -84,7 +84,7 @@ export const BottomNav3 = ({ onNotificationClick }: { onNotificationClick?: () =
               </div>
             </div>
             
-            <div className="bg-gradient-to-b from-black to-[#414141] border-none rounded-full h-5 w-5 absolute -top-1 -right-1 flex items-center justify-center relative before:absolute before:inset-0 before:rounded-full before:p-[1px] before:bg-gradient-to-b before:from-black before:to-[#666666] before:mask-composite-exclude before:pointer-events-none before:z-[1]">
+            <div className="bg-gradient-to-b from-black to-[#414141] border-none rounded-full h-5 w-5 absolute -top-2 -right-2 flex items-center justify-center  before:absolute before:inset-0 before:rounded-full before:p-[1px] before:bg-gradient-to-b before:from-black before:to-[#666666] before:mask-composite-exclude before:pointer-events-none before:z-[1]">
               <div className="font-['Roboto_Condensed'] text-xs font-semibold text-[#ffaa22] tracking-0 leading-normal relative z-10">
                 2
               </div>
@@ -94,7 +94,7 @@ export const BottomNav3 = ({ onNotificationClick }: { onNotificationClick?: () =
       </div>
 
       {/* Bottom navigation */}
-      <div className="md:w-auto md:relative md:top-0 md:left-0 bg-black w-full min-w-[390px]">
+      <div className="md:w-auto md:relative md:top-0 md:left-0 bg-black w-full">
         <div className="w-full px-2 py-2">
           <div className="flex items-center justify-between w-full">
             {/* YOU */}
