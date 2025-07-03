@@ -34,7 +34,7 @@ export const InventoryScreen = (): JSX.Element => {
   return (
     <div className="min-h-screen w-full bg-black overflow-hidden">
       {/* Mobile Layout - up to 767px */}
-      <div className="flex flex-col h-screen w-full min-w-[390px] md:hidden">
+      <div className="flex flex-col h-screen w-full max-w-full md:hidden">
         <div className="bg-black h-full w-full relative flex flex-col">
           {/* Background Image - Fixed positioning */}
           <img
@@ -64,60 +64,6 @@ export const InventoryScreen = (): JSX.Element => {
           {/* Bottom Navigation */}
           <div className="relative z-10 flex-shrink-0">
             <BottomNav3 onNotificationClick={() => setShowNotifications(true)} />
-          </div>
-        </div>
-      </div>
-
-      {/* Desktop Layout */}
-      <div className="hidden md:block h-screen relative">
-        <img
-          className="absolute inset-0 w-full h-full object-cover opacity-70"
-          alt="Background"
-          src={TelegramChairIMG}
-        />
-
-        <div className="absolute top-4 md:top-6 lg:top-8 left-1/2 transform -translate-x-1/2 z-20">
-          <img
-            className="h-6 md:h-8 lg:h-10 xl:h-12 w-auto"
-            alt="Logo"
-            src={Logo}
-          />
-        </div>
-
-        <div
-          className="absolute top-3 left-3 md:top-4 md:left-4 lg:top-5 lg:left-5 z-10 
-                     w-48 sm:w-52 md:w-56 lg:w-64 xl:w-72 2xl:w-80
-                     scale-50 sm:scale-60 md:scale-65 lg:scale-75 xl:scale-90 2xl:scale-100 
-                     origin-top-left"
-        >
-          <div className="bg-black/40 backdrop-blur-sm rounded-lg border border-gray-600/30">
-            <TopWrapper onNotificationClick={() => setShowNotifications(true)} />
-          </div>
-        </div>
-
-        <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10
-                     w-64 sm:w-72 md:w-80 lg:w-96 xl:w-[26rem] 2xl:w-[30rem]
-                     h-80 sm:h-[22rem] md:h-96 lg:h-[28rem] xl:h-[32rem] 2xl:h-[36rem]
-                     scale-60 sm:scale-65 md:scale-75 lg:scale-85 xl:scale-95 2xl:scale-100"
-        >
-          <div className="bg-black/40 backdrop-blur-sm rounded-lg border border-gray-600/30 h-full">
-            <div className="relative h-full flex flex-col">
-              <div className="flex-shrink-0">
-                <YourStatsWrapper activeTab={activeTab} onTabChange={setActiveTab} />
-              </div>
-              <div className="flex-1 overflow-hidden">
-                {renderTabContent()}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="fixed bottom-0 left-0 right-0 z-30">
-          <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-30">
-            <div className="scale-60 sm:scale-70 md:scale-80 lg:scale-90 xl:scale-100 origin-bottom">
-              <BottomNav3 />
-            </div>
           </div>
         </div>
       </div>
