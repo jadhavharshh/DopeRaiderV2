@@ -19,6 +19,7 @@ import ellipse4_3 from "@/static/img/ellipse-4-3.svg";
 // Import Icon Components
 import { InfoIcon } from "@/icons/InfoIcon/InfoIcon";
 import { BagIcon } from "@/icons/BagIcon/BagIcon";
+import { useNavigate } from "react-router-dom";
 
 const SliderKnob = ({ style }: { style?: React.CSSProperties }) => (
   <div className="absolute top-1/2 -translate-y-1/2 h-[16px] w-[16px] p-px rounded-full bg-gradient-to-b from-gray-300 to-gray-800 pointer-events-none" style={style}>
@@ -63,6 +64,8 @@ const ItemCard = ({ title, titleColor, itemCount, iconUrl, iconBgUrl, iconAlt, v
 };
 
 const AirdropContent = (): JSX.Element => {
+  const navigate = useNavigate();
+
   const itemData = useMemo(() => [
     { id: 'coke', title: "COKE", titleColor: "text-white", itemCount: 5, iconUrl: cokeIcon, iconBgUrl: ellipse4, iconAlt: "Coke", gradientClass: "bg-gradient-to-b from-[#2a2a2a] to-[#1a1a1a]" },
     { id: 'weed', title: "WEED", titleColor: "text-[#5BFF8E]", itemCount: 5, iconUrl: weedIcon, iconBgUrl: ellipse4_3, iconAlt: "Weed", gradientClass: "bg-gradient-to-b from-[#10341d] to-[#318952]" },
@@ -101,7 +104,7 @@ const AirdropContent = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-2">
+      <div className="grid grid-cols-2 gap-6 w-full max-w-[332px] justify-items-center">
         {itemData.map(item => (
           <ItemCard
             key={item.id}
@@ -138,7 +141,7 @@ const AirdropContent = (): JSX.Element => {
             </p>
           </div>
         </button>
-        <div className="inline-flex items-center gap-2 cursor-pointer opacity-80 hover:opacity-100">
+        <div className="inline-flex items-center gap-2 cursor-pointer opacity-80 hover:opacity-100" onClick={() => navigate('/player/inventory')}>
           <img className="w-6 h-3" alt="Exit" src={exitIcon} />
           <div className="text-white font-['Bangers'] text-2xl tracking-wide" style={{ textShadow: '0px 4px 4px #00000040' }}>
             EXIT AIRDROP
@@ -149,16 +152,17 @@ const AirdropContent = (): JSX.Element => {
   );
 };
 
+
 export const AirdropScreen = (): JSX.Element => {
   return (
     <div className="min-h-screen w-full bg-black overflow-hidden">
       {/* Mobile Layout */}
-      <div className="md:hidden flex flex-col h-screen w-full min-w-[390px] relative">
+      <div className="md:hidden flex flex-col h-screen w-full relative">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${bgImage})` }}>
           <div className="absolute inset-0 bg-black/60" />
         </div>
-        <div className="flex-1 overflow-y-auto scrollbar-hide">
-          <div className="w-full max-w-[393px] mx-auto py-4">
+        <div className="flex-1 flex items-center justify-center overflow-y-auto scrollbar-hide">
+          <div className="w-full flex justify-center py-4 px-2">
             <AirdropContent />
           </div>
         </div>
