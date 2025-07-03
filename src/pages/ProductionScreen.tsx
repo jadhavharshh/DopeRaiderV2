@@ -103,7 +103,8 @@ export const ProductionScreen = (): JSX.Element => {
         </div>
 
         {/* Yield Limitation Element */}
-        <div className="absolute flex items-center z-20" style={{ top: '523px', left: '25px', gap: '8px' }}>
+        {!isGrowActive && (
+          <div className="absolute flex items-center z-20" style={{ top: '523px', left: '25px', gap: '8px' }}>
           {/* 70/70 Element */}
           <div
             className="flex items-center"
@@ -165,11 +166,12 @@ export const ProductionScreen = (): JSX.Element => {
             </span>
           </div>
         </div>
+        )}
 
         {/* Left Production Card - GROW WEED */}
         {/* Left Production Card - GROW WEED */}
         <div 
-          className={`absolute w-[176px] h-[298px] left-[calc(50%-176px/2-92.5px)] top-[210px] rounded-[4px] flex flex-col items-center pt-[15px] px-[15px] pb-0 z-20 border ${isGrowActive ? 'border-[#3CE000]' : 'border-[#6e6b67] border-opacity-40'}`}
+          className={`absolute w-[176px] ${isGrowActive ? 'h-[338px]' : 'h-[298px]'} left-[calc(50%-176px/2-92.5px)] top-[210px] rounded-[4px] flex flex-col items-center pt-[15px] px-[15px] pb-0 z-20 border ${isGrowActive ? 'border-[#3CE000]' : 'border-[#6e6b67] border-opacity-40'}`}
           style={{ 
             background: 'rgba(0, 0, 0, 0.7)', 
             backdropFilter: 'blur(10px)'
@@ -378,7 +380,7 @@ export const ProductionScreen = (): JSX.Element => {
           {/* Grow Power Tier 1 Element - Shows when active */}
           {isGrowActive && (
             <div
-              className="w-[134px] h-[24px] rounded-[4px] flex items-center justify-center gap-[4px] mb-[8px]"
+              className="w-[134px] h-[24px] rounded-[4px] flex items-center justify-center gap-[4px] mt-[16px] mb-[16px]"
               style={{
                 background: 'linear-gradient(180deg, #10341D 0%, #318952 100%), linear-gradient(180deg, #000000 0%, #666666 100%)',
                 border: '1px solid #3CE000',
