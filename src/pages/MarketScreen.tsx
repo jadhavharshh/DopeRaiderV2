@@ -385,12 +385,12 @@ export const MarketScreen = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Bottom Element */}
+        {/* Bottom Element - Container 2 with SEEDS and CHEMICALS */}
         <div 
           className="absolute z-20"
           style={{
             width: 'calc(100% - 32px)',
-            height: '93px',
+            height: '136px',
             top: '461px',
             left: '16px',
             right: '16px',
@@ -398,7 +398,368 @@ export const MarketScreen = (): JSX.Element => {
             background: '#000000B2',
             border: '0.5px solid #FFFFFF66'
           }}
-        />
+        >
+          {/* ITEM Label */}
+          <div 
+            className="absolute"
+            style={{
+              width: '29px',
+              height: '16px',
+              top: '14px',
+              left: '24px'
+            }}
+          >
+            <span 
+              style={{
+                fontFamily: 'Roboto Condensed',
+                fontWeight: 700,
+                fontSize: '14px',
+                lineHeight: '100%',
+                letterSpacing: '0%',
+                color: '#FFFFFF'
+              }}
+            >
+              ITEM
+            </span>
+          </div>
+
+          {/* BUY Label */}
+          <div 
+            className="absolute"
+            style={{
+              width: '24px',
+              height: '16px',
+              top: '14px',
+              left: '146px'
+            }}
+          >
+            <span 
+              style={{
+                fontFamily: 'Roboto Condensed',
+                fontWeight: 700,
+                fontSize: '14px',
+                lineHeight: '100%',
+                letterSpacing: '0%',
+                color: '#FFFFFF'
+              }}
+            >
+              BUY
+            </span>
+          </div>
+
+          {/* SELL Label */}
+          <div 
+            className="absolute"
+            style={{
+              width: '28px',
+              height: '16px',
+              top: '14px',
+              left: '213px'
+            }}
+          >
+            <span 
+              style={{
+                fontFamily: 'Roboto Condensed',
+                fontWeight: 700,
+                fontSize: '14px',
+                lineHeight: '100%',
+                letterSpacing: '0%',
+                color: '#FFFFFF'
+              }}
+            >
+              SELL
+            </span>
+          </div>
+
+          {/* Divider Line */}
+          <div 
+            className="absolute"
+            style={{
+              width: '100%',
+              top: '46px',
+              left: '0',
+              borderTop: '0.5px solid #FFFFFF66'
+            }}
+          />
+
+          {/* Row #1 - SEEDS */}
+          <div 
+            className="absolute"
+            style={{
+              width: '329px',
+              height: '38px',
+              top: '52px',
+              left: '16px'
+            }}
+          >
+            {/* Icon */}
+            <div 
+              className="absolute"
+              style={{
+                width: '24px',
+                height: '24px',
+                top: '7px',
+                border: '1px solid transparent',
+                background: 'linear-gradient(360deg, #000000 0%, #666666 100%)',
+                borderRadius: '50%'
+              }}
+            >
+              {/* Seeds SVG Icon */}
+              <div 
+                className="absolute inset-0 flex items-center justify-center"
+              >
+                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clipPath="url(#clip0_1_2946_mobile)">
+                    <path d="M11.07 6.78247C11.0781 8.7313 10.3875 10.3939 8.92309 11.713C8.16388 12.3969 7.3014 12.8865 6.26424 12.9796C5.10445 13.0841 4.05883 12.7727 3.15157 12.0329C2.01033 11.1024 1.32777 9.88934 1.06516 8.4515C0.560495 5.68436 1.4855 3.40918 3.51181 1.53809C4.23754 0.867968 5.07501 0.374789 6.02422 0.108359C6.37841 0.00875156 6.76527 -0.00218098 7.13681 -0.000156433C7.42081 0.0014632 7.69391 0.130224 7.88674 0.34766C8.50637 1.04694 9.1615 1.72233 9.71215 2.47424C10.6384 3.73958 11.0708 5.18996 11.07 6.78247ZM6.42803 1.32875C6.33726 1.33564 6.32193 1.3328 6.31185 1.33847C6.27675 1.35831 6.24286 1.37977 6.20979 1.40285C5.25977 2.06771 4.58648 2.96378 4.0911 3.99872C3.35004 5.54628 3.11849 7.17766 3.36578 8.87301C3.50213 9.80592 3.83413 10.6647 4.43924 11.4013C4.50701 11.4839 4.58971 11.5547 4.66555 11.6313C3.50616 7.89759 4.01284 4.47004 6.42803 1.32916V1.32875Z" fill="url(#paint0_linear_1_2946_mobile)" />
+                  </g>
+                  <defs>
+                    <linearGradient id="paint0_linear_1_2946_mobile" x1="5.99989" y1="-0.000366211" x2="6" y2="13" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#FFE1CB" />
+                      <stop offset="1" stopColor="#85622A" />
+                    </linearGradient>
+                    <clipPath id="clip0_1_2946_mobile">
+                      <rect width="10.14" height="13" fill="white" transform="translate(0.930176)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+
+            {/* SEEDS Text */}
+            <div 
+              className="absolute"
+              style={{
+                width: '40px',
+                height: '16px',
+                top: '7px',
+                left: '32px'
+              }}
+            >
+              <span 
+                style={{
+                  fontFamily: 'Roboto Condensed',
+                  fontWeight: 700,
+                  fontSize: '14px',
+                  lineHeight: '100%',
+                  letterSpacing: '0%',
+                  color: '#FFFFFF'
+                }}
+              >
+                SEEDS
+              </span>
+            </div>
+
+            {/* BUY Price */}
+            <div 
+              className="absolute"
+              style={{
+                width: '33px',
+                height: '16px',
+                top: '7px',
+                left: '125px'
+              }}
+            >
+              <span 
+                style={{
+                  fontFamily: 'Roboto Condensed',
+                  fontWeight: 700,
+                  fontSize: '14px',
+                  lineHeight: '100%',
+                  letterSpacing: '0%',
+                  textAlign: 'center',
+                  color: '#5BFF8E'
+                }}
+              >
+                $0.25
+              </span>
+            </div>
+
+            {/* SELL Price */}
+            <div 
+              className="absolute"
+              style={{
+                width: '33px',
+                height: '16px',
+                top: '7px',
+                left: '195px'
+              }}
+            >
+              <span 
+                style={{
+                  fontFamily: 'Roboto Condensed',
+                  fontWeight: 700,
+                  fontSize: '14px',
+                  lineHeight: '100%',
+                  letterSpacing: '0%',
+                  textAlign: 'center',
+                  color: '#FFFFFF'
+                }}
+              >
+                $0.20
+              </span>
+            </div>
+
+            {/* TRADE Button */}
+            <button 
+              style={{
+                boxSizing: 'border-box',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+                padding: '8px 14px 8px 8px',
+                gap: '8px',
+                position: 'absolute',
+                minWidth: '48px',
+                height: '30px',
+                left: '258px',
+                top: '4px',
+                background: 'linear-gradient(360deg, #10341D 0%, #318952 100%)',
+                borderRadius: '74px'
+              }}
+            >
+            </button>
+          </div>
+
+          {/* Row #2 - CHEMICALS */}
+          <div 
+            className="absolute"
+            style={{
+              width: '329px',
+              height: '38px',
+              top: '90px',
+              left: '16px'
+            }}
+          >
+            {/* Icon */}
+            <div 
+              className="absolute"
+              style={{
+                width: '24px',
+                height: '24px',
+                top: '7px',
+                border: '1px solid transparent',
+                background: 'linear-gradient(360deg, #000000 0%, #666666 100%)',
+                borderRadius: '50%'
+              }}
+            >
+              {/* Chemicals SVG Icon */}
+              <div 
+                className="absolute inset-0 flex items-center justify-center"
+              >
+                <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.06524 11.9986C3.9627 11.9986 2.86016 12.0025 1.75762 11.9972C1.05823 11.9939 0.516609 11.7171 0.185046 11.13C-0.0412554 10.7291 -0.0579748 10.3056 0.12382 9.88551C0.42218 9.19704 0.734904 8.5141 1.03538 7.8263C1.54874 6.65069 2.05833 5.47353 2.56557 4.29548C2.60277 4.20917 2.62632 4.11117 2.62726 4.01824C2.63503 3.22405 2.63833 2.42964 2.63621 1.63545C2.63621 1.55598 2.6096 1.46548 2.56392 1.39904C2.42168 1.19266 2.26415 0.995545 2.11273 0.7949C1.93965 0.565781 1.95001 0.322093 2.14216 0.144625C2.23871 0.0554493 2.35622 0.0115237 2.49162 0.0115237C3.5904 0.0106408 4.68894 0.0108615 5.78771 0.00909567C6.29353 0.00821275 6.79936 0.00446031 7.30518 4.56816e-05C7.52865 -0.0019409 7.7194 0.0605261 7.82796 0.254108C7.93863 0.451662 7.88871 0.638401 7.74648 0.807482C7.59553 0.986716 7.44859 1.16772 7.40031 1.39948C7.39584 1.42089 7.38901 1.44275 7.38901 1.46438C7.38595 2.31684 7.38124 3.16953 7.38383 4.02199C7.38407 4.11779 7.41162 4.21889 7.45071 4.30828C8.25089 6.14543 9.04659 7.98457 9.86066 9.8162C10.2735 10.745 9.72126 11.6842 8.8323 11.9145C8.59941 11.9747 8.34508 11.9778 8.10041 11.9794C7.08877 11.986 6.07736 11.9822 5.06571 11.9822C5.06571 11.9878 5.06571 11.9931 5.06571 11.9986H5.06524ZM3.34385 3.01502C3.34385 3.29844 3.34455 3.56287 3.34314 3.82709C3.3429 3.88779 3.37493 3.89949 3.43192 3.89861C3.60453 3.89596 3.77714 3.89441 3.94975 3.89772C4.12895 3.90103 4.24269 4.00897 4.23963 4.16525C4.23633 4.3255 4.12377 4.42704 3.94598 4.42814C3.76937 4.42902 3.59275 4.43211 3.41637 4.42682C3.33301 4.42439 3.29204 4.44977 3.26213 4.52526C3.16134 4.7791 3.05443 5.03096 2.94352 5.28105C2.22929 6.89415 1.51389 8.5066 0.79825 10.119C0.552874 10.672 0.975806 11.2887 1.61303 11.2898C3.87298 11.2933 6.13293 11.2929 8.39289 11.2898C9.01928 11.2889 9.44645 10.6817 9.21049 10.1389C9.06755 9.81002 8.91755 9.48377 8.77296 9.15555C8.12184 7.67665 7.47096 6.19774 6.82126 4.71818C6.72353 4.49546 6.61073 4.27826 6.61379 4.02619C6.62345 3.2139 6.6324 2.40138 6.62863 1.58909C6.62745 1.32201 6.655 1.07037 6.81749 0.843682C6.82008 0.84015 6.81372 0.830879 6.81349 0.830217H3.03489C3.08505 0.89158 3.1199 0.935947 3.15687 0.978548C3.3137 1.15999 3.38411 1.36328 3.37093 1.60035C3.35633 1.86081 3.36739 2.12238 3.36057 2.38328C3.35821 2.4718 3.38058 2.50711 3.48419 2.5038C3.72321 2.4963 3.9627 2.49828 4.20195 2.50137C4.34395 2.50314 4.45016 2.59563 4.46711 2.721C4.48501 2.85101 4.40023 2.97529 4.26553 3.00619C4.21702 3.01745 4.16428 3.01436 4.11341 3.01458C3.86733 3.01524 3.62101 3.0148 3.34408 3.0148L3.34385 3.01502Z" fill="url(#paint0_linear_1_2966_mobile)" />
+                  <path d="M4.99125 10.829C3.9789 10.829 2.96654 10.829 1.95419 10.829C1.90333 10.829 1.85176 10.8305 1.80136 10.8246C1.40504 10.7789 1.22419 10.4833 1.37867 10.137C2.00788 8.72452 2.6371 7.31228 3.2642 5.89916C3.29246 5.83537 3.32825 5.80976 3.40172 5.80976C4.472 5.80711 5.54205 5.80358 6.61209 5.79652C6.70629 5.79585 6.74161 5.83801 6.77269 5.90887C7.22058 6.93196 7.66966 7.95461 8.11967 8.97682C8.28663 9.35603 8.46065 9.73238 8.62361 10.1129C8.79622 10.5158 8.56521 10.8272 8.09871 10.8276C7.06281 10.8285 6.02691 10.8279 4.99101 10.8279V10.8294L4.99125 10.829ZM6.84616 9.42954C6.84758 9.08806 6.57112 8.82054 6.21601 8.81965C5.85336 8.81877 5.55877 9.09292 5.55523 9.43417C5.55194 9.76483 5.83876 10.033 6.19787 10.0352C6.56146 10.0374 6.84475 9.77277 6.84616 9.42976V9.42954ZM5.41182 7.41183C5.41182 7.14408 5.18882 6.9335 4.90788 6.93659C4.61141 6.93968 4.38534 7.14408 4.38346 7.41073C4.38157 7.67428 4.60764 7.89082 4.88575 7.8917C5.18529 7.89258 5.41182 7.6862 5.41206 7.41205L5.41182 7.41183ZM3.42291 8.92362C3.41632 9.11676 3.58069 9.2748 3.79027 9.27679C3.98502 9.27878 4.15716 9.11897 4.16069 8.93267C4.16422 8.74571 4.01116 8.59605 3.80958 8.58921C3.59623 8.58193 3.42998 8.72584 3.42315 8.92362H3.42291Z" fill="url(#paint1_linear_1_2966_mobile)" />
+                  <defs>
+                    <linearGradient id="paint0_linear_1_2966_mobile" x1="5" y1="0" x2="5" y2="12" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="white" />
+                      <stop offset="1" stopColor="#35B2FF" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_1_2966_mobile" x1="5.00223" y1="5.79651" x2="5.00223" y2="10.8294" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#A8E5FF" />
+                      <stop offset="1" stopColor="#006B99" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+
+            {/* CHEMICALS Text */}
+            <div 
+              className="absolute"
+              style={{
+                width: '70px',
+                height: '16px',
+                top: '7px',
+                left: '32px'
+              }}
+            >
+              <span 
+                style={{
+                  fontFamily: 'Roboto Condensed',
+                  fontWeight: 700,
+                  fontSize: '14px',
+                  lineHeight: '100%',
+                  letterSpacing: '0%',
+                  color: '#FFFFFF'
+                }}
+              >
+                CHEMICALS
+              </span>
+            </div>
+
+            {/* BUY Price */}
+            <div 
+              className="absolute"
+              style={{
+                width: '33px',
+                height: '16px',
+                top: '7px',
+                left: '125px'
+              }}
+            >
+              <span 
+                style={{
+                  fontFamily: 'Roboto Condensed',
+                  fontWeight: 700,
+                  fontSize: '14px',
+                  lineHeight: '100%',
+                  letterSpacing: '0%',
+                  textAlign: 'center',
+                  color: '#FF5454'
+                }}
+              >
+                $0.25
+              </span>
+            </div>
+
+            {/* SELL Price */}
+            <div 
+              className="absolute"
+              style={{
+                width: '33px',
+                height: '16px',
+                top: '7px',
+                left: '195px'
+              }}
+            >
+              <span 
+                style={{
+                  fontFamily: 'Roboto Condensed',
+                  fontWeight: 700,
+                  fontSize: '14px',
+                  lineHeight: '100%',
+                  letterSpacing: '0%',
+                  textAlign: 'center',
+                  color: '#FFFFFF'
+                }}
+              >
+                $0.20
+              </span>
+            </div>
+
+            {/* TRADE Button */}
+            <button 
+              style={{
+                boxSizing: 'border-box',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+                padding: '8px 14px 8px 8px',
+                gap: '8px',
+                position: 'absolute',
+                minWidth: '48px',
+                height: '30px',
+                left: '258px',
+                top: '4px',
+                background: 'linear-gradient(360deg, #10341D 0%, #318952 100%)',
+                borderRadius: '74px'
+              }}
+            >
+            </button>
+          </div>
+        </div>
 
         {/* Bottom Navigation */}
         <div className="absolute bottom-0 left-0 right-0 z-30">

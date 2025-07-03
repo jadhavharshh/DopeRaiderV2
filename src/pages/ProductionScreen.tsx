@@ -269,7 +269,7 @@ export const ProductionScreen = (): JSX.Element => {
               }}
             >
               {/* IN PROGRESS text */}
-              <div className="absolute w-[77px] h-[14px]" style={{ left: '34px', top: '16px' }}>
+              <div className="absolute w-[77px] h-[14px]" style={{ left: '34px', top: '7px' }}>
                 <span
                   className="text-white text-[12px] font-semibold leading-[100%]"
                   style={{
@@ -436,7 +436,17 @@ export const ProductionScreen = (): JSX.Element => {
               </span>
             </button>
           ) : (
-            <div className="w-[144px] h-[35px] bg-gradient-to-b from-black to-[#666666] rounded-[74px] flex items-center justify-center gap-[8px] px-[8px] mb-[15px] mt-auto">
+            <div 
+              className="w-[144px] h-[35px] rounded-[74px] flex items-center justify-center gap-[8px] px-[8px] py-[8px] mb-[15px] mt-auto"
+              style={{
+                background: 'linear-gradient(to bottom, #000000, #666666)',
+                border: '1px solid transparent',
+                backgroundImage: 'linear-gradient(to bottom, #000000, #666666), linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(102, 102, 102, 1))',
+                backgroundOrigin: 'border-box',
+                backgroundClip: 'content-box, border-box',
+                boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.3)'
+              }}
+            >
               {/* Animated Spinning Circle - Group 13 */}
               <div className="relative w-[18px] h-[18px] flex-none">
                 {/* Background circle - Ellipse 9 */}
