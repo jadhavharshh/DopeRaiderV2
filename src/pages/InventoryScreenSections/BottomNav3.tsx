@@ -18,7 +18,7 @@ export const BottomNav3 = ({ onNotificationClick }: { onNotificationClick?: () =
   const { pathname } = useLocation();
 
   return (
-    <div className="md:relative md:w-auto md:h-20 md:top-0 md:left-0 w-full bg-black">
+    <div className="md:relative md:w-auto md:h-20 md:top-0 md:left-0 w-full min-w-[390px] bg-black">
       {/* Top stats bar - Hide on desktop */}
       <div className="md:hidden bg-gradient-to-b from-[#303030] to-[#1b1b1b] border-b border-black w-full py-2">
         <div className="flex items-center gap-1 justify-end px-4">
@@ -84,7 +84,7 @@ export const BottomNav3 = ({ onNotificationClick }: { onNotificationClick?: () =
               </div>
             </div>
             
-            <div className="bg-gradient-to-b from-black to-[#414141] border-none rounded-full h-5 w-5 absolute -top-2 -right-2 flex items-center justify-center  before:absolute before:inset-0 before:rounded-full before:p-[1px] before:bg-gradient-to-b before:from-black before:to-[#666666] before:mask-composite-exclude before:pointer-events-none before:z-[1]">
+            <div className="bg-gradient-to-b from-black to-[#414141] border-none rounded-full h-5 w-5 absolute -top-1 -right-1 flex items-center justify-center relative before:absolute before:inset-0 before:rounded-full before:p-[1px] before:bg-gradient-to-b before:from-black before:to-[#666666] before:mask-composite-exclude before:pointer-events-none before:z-[1]">
               <div className="font-['Roboto_Condensed'] text-xs font-semibold text-[#ffaa22] tracking-0 leading-normal relative z-10">
                 2
               </div>
@@ -93,70 +93,89 @@ export const BottomNav3 = ({ onNotificationClick }: { onNotificationClick?: () =
         </div>
       </div>
 
-      {/* Bottom navigation */}
-      <div className="md:w-auto md:relative md:top-0 md:left-0 bg-black w-full">
+      {/* Bottom navigation - Full width */}
+      <div className="md:w-auto md:relative md:top-0 md:left-0 bg-black w-full min-w-[390px]">
         <div className="w-full px-2 py-2">
           <div className="flex items-center justify-between w-full">
             {/* YOU */}
-            <Link className={`h-16 flex-1 flex flex-col items-center justify-center border-r border-transparent ${pathname.startsWith("/player") ? "bg-gradient-to-b from-[#1c1c1c] to-black" : ""}`} to="/player/inventory" style={{
-              borderImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 153, 153, 0.43) 100%) 1',
-              borderRightStyle: 'solid',
-              borderRightWidth: '1px'
-            }}>
+            <Link 
+              className={`h-16 md:h-20 flex-1 flex flex-col items-center justify-center border-r border-transparent ${pathname.startsWith("/player") ? "bg-gradient-to-b from-[#1c1c1c] to-black" : ""}`} 
+              to="/player/inventory" 
+              style={{
+                borderImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 153, 153, 0.43) 100%) 1',
+                borderRightStyle: 'solid',
+                borderRightWidth: '1px'
+              }}
+            >
               <img
-                className="h-8 w-8 mb-1"
+                className="h-8 w-8 md:h-10 md:w-10 mb-1 md:mb-2"
                 alt="Union"
                 src={unionYou}
               />
-              <div className={`font-['Roboto_Condensed'] text-xs font-black tracking-0 leading-normal whitespace-nowrap ${pathname.startsWith("/player") ? "text-white" : "text-[#aaaaaa]"}`}>
+              <div className={`font-['Roboto_Condensed'] text-xs md:text-sm font-black tracking-0 leading-normal whitespace-nowrap ${pathname.startsWith("/player") ? "text-white" : "text-[#aaaaaa]"}`}>
                 YOU
               </div>
             </Link>
 
             {/* MARKET */}
-            <Link className={`h-16 flex-1 flex flex-col items-center justify-center border-r border-transparent ${pathname.startsWith("/market") ? "bg-gradient-to-b from-[#1c1c1c] to-black" : ""}`} to="/market" style={{
-              borderImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 153, 153, 0.43) 100%) 1',
-              borderRightStyle: 'solid',
-              borderRightWidth: '1px'
-            }}>
-              <img className="h-8 w-8 mb-1" alt="Layer" src={layerMarket} />
-              <div className={`font-['Roboto_Condensed'] text-xs font-black tracking-0 leading-normal whitespace-nowrap ${pathname.startsWith("/market") ? "text-white" : "text-[#aaaaaa]"}`}>
+            <Link 
+              className={`h-16 md:h-20 flex-1 flex flex-col items-center justify-center border-r border-transparent ${pathname.startsWith("/market") ? "bg-gradient-to-b from-[#1c1c1c] to-black" : ""}`} 
+              to="/market" 
+              style={{
+                borderImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 153, 153, 0.43) 100%) 1',
+                borderRightStyle: 'solid',
+                borderRightWidth: '1px'
+              }}
+            >
+              <img className="h-8 w-8 md:h-10 md:w-10 mb-1 md:mb-2" alt="Layer" src={layerMarket} />
+              <div className={`font-['Roboto_Condensed'] text-xs md:text-sm font-black tracking-0 leading-normal whitespace-nowrap ${pathname.startsWith("/market") ? "text-white" : "text-[#aaaaaa]"}`}>
                 MARKET
               </div>
             </Link>
 
             {/* PRODUCE */}
-            <Link className={`h-16 flex-1 flex flex-col items-center justify-center border-r border-transparent ${pathname.startsWith("/production") ? "bg-gradient-to-b from-[#1c1c1c] to-black" : ""}`} to="/production" style={{
-              borderImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 153, 153, 0.43) 100%) 1',
-              borderRightStyle: 'solid',
-              borderRightWidth: '1px'
-            }}>
+            <Link 
+              className={`h-16 md:h-20 flex-1 flex flex-col items-center justify-center border-r border-transparent ${pathname.startsWith("/production") ? "bg-gradient-to-b from-[#1c1c1c] to-black" : ""}`} 
+              to="/production" 
+              style={{
+                borderImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 153, 153, 0.43) 100%) 1',
+                borderRightStyle: 'solid',
+                borderRightWidth: '1px'
+              }}
+            >
               <img
-                className="h-8 w-8 mb-1"
+                className="h-8 w-8 md:h-10 md:w-10 mb-1 md:mb-2"
                 alt="Layer"
                 src={layerProduce}
               />
-              <div className={`font-['Roboto_Condensed'] text-xs font-black tracking-0 leading-normal whitespace-nowrap ${pathname.startsWith("/production") ? "text-white" : "text-[#aaaaaa]"}`}>
+              <div className={`font-['Roboto_Condensed'] text-xs md:text-sm font-black tracking-0 leading-normal whitespace-nowrap ${pathname.startsWith("/production") ? "text-white" : "text-[#aaaaaa]"}`}>
                 PRODUCE
               </div>
             </Link>
 
             {/* MAP */}
-            <Link className={`h-16 flex-1 flex flex-col items-center justify-center border-r border-transparent ${pathname.startsWith("/map") ? "bg-gradient-to-b from-[#1c1c1c] to-black" : ""}`} to="/map" style={{
-              borderImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 153, 153, 0.43) 100%) 1',
-              borderRightStyle: 'solid',
-              borderRightWidth: '1px'
-            }}>
-              <img className="h-8 w-8 mb-1" alt="Icon" src={iconMap} />
-              <div className={`font-['Roboto_Condensed'] text-xs font-black tracking-0 leading-normal whitespace-nowrap ${pathname.startsWith("/map") ? "text-white" : "text-[#aaaaaa]"}`}>
+            <Link 
+              className={`h-16 md:h-20 flex-1 flex flex-col items-center justify-center border-r border-transparent ${pathname.startsWith("/map") ? "bg-gradient-to-b from-[#1c1c1c] to-black" : ""}`} 
+              to="/map" 
+              style={{
+                borderImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 153, 153, 0.43) 100%) 1',
+                borderRightStyle: 'solid',
+                borderRightWidth: '1px'
+              }}
+            >
+              <img className="h-8 w-8 md:h-10 md:w-10 mb-1 md:mb-2" alt="Icon" src={iconMap} />
+              <div className={`font-['Roboto_Condensed'] text-xs md:text-sm font-black tracking-0 leading-normal whitespace-nowrap ${pathname.startsWith("/map") ? "text-white" : "text-[#aaaaaa]"}`}>
                 MAP
               </div>
             </Link>
 
             {/* RAID */}
-            <Link className={`h-16 flex-1 flex flex-col items-center justify-center ${pathname.startsWith("/raid") ? "bg-gradient-to-b from-[#1c1c1c] to-black" : ""}`} to="/raid">
-              <img className="h-8 w-8 mb-1" alt="Icon" src={iconRaid} />
-              <div className={`font-['Roboto_Condensed'] text-xs font-black tracking-0 leading-normal whitespace-nowrap ${pathname.startsWith("/raid") ? "text-white" : "text-[#aaaaaa]"}`}>
+            <Link 
+              className={`h-16 md:h-20 flex-1 flex flex-col items-center justify-center ${pathname.startsWith("/raid") ? "bg-gradient-to-b from-[#1c1c1c] to-black" : ""}`} 
+              to="/raid"
+            >
+              <img className="h-8 w-8 md:h-10 md:w-10 mb-1 md:mb-2" alt="Icon" src={iconRaid} />
+              <div className={`font-['Roboto_Condensed'] text-xs md:text-sm font-black tracking-0 leading-normal whitespace-nowrap ${pathname.startsWith("/raid") ? "text-white" : "text-[#aaaaaa]"}`}>
                 RAID
               </div>
             </Link>
