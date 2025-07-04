@@ -144,12 +144,10 @@ export const MarketScreen = (): JSX.Element => {
               style={{
                 width: '24px',
                 height: '24px',
-                top: '7px',
-                border: '1px solid transparent',
-                background: 'linear-gradient(360deg, #000000 0%, #666666 100%)',
-                borderRadius: '50%'
+                top: '7px'
               }}
             >
+              <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full" />
               {/* Vector Icon */}
               <div 
                 className="absolute inset-0 flex items-center justify-center"
@@ -277,12 +275,10 @@ export const MarketScreen = (): JSX.Element => {
               style={{
                 width: '24px',
                 height: '24px',
-                top: '7px',
-                border: '1px solid transparent',
-                background: 'linear-gradient(360deg, #000000 0%, #666666 100%)',
-                borderRadius: '50%'
+                top: '7px'
               }}
             >
+              <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full" />
               {/* Vector Icon */}
               <div 
                 className="absolute inset-0 flex items-center justify-center"
@@ -426,12 +422,10 @@ export const MarketScreen = (): JSX.Element => {
               style={{
                 width: '24px',
                 height: '24px',
-                top: '7px',
-                border: '1px solid transparent',
-                background: 'linear-gradient(360deg, #000000 0%, #666666 100%)',
-                borderRadius: '50%'
+                top: '7px'
               }}
             >
+              <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full" />
               {/* Seeds SVG Icon */}
               <div 
                 className="absolute inset-0 flex items-center justify-center"
@@ -570,12 +564,10 @@ export const MarketScreen = (): JSX.Element => {
               style={{
                 width: '24px',
                 height: '24px',
-                top: '7px',
-                border: '1px solid transparent',
-                background: 'linear-gradient(360deg, #000000 0%, #666666 100%)',
-                borderRadius: '50%'
+                top: '7px'
               }}
             >
+              <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full" />
               {/* Chemicals SVG Icon */}
               <div 
                 className="absolute inset-0 flex items-center justify-center"
