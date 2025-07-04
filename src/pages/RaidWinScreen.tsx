@@ -148,7 +148,10 @@ export const RaidWinScreen: React.FC = (): JSX.Element => {
       const timer = setTimeout(() => setCountdown((prev) => prev - 1), 1000);
       return () => clearTimeout(timer);
     } else {
-      navigate("/raid");
+      const timeout = setTimeout(() => {
+        navigate("/raid");
+      }, 5000);
+      return () => clearTimeout(timeout);
     }
   }, [countdown, navigate]);
 
@@ -176,51 +179,6 @@ export const RaidWinScreen: React.FC = (): JSX.Element => {
 
   const renderWinScreenContent = () => (
     <div className="relative z-10 flex flex-col h-full justify-between items-center py-4 overflow-y-auto scrollbar-hide">
-      <div className="w-full flex justify-between items-center px-4 absolute top-4">
-        <button
-          onClick={() => navigate(-1)}
-          className="flex items-center gap-2 text-white font-['Roboto_Condensed'] font-bold"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-        <div className="flex items-center gap-2">
-          <button className="text-white p-1">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <button className="text-white p-1">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
       <h1 className="text-white font-['Bangers',_Helvetica] text-3xl tracking-wider mt-12">RAIDING...</h1>
 
       <div className="w-full flex flex-col items-center gap-2">

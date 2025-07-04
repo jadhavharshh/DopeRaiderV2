@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import type { JSX } from "react";
+import { useEffect } from "react";
 
 // Image Imports
 import bgImage from "@/static/img/RaidBG.png";
@@ -60,8 +61,16 @@ const WeaponChoice = ({ to, bgImg, frameImg, maskImg, weaponImg }: { to?: string
 };
 
 export const ActiveRaidScreen = (): JSX.Element => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate('/raid/win');
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [navigate]);
+
   const renderContent = () => (
-    <div className="relative w-[393px] h-[852px] bg-white overflow-hidden mx-auto">
+    <div className="relative w-[393px] h-[852px] bg-white overflow-hidden mx-auto overflow-y-auto scrollbar-hide">
       <div className="absolute top-[-78px] left-[-277px] w-[906px] h-[944px]">
         <div className="absolute inset-0">
           <div className="relative w-full h-full">

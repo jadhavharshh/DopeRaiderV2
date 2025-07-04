@@ -1,5 +1,6 @@
 import React from "react";
 import type { JSX } from "react";
+import { useNavigate } from "react-router-dom";
 
 // Assets for Sonny Black's details - these are specific and passed if needed
 import maskGroup9Png from "@/static/img/mask-group-9.png";
@@ -46,6 +47,7 @@ interface PlayerListItemProps {
     profilePicShadowStyle: React.CSSProperties;
     textShadowStyle: React.CSSProperties;
   };
+  isProtected: boolean;
 }
 
 export const PlayerListItem: React.FC<PlayerListItemProps> = ({
@@ -53,8 +55,10 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
   isOpen,
   onClick,
   commonStyles,
+  isProtected,
 }) => {
   const { playerStatCommonClasses, profilePicShadowStyle, textShadowStyle } = commonStyles;
+  const navigate = useNavigate();
 
   return (
     <div
@@ -99,27 +103,66 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
       {/* Expandable Details */}
       {isOpen && player.hasExpandedDetails && (
         <div className="absolute top-[48px] left-0 w-full h-[calc(132px-52px)] px-1 pt-1 z-0"> {/* Ensure details are below header grunge if it overlaps */}
-          {/* Protected section */}
-          <div className="absolute left-[32px] top-[2px] p-px rounded-[74px] bg-gradient-to-b from-[rgba(0,0,0,1)] to-[rgba(102,102,102,1)] w-fit">
-            <div className="inline-flex items-center justify-center gap-2 px-4 py-1 rounded-[73px] bg-gradient-to-b from-[rgba(0,0,0,1)] to-[rgba(102,102,102,1)] overflow-hidden">
-              <div
-                className="bg-contain bg-no-repeat h-[18px] w-[18px] border-[2.83px] border-[#626262] rounded-[9px] relative ml-[-2.8px]"
-                style={{ backgroundImage: `url(${maskGroup9Png})` }}
-              >
+          {/* Protected section or Raid button */}
+          {isProtected ? (
+            <div className="absolute left-[32px] top-[2px] p-px rounded-[74px] bg-gradient-to-b from-[rgba(0,0,0,1)] to-[rgba(102,102,102,1)] w-fit">
+              <div className="inline-flex items-center justify-center gap-2 px-4 py-1 rounded-[73px] bg-gradient-to-b from-[rgba(0,0,0,1)] to-[rgba(102,102,102,1)] overflow-hidden">
                 <div
-                  className="bg-contain bg-no-repeat h-[18px] w-[18px] relative"
-                  style={{ backgroundImage: `url(${maskGroup10Png})` }}
+                  className="bg-contain bg-no-repeat h-[18px] w-[18px] border-[2.83px] border-[#626262] rounded-[9px] relative ml-[-2.8px]"
+                  style={{ backgroundImage: `url(${maskGroup9Png})` }}
                 >
-                  <img className="h-[18px] w-[18px] absolute left-0 top-0" alt="Mask group" src={maskGroup11Png} />
+                  <div
+                    className="bg-contain bg-no-repeat h-[18px] w-[18px] relative"
+                    style={{ backgroundImage: `url(${maskGroup10Png})` }}
+                  >
+                    <img className="h-[18px] w-[18px] absolute left-0 top-0" alt="Mask group" src={maskGroup11Png} />
+                  </div>
+                </div>
+                <div className="text-[#aeaeae] font-['Roboto_Condensed',_Helvetica] text-sm font-semibold tracking-[-0.48px] leading-normal relative" style={textShadowStyle}>
+                  PROTECTED
+                  <br />
+                  15m 23s
                 </div>
               </div>
-              <div className="text-[#aeaeae] font-['Roboto_Condensed',_Helvetica] text-sm font-semibold tracking-[-0.48px] leading-normal relative" style={textShadowStyle}>
-                PROTECTED
-                <br />
-                15m 23s
+            </div>
+          ) : (
+            <div className="absolute left-[32px] top-[2px] w-fit">
+              <div className="relative group inline-flex items-center justify-center">
+                {/* Button Glow Effect */}
+                <div
+                  className="absolute inset-0 rounded-full blur-sm opacity-75 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{
+                    background: 'linear-gradient(to bottom, #103410, #318952)'
+                  }}
+                />
+                {/* Main Button with inner border gradient */}
+                <button
+                  className="relative transition-all duration-200 text-white px-6 py-1 rounded-full shadow-lg hover:shadow-xl transform group-hover:scale-105 group-active:scale-95"
+                  style={{
+                    background: `
+                      linear-gradient(to bottom, #76E39D, #6BBA1C) padding-box,
+                      linear-gradient(to bottom, #103410, #318952) border-box
+                    `,
+                    border: '2px solid transparent',
+                    minWidth: '120px',
+                    height: '38px',
+                  }}
+                  onClick={e => { e.stopPropagation(); navigate('/raid/active'); }}
+                >
+                  {/* Inner content with main background */}
+                  <div
+                    className="absolute inset-[2px] rounded-full"
+                    style={{
+                      background: 'linear-gradient(to bottom, #103410, #318952)'
+                    }}
+                  />
+                  <span className="relative text-white text-base font-semibold z-10">
+                    Raid $0.25
+                  </span>
+                </button>
               </div>
             </div>
-          </div>
+          )}
           {/* WIN-STATS-4 section */}
           <div className="absolute right-[9px] top-[0px] h-[63px] w-[123px]">
             <div className="h-[63px] w-[122px] relative">

@@ -50,7 +50,7 @@ const allPlayersData = [
     imgSrc: telegramPeerPhoto77Png,
     stats: [60, 12, 48],
     ellipseSrc: ellipse1510Svg,
-    headerGrungeSrc: organicGrungeBoldShapes27Svg,
+    headerGrungeSrc: organicGrungeBoldShapes71Svg,
     bodyGrungeSrc: organicGrungeBoldShapes26Svg,
     hasExpandedDetails: true,
   },
@@ -98,6 +98,10 @@ const allPlayersData = [
 
 export const PlayersWrapper = (): JSX.Element => {
   const [openPlayerId, setOpenPlayerId] = useState<string | number | null>(null);
+  const [protectedPlayerId] = useState(() => {
+    const randomIndex = Math.floor(Math.random() * allPlayersData.length);
+    return allPlayersData[randomIndex].id;
+  });
 
   const handlePlayerClick = (id: string | number) => {
     setOpenPlayerId(prevId => (prevId === id ? null : id));
@@ -113,6 +117,7 @@ export const PlayersWrapper = (): JSX.Element => {
             isOpen={openPlayerId === player.id}
             onClick={() => handlePlayerClick(player.id)}
             commonStyles={commonStyles}
+            isProtected={protectedPlayerId === player.id}
           />
         ))}
       </div>
