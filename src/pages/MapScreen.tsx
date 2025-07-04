@@ -1,16 +1,11 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import { BottomNav3 } from "./InventoryScreenSections/BottomNav3";
 import { TopWrapper } from "./InventoryScreenSections/TopWrapper";
 import type { JSX } from "react";
 
 // Import all images using Vite's static imports
 import fullMapImg from "@/static/img/image.png"; // Using the larger map image
-import athga12Png from "@/static/img/9athga-12.png";
-import iconCoke from "@/static/img/icon-57.png";
-import iconWeed from "@/static/img/icon-58.png";
-import iconEnergy from "@/static/img/icon-6.svg";
-import xthfgl6Png from "@/static/img/xthfgl-6.png";
+
 import telegramPeerPhoto from "@/static/img/telegram-peer-photo-size-4-2140046577575765933-1-0-0.png";
 import subtractSvg from "@/static/img/subtract.svg";
 import organicGrunge1Svg from "@/static/img/organic-grunge-bold-shapes.svg";
@@ -47,17 +42,154 @@ import organicGrunge14Svg from "@/static/img/organic-grunge-bold-shapes-13.svg";
 import vector9Svg from "@/static/img/vector-9.svg";
 import group4Png from "@/static/img/group-4.png";
 import Logo from "@/static/img/logo-1.svg";
+import maskGroupPng from '@/static/img/mask-group.png';
+import weedIcon from '@/static/img/weed-icon.svg';
+import cokeIcon from '@/static/img/coke-icon.svg';
+
+// Popup data for each location
+const popupData: Record<string, any> = {
+  'Chinatown': {
+    population: '12k',
+    image: maskGroupPng,
+    items: [
+      { name: 'COKE', icon: cokeIcon, buy: '$6.66', sell: '$6.33', buyColor: 'text-green-400' },
+      { name: 'WEED', icon: weedIcon, buy: '$3.73', sell: '$3.54', buyColor: 'text-green-400' },
+    ],
+    description: `Tucked behind neon-lit noodle shops and incense-filled herbal markets, Chinatown is the beating heart of the underground narcotics trade. Beneath its vibrant facade lies a dense web of hidden backrooms, coded phrases, and cash-only transactions.`
+  },
+  'Jamaica Village': {
+    population: '8k',
+    image: maskGroupPng,
+    items: [
+      { name: 'COKE', icon: cokeIcon, buy: '$5.00', sell: '$4.80', buyColor: 'text-green-400' },
+      { name: 'WEED', icon: weedIcon, buy: '$2.50', sell: '$2.30', buyColor: 'text-green-400' },
+    ],
+    description: 'A laid-back coastal hub known for reggae, rum, and a thriving herbal scene.'
+  },
+  'Novo Moskovo': {
+    population: '10k',
+    image: maskGroupPng,
+    items: [
+      { name: 'COKE', icon: cokeIcon, buy: '$7.10', sell: '$6.90', buyColor: 'text-green-400' },
+      { name: 'WEED', icon: weedIcon, buy: '$4.00', sell: '$3.80', buyColor: 'text-green-400' },
+    ],
+    description: 'A cold, industrial city with a taste for luxury and a hidden underworld.'
+  },
+  'Little Italy': {
+    population: '6k',
+    image: maskGroupPng,
+    items: [
+      { name: 'COKE', icon: cokeIcon, buy: '$6.00', sell: '$5.80', buyColor: 'text-green-400' },
+      { name: 'WEED', icon: weedIcon, buy: '$3.20', sell: '$3.00', buyColor: 'text-green-400' },
+    ],
+    description: 'Classic mobster territory, where deals are made over pasta and wine.'
+  },
+  'Cartagena': {
+    population: '7k',
+    image: maskGroupPng,
+    items: [
+      { name: 'COKE', icon: cokeIcon, buy: '$5.80', sell: '$5.60', buyColor: 'text-green-400' },
+      { name: 'WEED', icon: weedIcon, buy: '$2.90', sell: '$2.70', buyColor: 'text-green-400' },
+    ],
+    description: 'A sun-soaked port city with a reputation for fast boats and faster deals.'
+  },
+  'Baltimore': {
+    population: '9k',
+    image: maskGroupPng,
+    items: [
+      { name: 'COKE', icon: cokeIcon, buy: '$6.20', sell: '$6.00', buyColor: 'text-green-400' },
+      { name: 'WEED', icon: weedIcon, buy: '$3.50', sell: '$3.30', buyColor: 'text-green-400' },
+    ],
+    description: 'A gritty city where the docks never sleep and neither do the hustlers.'
+  },
+  'Vice Island': {
+    population: '5k',
+    image: maskGroupPng,
+    items: [
+      { name: 'COKE', icon: cokeIcon, buy: '$7.50', sell: '$7.20', buyColor: 'text-green-400' },
+      { name: 'WEED', icon: weedIcon, buy: '$4.50', sell: '$4.20', buyColor: 'text-green-400' },
+    ],
+    description: 'A tropical paradise with a dark side, where anything goes for the right price.'
+  },
+};
+
+// PopupLocation component for both mobile and desktop
+const PopupLocation = ({ openPopup, handleClosePopup }: { openPopup: string | null, handleClosePopup: () => void }) => {
+  if (!openPopup) return null;
+  return (
+    <div 
+      className="absolute inset-0 z-50 flex items-center justify-center"
+      style={{
+        background: 'rgba(0, 0, 0, 0.5)',
+        animation: 'dissolve-in 300ms ease-out'
+      }}
+    >
+      <div
+        className="relative rounded-xl shadow-lg flex flex-col items-center"
+        style={{
+          width: 350,
+          background: 'linear-gradient(180deg, #232323 0%, #353535 100%)',
+          border: '2px solid #232323',
+          boxShadow: '0 8px 32px #000a',
+          padding: 0,
+          fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
+        }}
+      >
+        {/* Top Bar */}
+        <div className="absolute right-3 top-3 z-10">
+          <button onClick={handleClosePopup} className="w-8 h-8 rounded-full bg-[#232323] border-2 border-[#666] flex items-center justify-center text-2xl text-[#FFAA22] hover:bg-[#333] transition">
+            ×
+          </button>
+        </div>
+        {/* Header */}
+        <div className="w-full flex flex-col items-center pt-3 pb-1">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="text-xs">🇨🇳</span>
+            <span className="bg-[#232323] border border-[#666] text-white font-bold px-4 py-1 rounded-[4px] uppercase tracking-widest text-xs shadow" style={{letterSpacing: 1, fontFamily: 'Bangers, Roboto, Helvetica, Arial, sans-serif', fontSize: '18px', marginTop: '-2px'}}>CHINATOWN</span>
+          </div>
+          <div className="w-full flex justify-center">
+            <img src={popupData[openPopup]?.image} alt={openPopup} className="w-[320px] h-[110px] object-cover rounded-[8px] border border-[#232323] shadow" style={{objectPosition:'center', marginTop: '2px'}} />
+          </div>
+        </div>
+        {/* Population Row */}
+        <div className="flex items-center gap-2 text-xs text-[#bdbdbd] font-semibold w-full px-6 mt-2 mb-1">
+          <svg width="16" height="16" fill="currentColor" className="inline-block"><circle cx="8" cy="8" r="8" fill="#aaa" /></svg>
+          <span>POPULATION: <span className="text-white font-bold">{popupData[openPopup]?.population}</span></span>
+          <span className="ml-auto flex items-center gap-1"><img src={cokeIcon} alt="coke" className="w-4 h-4" /><img src={weedIcon} alt="weed" className="w-4 h-4" /></span>
+        </div>
+        {/* Table */}
+        <div className="w-[90%] mx-auto mt-1 bg-[#232323] rounded-lg border border-[#444] overflow-hidden">
+          <div className="flex justify-between px-4 py-1 text-xs text-[#bdbdbd] font-bold border-b border-[#444] bg-[#181818] tracking-wider">
+            <span>ITEM</span>
+            <span>BUY</span>
+            <span>SELL</span>
+          </div>
+          {popupData[openPopup]?.items.map((item:any) => (
+            <div key={item.name} className="flex justify-between items-center px-4 py-1 text-sm border-b border-[#333] last:border-b-0 bg-[#232323]">
+              <span className="flex items-center gap-1 font-bold text-white"><img src={item.icon} alt={item.name} className="w-4 h-4" />{item.name}</span>
+              <span className={item.buyColor + ' font-bold'}>{item.buy}</span>
+              <span className="text-[#bdbdbd] font-bold">{item.sell}</span>
+            </div>
+          ))}
+        </div>
+        {/* Description */}
+        <div className="text-xs text-[#bdbdbd] px-6 py-2 text-left w-full font-medium" style={{lineHeight: '1.4'}}>
+          {popupData[openPopup]?.description}
+        </div>
+        {/* Travel Buttons */}
+        <div className="flex w-full gap-2 px-6 pb-4 mt-1">
+          <button className="flex-1 bg-gradient-to-b from-[#76E39D] to-[#6BBA1C] text-white font-bold py-2 rounded-full shadow-inner border-2 border-[#318952] text-base transition hover:brightness-110">TRAVEL $0.25</button>
+          <button className="flex-1 bg-[#444] text-[#bdbdbd] font-bold py-2 rounded-full border-2 border-[#666] text-base cursor-not-allowed opacity-70">FAST TRAVEL $1.00</button>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export const DoperaiderMap = (): JSX.Element => {
-  const [showChinatownPopup, setShowChinatownPopup] = useState(false);
-
-  const handleChinatownClick = () => {
-    setShowChinatownPopup(true);
-  };
-
-  const handleClosePopup = () => {
-    setShowChinatownPopup(false);
-  };
+  const [openPopup, setOpenPopup] = useState<string | null>(null);
+  const handlePinClick = (location: string) => setOpenPopup(location);
+  const handleClosePopup = () => setOpenPopup(null);
 
   return (
     <div className="min-h-screen w-full bg-black overflow-hidden">
@@ -90,8 +222,8 @@ export const DoperaiderMap = (): JSX.Element => {
             {/* Map Pins Container - Keep same positions */}
             <div className="absolute inset-0 pt-24 pb-32">
               {/* PIN-4 - Jamaica Village */}
-              <div className="absolute" style={{ left: '62%', top: '26%' }}>
-                <div className="relative">
+              <div className="absolute" style={{ left: '54%', top: '28%' }} onClick={() => handlePinClick('Jamaica Village')}>
+                <div className="relative cursor-pointer">
                   <div 
                     className="bg-cover bg-center rounded-[40px] h-[32px] w-[32px] absolute left-[10px] top-0"
                     style={{ 
@@ -120,7 +252,7 @@ export const DoperaiderMap = (): JSX.Element => {
               </div>
 
               {/* PIN-5 - Novo Moskovo */}
-              <div className="absolute" style={{ left: '66%', top: '42%' }}>
+              <div className="absolute" style={{ left: '58%', top: '54%' }} onClick={() => handlePinClick('Novo Moskovo')}>
                 <div className="h-[74px] relative w-[109px]">
                   <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[42px] absolute top-[56px] w-[28px]"></div>
                   <img className="h-[69px] left-[35px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract1Svg} />
@@ -134,7 +266,7 @@ export const DoperaiderMap = (): JSX.Element => {
               </div>
 
               {/* PIN-6 - Little Italy */}
-              <div className="absolute" style={{ left: '62%', top: '66%' }}>
+              <div className="absolute" style={{ left: '52%', top: '68%' }} onClick={() => handlePinClick('Little Italy')}>
                 <div className="h-[74px] relative w-[77px]">
                   <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[25px] absolute top-[56px] w-[28px]"></div>
                   <img className="h-[69px] left-[18px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract2Svg} />
@@ -148,7 +280,7 @@ export const DoperaiderMap = (): JSX.Element => {
               </div>
 
               {/* PIN-7 - Cartagena */}
-              <div className="absolute" style={{ left: '30%', top: '66%' }}>
+              <div className="absolute" style={{ left: '46%', top: '68%' }} onClick={() => handlePinClick('Cartagena')}>
                 <div className="h-[74px] relative w-[77px]">
                   <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[25px] absolute top-[56px] w-[28px]"></div>
                   <img className="h-[69px] left-[18px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract3Svg} />
@@ -162,7 +294,7 @@ export const DoperaiderMap = (): JSX.Element => {
               </div>
 
               {/* PIN-8 - Baltimore */}
-              <div className="absolute" style={{ left: '22%', top: '46%' }}>
+              <div className="absolute" style={{ left: '42%', top: '54%' }} onClick={() => handlePinClick('Baltimore')}>
                 <div className="h-[74px] relative w-[76px]">
                   <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[26px] absolute top-[56px] w-[28px]"></div>
                   <img className="h-[69px] left-[19px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract4Svg} />
@@ -182,7 +314,7 @@ export const DoperaiderMap = (): JSX.Element => {
               </div>
 
               {/* PIN-9 - Vice Island */}
-              <div className="absolute" style={{ left: '50%', top: '50%' }}>
+              <div className="absolute" style={{ left: '48%', top: '48%' }} onClick={() => handlePinClick('Vice Island')}>
                 <div className="h-[74px] relative w-[79px]">
                   <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[26px] absolute top-[56px] w-[28px]"></div>
                   <img className="h-[69px] left-[19px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract5Svg} />
@@ -196,8 +328,8 @@ export const DoperaiderMap = (): JSX.Element => {
               </div>
 
               {/* PIN-10 - Chinatown (Button) */}
-              <button className="block absolute" style={{ left: '26%', top: '30%' }} onClick={handleChinatownClick}>
-                <div className="h-[74px] relative w-[78px]">
+              <div className="absolute" style={{ left: '46%', top: '20%' }} onClick={() => handlePinClick('Chinatown')}>
+                <div className="h-[74px] relative w-[78px] cursor-pointer">
                   <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[27px] absolute top-[56px] w-[28px]"></div>
                   <img className="h-[69px] left-[20px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract6Svg} />
                   <img className="h-[24px] left-0 absolute top-[19px] w-[78px]" alt="Organic grunge bold" src={organicGrunge13Svg} />
@@ -205,119 +337,19 @@ export const DoperaiderMap = (): JSX.Element => {
                   <div className="text-white font-['Bangers'] text-[16px] font-normal left-[8px] tracking-[0.32px] leading-normal absolute text-center top-[22px] whitespace-nowrap">
                     CHINATOWN
                   </div>
-                  <div className="h-[20px] left-[30px] absolute top-[2px] w-[20px]">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M19.6551 16.5517H0.344843C0.154414 16.5517 0 16.3973 0 16.2069V3.79309C0 3.60266 0.154414 3.44824 0.344843 3.44824H19.6552C19.8456 3.44824 20 3.60266 20 3.79309V16.2069C20 16.3973 19.8455 16.5517 19.6551 16.5517Z" fill="#FF4B55"/>
-                      <path d="M3.32047 5.49735L3.64922 6.48305L4.68828 6.4911C4.82281 6.49212 4.87859 6.66384 4.77035 6.74372L3.93449 7.36094L4.24789 8.35164C4.28844 8.47993 4.14242 8.58598 4.03297 8.50778L3.18766 7.90352L2.34235 8.50774C2.2329 8.58598 2.08688 8.47985 2.12743 8.35161L2.44082 7.3609L1.60497 6.74372C1.49673 6.6638 1.55251 6.49212 1.68704 6.4911L2.7261 6.48305L3.05485 5.49735C3.09743 5.3697 3.27793 5.3697 3.32047 5.49735Z" fill="#FFE15A"/>
-                      <path d="M7.09354 5.74032L7.32929 6.0618L7.70971 5.94281C7.75897 5.92742 7.79948 5.9836 7.76932 6.02543L7.53643 6.34891L7.76714 6.67395C7.79702 6.71602 7.75612 6.77191 7.70698 6.75617L7.32733 6.63465L7.08948 6.95453C7.0587 6.99594 6.99288 6.9743 6.99268 6.92273L6.99093 6.5241L6.61319 6.39672C6.56433 6.3802 6.56452 6.31098 6.61355 6.29481L6.99206 6.16996L6.99651 5.77137C6.99706 5.71985 7.06304 5.69871 7.09354 5.74032Z" fill="#FFE15A"/>
-                      <path d="M5.65829 4.78209L6.05458 4.82514L6.22364 4.46417C6.24556 4.41745 6.31431 4.42545 6.32486 4.47596L6.40634 4.86612L6.80189 4.91534C6.8531 4.9217 6.86673 4.98959 6.82192 5.01526L6.47603 5.21331L6.55146 5.60471C6.56122 5.65541 6.50087 5.68932 6.46263 5.65467L6.16736 5.3869L5.81845 5.57955C5.77329 5.60451 5.72232 5.55756 5.74349 5.51049L5.90689 5.1469L5.61579 4.87456C5.57814 4.83948 5.60701 4.77655 5.65829 4.78209Z" fill="#FFE15A"/>
-                      <path d="M6.28477 8.64511L6.04903 8.96659L5.6686 8.84761C5.61934 8.83222 5.57883 8.88839 5.60899 8.93022L5.84188 9.2537L5.61118 9.57874C5.5813 9.62081 5.62219 9.67671 5.67133 9.66097L6.05098 9.53944L6.28883 9.85932C6.31961 9.90073 6.38544 9.87909 6.38563 9.82753L6.38739 9.4289L6.76512 9.30151C6.81403 9.28499 6.81379 9.21577 6.76477 9.1996L6.38625 9.07476L6.3818 8.67616C6.38118 8.62468 6.31528 8.60347 6.28477 8.64511Z" fill="#FFE15A"/>
-                      <path d="M7.72005 7.74462L7.32376 7.78767L7.1547 7.42669C7.13278 7.37997 7.06403 7.38798 7.05348 7.43849L6.97196 7.82864L6.57642 7.87786C6.5252 7.88423 6.51157 7.95212 6.55638 7.97778L6.90227 8.17583L6.82684 8.56724C6.81708 8.61794 6.87743 8.65184 6.91567 8.6172L7.21095 8.34942L7.55985 8.54208C7.60501 8.56704 7.65598 8.52009 7.63481 8.47302L7.47141 8.10942L7.76251 7.83708C7.80028 7.802 7.77141 7.73907 7.72005 7.74462Z" fill="#FFE15A"/>
-                    </svg>
+                  <div className="h-[20px] left-[30px] absolute top-[3px] w-[20px]">
+                    <div className="h-[13px] relative top-[3px] bg-cover bg-center" style={{ backgroundImage: `url(${vector9Svg})` }}>
+                      <img className="h-[5px] left-[2px] absolute top-[1px] w-[6px]" alt="Group" src={group4Png} />
+                    </div>
                   </div>
                 </div>
-              </button>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Chinatown Popup - Mobile */}
-        {showChinatownPopup && (
-          <div 
-            className="absolute inset-0 z-50 flex items-center justify-center"
-            style={{
-              background: 'rgba(0, 0, 0, 0.5)',
-              animation: 'dissolve-in 300ms ease-out'
-            }}
-          >
-            <div 
-              className="bg-white rounded shadow-lg"
-              style={{
-                width: 'calc(100% - 32px)',
-                height: '490px',
-                top: '177px',
-                left: '16px',
-                right: '16px',
-                position: 'absolute'
-              }}
-            >
-              {/* Title Tag */}
-              <div 
-                className="absolute"
-                style={{
-                  width: '145px',
-                  height: '30px',
-                  top: '-15px',
-                  left: '108px',
-                  borderRadius: '4px',
-                  backgroundImage: 'linear-gradient(180deg, #000000 0%, #666666 100%)',
-                  border: '1px solid #666666',
-                  paddingTop: '4px',
-                  paddingBottom: '4px',
-                  paddingLeft: '16px',
-                  paddingRight: '16px',
-                  display: 'flex',
-                  alignItems: 'center'
-                }}
-              >
-                <div style={{ marginRight: '10px' }}>
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19.6551 16.5517H0.344843C0.154414 16.5517 0 16.3973 0 16.2069V3.79309C0 3.60266 0.154414 3.44824 0.344843 3.44824H19.6552C19.8456 3.44824 20 3.60266 20 3.79309V16.2069C20 16.3973 19.8455 16.5517 19.6551 16.5517Z" fill="#FF4B55"/>
-                    <path d="M3.32047 5.49735L3.64922 6.48305L4.68828 6.4911C4.82281 6.49212 4.87859 6.66384 4.77035 6.74372L3.93449 7.36094L4.24789 8.35164C4.28844 8.47993 4.14242 8.58598 4.03297 8.50778L3.18766 7.90352L2.34235 8.50774C2.2329 8.58598 2.08688 8.47985 2.12743 8.35161L2.44082 7.3609L1.60497 6.74372C1.49673 6.6638 1.55251 6.49212 1.68704 6.4911L2.7261 6.48305L3.05485 5.49735C3.09743 5.3697 3.27793 5.3697 3.32047 5.49735Z" fill="#FFE15A"/>
-                    <path d="M7.09354 5.74032L7.32929 6.0618L7.70971 5.94281C7.75897 5.92742 7.79948 5.9836 7.76932 6.02543L7.53643 6.34891L7.76714 6.67395C7.79702 6.71602 7.75612 6.77191 7.70698 6.75617L7.32733 6.63465L7.08948 6.95453C7.0587 6.99594 6.99288 6.9743 6.99268 6.92273L6.99093 6.5241L6.61319 6.39672C6.56433 6.3802 6.56452 6.31098 6.61355 6.29481L6.99206 6.16996L6.99651 5.77137C6.99706 5.71985 7.06304 5.69871 7.09354 5.74032Z" fill="#FFE15A"/>
-                    <path d="M5.65829 4.78209L6.05458 4.82514L6.22364 4.46417C6.24556 4.41745 6.31431 4.42545 6.32486 4.47596L6.40634 4.86612L6.80189 4.91534C6.8531 4.9217 6.86673 4.98959 6.82192 5.01526L6.47603 5.21331L6.55146 5.60471C6.56122 5.65541 6.50087 5.68932 6.46263 5.65467L6.16736 5.3869L5.81845 5.57955C5.77329 5.60451 5.72232 5.55756 5.74349 5.51049L5.90689 5.1469L5.61579 4.87456C5.57814 4.83948 5.60701 4.77655 5.65829 4.78209Z" fill="#FFE15A"/>
-                    <path d="M6.28477 8.64511L6.04903 8.96659L5.6686 8.84761C5.61934 8.83222 5.57883 8.88839 5.60899 8.93022L5.84188 9.2537L5.61118 9.57874C5.5813 9.62081 5.62219 9.67671 5.67133 9.66097L6.05098 9.53944L6.28883 9.85932C6.31961 9.90073 6.38544 9.87909 6.38563 9.82753L6.38739 9.4289L6.76512 9.30151C6.81403 9.28499 6.81379 9.21577 6.76477 9.1996L6.38625 9.07476L6.3818 8.67616C6.38118 8.62468 6.31528 8.60347 6.28477 8.64511Z" fill="#FFE15A"/>
-                    <path d="M7.72005 7.74462L7.32376 7.78767L7.1547 7.42669C7.13278 7.37997 7.06403 7.38798 7.05348 7.43849L6.97196 7.82864L6.57642 7.87786C6.5252 7.88423 6.51157 7.95212 6.55638 7.97778L6.90227 8.17583L6.82684 8.56724C6.81708 8.61794 6.87743 8.65184 6.91567 8.6172L7.21095 8.34942L7.55985 8.54208C7.60501 8.56704 7.65598 8.52009 7.63481 8.47302L7.47141 8.10942L7.76251 7.83708C7.80028 7.802 7.77141 7.73907 7.72005 7.74462Z" fill="#FFE15A"/>
-                  </svg>
-                </div>
-                <span 
-                  style={{
-                    fontFamily: 'Bangers',
-                    fontWeight: 400,
-                    fontSize: '21px',
-                    lineHeight: '100%',
-                    letterSpacing: '2%',
-                    color: 'white',
-                    textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'
-                  }}
-                >
-                  CHINATOWN
-                </span>
-              </div>
-
-              {/* Close Button */}
-              <button 
-                onClick={handleClosePopup}
-                className="absolute"
-                style={{
-                  width: '48px',
-                  height: '48px',
-                  top: '-10px',
-                  left: '307px',
-                  borderRadius: '74px',
-                  background: 'linear-gradient(180deg, #000000 0%, #414141 100%)',
-                  border: '1px solid transparent',
-                  backgroundImage: 'linear-gradient(180deg, #000000 0%, #414141 100%), linear-gradient(360deg, #000000 0%, #666666 100%)',
-                  backgroundOrigin: 'border-box',
-                  backgroundClip: 'content-box, border-box',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
-                }}
-              >
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4.45117 0C4.45488 0.0285516 4.37772 0.207481 4.2207 0.536133C4.05237 0.881187 3.83924 1.29163 3.58105 1.7666C3.33789 2.25372 3.07891 2.72854 2.80566 3.19141C2.54746 3.6664 2.3121 4.05852 2.09863 4.36719C3.01334 5.38302 3.91119 6.37275 4.79199 7.33594C5.55412 8.19436 6.36416 9.08852 7.21875 10.0215C7.07087 10.1334 6.92287 10.2466 6.77344 10.3594C5.53838 11.2914 4.33565 12.1875 3.16699 13.0479C2.0118 13.8937 0.956047 14.6319 0 15.2627C0.0265503 15.2627 0.179314 15.37 0.458008 15.585C0.750145 15.8144 1.09578 16.1012 1.49414 16.4453C1.90578 16.7751 2.30437 17.1191 2.68945 17.4775C3.08786 17.8217 3.41272 18.1309 3.66504 18.4033C4.72746 17.5717 5.76414 16.7541 6.77344 15.9512C7.79594 15.1626 8.87128 14.3163 10 13.4131C10.0518 13.3727 10.1038 13.3318 10.1562 13.291C10.3977 13.5602 10.6435 13.8363 10.8955 14.1172L16.0742 20L18.1387 15.7432C17.2428 14.7679 16.3608 13.79 15.4912 12.8105C14.8309 12.0885 14.184 11.367 13.5469 10.6494C13.6518 10.5676 13.7577 10.4854 13.8643 10.4023L20 5.71289L16.3945 2.89551C15.372 3.71276 14.3497 4.51611 13.3271 5.30469C12.4343 6.015 11.5446 6.70616 10.6621 7.38281C10.4166 7.10218 10.1674 6.81999 9.91797 6.5332C8.88645 5.34727 7.89182 4.19168 6.93555 3.06641C5.99445 1.95341 5.1666 0.931054 4.45117 0Z" fill="#FFAA22"/>
-                </svg>
-              </button>
-              
-              {/* Popup Content - Plain for now */}
-              <div className="p-6">
-                <h2 className="text-2xl font-bold mb-4">Chinatown</h2>
-                <p className="text-gray-600">Popup content will go here...</p>
-              </div>
-            </div>
-          </div>
-        )}
+        <PopupLocation openPopup={openPopup} handleClosePopup={handleClosePopup} />
       </div>
 
       {/* Desktop Layout */}
@@ -353,8 +385,8 @@ export const DoperaiderMap = (): JSX.Element => {
           {/* Desktop Map Pins - Keep EXACT SAME positions as mobile */}
           <div className="absolute inset-0 pt-32 pb-32">
             {/* Jamaica Village - Desktop - Same position */}
-            <div className="absolute" style={{ left: '62%', top: '26%' }}>
-              <div className="relative">
+            <div className="absolute" style={{ left: '54%', top: '28%' }} onClick={() => handlePinClick('Jamaica Village')}>
+              <div className="relative cursor-pointer">
                 <div 
                   className="bg-cover bg-center rounded-[40px] h-[32px] w-[32px] absolute left-[10px] top-0"
                   style={{ 
@@ -383,7 +415,7 @@ export const DoperaiderMap = (): JSX.Element => {
             </div>
 
             {/* Novo Moskovo - Desktop - Same position */}
-            <div className="absolute" style={{ left: '66%', top: '42%' }}>
+            <div className="absolute" style={{ left: '58%', top: '54%' }} onClick={() => handlePinClick('Novo Moskovo')}>
               <div className="h-[74px] relative w-[109px]">
                 <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[42px] absolute top-[56px] w-[28px]"></div>
                 <img className="h-[69px] left-[35px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract1Svg} />
@@ -397,7 +429,7 @@ export const DoperaiderMap = (): JSX.Element => {
             </div>
 
             {/* Little Italy - Desktop - Same position */}
-            <div className="absolute" style={{ left: '62%', top: '66%' }}>
+            <div className="absolute" style={{ left: '52%', top: '68%' }} onClick={() => handlePinClick('Little Italy')}>
               <div className="h-[74px] relative w-[77px]">
                 <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[25px] absolute top-[56px] w-[28px]"></div>
                 <img className="h-[69px] left-[18px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract2Svg} />
@@ -411,7 +443,7 @@ export const DoperaiderMap = (): JSX.Element => {
             </div>
 
             {/* Cartagena - Desktop - Same position */}
-            <div className="absolute" style={{ left: '30%', top: '66%' }}>
+            <div className="absolute" style={{ left: '46%', top: '68%' }} onClick={() => handlePinClick('Cartagena')}>
               <div className="h-[74px] relative w-[77px]">
                 <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[25px] absolute top-[56px] w-[28px]"></div>
                 <img className="h-[69px] left-[18px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract3Svg} />
@@ -425,7 +457,7 @@ export const DoperaiderMap = (): JSX.Element => {
             </div>
 
             {/* Baltimore - Desktop - Same position */}
-            <div className="absolute" style={{ left: '22%', top: '46%' }}>
+            <div className="absolute" style={{ left: '42%', top: '54%' }} onClick={() => handlePinClick('Baltimore')}>
               <div className="h-[74px] relative w-[76px]">
                 <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[26px] absolute top-[56px] w-[28px]"></div>
                 <img className="h-[69px] left-[19px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract4Svg} />
@@ -445,7 +477,7 @@ export const DoperaiderMap = (): JSX.Element => {
             </div>
 
             {/* Vice Island - Desktop - Same position */}
-            <div className="absolute" style={{ left: '50%', top: '50%' }}>
+            <div className="absolute" style={{ left: '48%', top: '48%' }} onClick={() => handlePinClick('Vice Island')}>
               <div className="h-[74px] relative w-[79px]">
                 <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[26px] absolute top-[56px] w-[28px]"></div>
                 <img className="h-[69px] left-[19px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract5Svg} />
@@ -459,8 +491,8 @@ export const DoperaiderMap = (): JSX.Element => {
             </div>
 
             {/* Chinatown - Desktop - Same position (Link) */}
-            <Link className="block absolute" style={{ left: '26%', top: '30%' }} to="/map/chinatown">
-              <div className="h-[74px] relative w-[78px]">
+            <div className="absolute" style={{ left: '46%', top: '20%' }} onClick={() => handlePinClick('Chinatown')}>
+              <div className="h-[74px] relative w-[78px] cursor-pointer">
                 <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[27px] absolute top-[56px] w-[28px]"></div>
                 <img className="h-[69px] left-[20px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract6Svg} />
                 <img className="h-[24px] left-0 absolute top-[19px] w-[78px]" alt="Organic grunge bold" src={organicGrunge13Svg} />
@@ -474,7 +506,7 @@ export const DoperaiderMap = (): JSX.Element => {
                   </div>
                 </div>
               </div>
-            </Link>
+            </div>
           </div>
 
           {/* Desktop Stats Bar - Top */}
@@ -489,6 +521,9 @@ export const DoperaiderMap = (): JSX.Element => {
             </div>
           </div>
         </div>
+
+        {/* Chinatown Popup - Desktop */}
+        <PopupLocation openPopup={openPopup} handleClosePopup={handleClosePopup} />
       </div>
     </div>
   );
