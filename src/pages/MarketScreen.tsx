@@ -147,7 +147,16 @@ export const MarketScreen = (): JSX.Element => {
                 top: '7px'
               }}
             >
-              <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full" />
+              <div 
+                className="absolute w-[24px] h-[24px] rounded-full"
+                style={{
+                  background: 'linear-gradient(180deg, #000000 0%, #666666 100%)',
+                  border: '1px solid transparent',
+                  backgroundImage: 'linear-gradient(180deg, #000000 0%, #666666 100%), linear-gradient(360deg, #000000 0%, #666666 100%)',
+                  backgroundOrigin: 'border-box',
+                  backgroundClip: 'content-box, border-box'
+                }}
+              />
               {/* Vector Icon */}
               <div 
                 className="absolute inset-0 flex items-center justify-center"
@@ -278,7 +287,16 @@ export const MarketScreen = (): JSX.Element => {
                 top: '7px'
               }}
             >
-              <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full" />
+              <div 
+                className="absolute w-[24px] h-[24px] rounded-full"
+                style={{
+                  background: 'linear-gradient(180deg, #000000 0%, #666666 100%)',
+                  border: '1px solid transparent',
+                  backgroundImage: 'linear-gradient(180deg, #000000 0%, #666666 100%), linear-gradient(360deg, #000000 0%, #666666 100%)',
+                  backgroundOrigin: 'border-box',
+                  backgroundClip: 'content-box, border-box'
+                }}
+              />
               {/* Vector Icon */}
               <div 
                 className="absolute inset-0 flex items-center justify-center"
@@ -425,7 +443,16 @@ export const MarketScreen = (): JSX.Element => {
                 top: '7px'
               }}
             >
-              <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full" />
+              <div 
+                className="absolute w-[24px] h-[24px] rounded-full"
+                style={{
+                  background: 'linear-gradient(180deg, #000000 0%, #666666 100%)',
+                  border: '1px solid transparent',
+                  backgroundImage: 'linear-gradient(180deg, #000000 0%, #666666 100%), linear-gradient(360deg, #000000 0%, #666666 100%)',
+                  backgroundOrigin: 'border-box',
+                  backgroundClip: 'content-box, border-box'
+                }}
+              />
               {/* Seeds SVG Icon */}
               <div 
                 className="absolute inset-0 flex items-center justify-center"
@@ -567,7 +594,16 @@ export const MarketScreen = (): JSX.Element => {
                 top: '7px'
               }}
             >
-              <div className="absolute w-[24px] h-[24px] bg-gradient-to-b from-black to-[#666666] rounded-full" />
+              <div 
+                className="absolute w-[24px] h-[24px] rounded-full"
+                style={{
+                  background: 'linear-gradient(180deg, #000000 0%, #666666 100%)',
+                  border: '1px solid transparent',
+                  backgroundImage: 'linear-gradient(180deg, #000000 0%, #666666 100%), linear-gradient(360deg, #000000 0%, #666666 100%)',
+                  backgroundOrigin: 'border-box',
+                  backgroundClip: 'content-box, border-box'
+                }}
+              />
               {/* Chemicals SVG Icon */}
               <div 
                 className="absolute inset-0 flex items-center justify-center"
