@@ -171,8 +171,13 @@ export const BottomNav3 = ({ onNotificationClick }: { onNotificationClick?: () =
 
             {/* RAID */}
             <Link 
-              className={`h-16 md:h-20 flex-1 md:flex-none md:w-24 flex flex-col items-center justify-center ${pathname.startsWith("/raid") ? "bg-gradient-to-b from-[#1c1c1c] to-black" : ""}`} 
+              className={`h-16 md:h-20 flex-1 md:flex-none md:w-24 flex flex-col items-center justify-center border-r md:border-r-0 border-transparent ${pathname.startsWith("/raid") ? "bg-gradient-to-b from-[#1c1c1c] to-black" : ""}`} 
               to="/raid"
+              style={{
+                borderImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 153, 153, 0.43) 100%) 1',
+                borderRightStyle: 'solid',
+                borderRightWidth: '1px'
+              }}
             >
               <img className={`h-7 w-7 md:h-10 md:w-10 mb-1 md:mb-2 ${pathname.startsWith("/raid") ? "brightness-125 contrast-125" : "brightness-75 opacity-75"}`} alt="Icon" src={iconRaid} />
               <div className={`font-['Roboto_Condensed'] text-xs md:text-sm font-black tracking-0 leading-normal whitespace-nowrap ${pathname.startsWith("/raid") ? "text-white" : "text-[#aaaaaa]"}`}>
