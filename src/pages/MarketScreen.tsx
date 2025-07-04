@@ -24,10 +24,10 @@ export const MarketScreen = (): JSX.Element => {
           }}
         />
 
-        {/* MARKET Title */}
-        <div className="absolute w-[137px] h-[34px] left-[128px] top-[59px] z-20">
+        {/* LITTLE ITALY Title */}
+        <div className="absolute w-[180px] h-[34px] left-[107px] top-[59px] z-20">
           <h1 className="text-white text-[32px] font-normal leading-[34px] text-center tracking-[0.02em]" style={{ fontFamily: 'Bangers' }}>
-            MARKET
+            LITTLE ITALY
           </h1>
         </div>
 
@@ -921,7 +921,7 @@ export const MarketScreen = (): JSX.Element => {
               </span>
             </div>
 
-            {/* TRADE Button */}
+            {/* BUY Button */}
             <button 
               style={{
                 boxSizing: 'border-box',
@@ -930,9 +930,9 @@ export const MarketScreen = (): JSX.Element => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 position: 'absolute',
-                minWidth: '48px',
+                minWidth: '70px',
                 height: '30px',
-                left: '258px',
+                right: '16px',
                 top: '4px',
                 background: 'linear-gradient(to top, #10341D, #318952)',
                 border: '1px solid transparent',
@@ -943,7 +943,7 @@ export const MarketScreen = (): JSX.Element => {
               }}
             >
               <span className="text-white text-[12px] font-semibold leading-[14px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
-                TRADE
+                BUY $2.50
               </span>
             </button>
           </div>
@@ -1072,7 +1072,7 @@ export const MarketScreen = (): JSX.Element => {
               </span>
             </div>
 
-            {/* TRADE Button */}
+            {/* BUY Button */}
             <button 
               style={{
                 boxSizing: 'border-box',
@@ -1081,9 +1081,9 @@ export const MarketScreen = (): JSX.Element => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 position: 'absolute',
-                minWidth: '48px',
+                minWidth: '80px',
                 height: '30px',
-                left: '258px',
+                right: '16px',
                 top: '4px',
                 background: 'linear-gradient(to top, #10341D, #318952)',
                 border: '1px solid transparent',
@@ -1094,7 +1094,7 @@ export const MarketScreen = (): JSX.Element => {
               }}
             >
               <span className="text-white text-[12px] font-semibold leading-[14px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
-                TRADE
+                BUY $13.50
               </span>
             </button>
           </div>
