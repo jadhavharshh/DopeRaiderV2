@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { BottomNav3 } from "./InventoryScreenSections/BottomNav3";
 import { TopWrapper } from "./InventoryScreenSections/TopWrapper";
@@ -49,8 +49,26 @@ import group4Png from "@/static/img/group-4.png";
 import Logo from "@/static/img/logo-1.svg";
 
 export const DoperaiderMap = (): JSX.Element => {
+  const [showChinatownPopup, setShowChinatownPopup] = useState(false);
+
+  const handleChinatownClick = () => {
+    setShowChinatownPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowChinatownPopup(false);
+  };
+
   return (
     <div className="min-h-screen w-full bg-black overflow-hidden">
+      <style>
+        {`
+          @keyframes dissolve-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+        `}
+      </style>
       {/* Mobile Layout */}
       <div className="md:hidden flex items-center justify-center h-screen w-screen">
         <div className="bg-white h-full w-[393px] relative overflow-hidden" data-model-id="412:3173">
@@ -177,8 +195,8 @@ export const DoperaiderMap = (): JSX.Element => {
                 </div>
               </div>
 
-              {/* PIN-10 - Chinatown (Link) */}
-              <Link className="block absolute" style={{ left: '26%', top: '30%' }} to="/map/chinatown">
+              {/* PIN-10 - Chinatown (Button) */}
+              <button className="block absolute" style={{ left: '26%', top: '30%' }} onClick={handleChinatownClick}>
                 <div className="h-[74px] relative w-[78px]">
                   <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[27px] absolute top-[56px] w-[28px]"></div>
                   <img className="h-[69px] left-[20px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract6Svg} />
@@ -198,10 +216,64 @@ export const DoperaiderMap = (): JSX.Element => {
                     </svg>
                   </div>
                 </div>
-              </Link>
+              </button>
             </div>
           </div>
         </div>
+
+        {/* Chinatown Popup - Mobile */}
+        {showChinatownPopup && (
+          <div 
+            className="absolute inset-0 z-50 flex items-center justify-center"
+            style={{
+              background: 'rgba(0, 0, 0, 0.5)',
+              animation: 'dissolve-in 300ms ease-out'
+            }}
+          >
+            <div 
+              className="bg-white rounded shadow-lg"
+              style={{
+                width: 'calc(100% - 32px)',
+                height: '490px',
+                top: '177px',
+                left: '16px',
+                right: '16px',
+                position: 'absolute'
+              }}
+            >
+              {/* Close Button */}
+              <button 
+                onClick={handleClosePopup}
+                className="absolute"
+                style={{
+                  width: '48px',
+                  height: '48px',
+                  top: '-10px',
+                  left: '307px',
+                  borderRadius: '74px',
+                  background: 'linear-gradient(180deg, #000000 0%, #414141 100%)',
+                  border: '1px solid transparent',
+                  backgroundImage: 'linear-gradient(180deg, #000000 0%, #414141 100%), linear-gradient(360deg, #000000 0%, #666666 100%)',
+                  backgroundOrigin: 'border-box',
+                  backgroundClip: 'content-box, border-box',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+              >
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.45117 0C4.45488 0.0285516 4.37772 0.207481 4.2207 0.536133C4.05237 0.881187 3.83924 1.29163 3.58105 1.7666C3.33789 2.25372 3.07891 2.72854 2.80566 3.19141C2.54746 3.6664 2.3121 4.05852 2.09863 4.36719C3.01334 5.38302 3.91119 6.37275 4.79199 7.33594C5.55412 8.19436 6.36416 9.08852 7.21875 10.0215C7.07087 10.1334 6.92287 10.2466 6.77344 10.3594C5.53838 11.2914 4.33565 12.1875 3.16699 13.0479C2.0118 13.8937 0.956047 14.6319 0 15.2627C0.0265503 15.2627 0.179314 15.37 0.458008 15.585C0.750145 15.8144 1.09578 16.1012 1.49414 16.4453C1.90578 16.7751 2.30437 17.1191 2.68945 17.4775C3.08786 17.8217 3.41272 18.1309 3.66504 18.4033C4.72746 17.5717 5.76414 16.7541 6.77344 15.9512C7.79594 15.1626 8.87128 14.3163 10 13.4131C10.0518 13.3727 10.1038 13.3318 10.1562 13.291C10.3977 13.5602 10.6435 13.8363 10.8955 14.1172L16.0742 20L18.1387 15.7432C17.2428 14.7679 16.3608 13.79 15.4912 12.8105C14.8309 12.0885 14.184 11.367 13.5469 10.6494C13.6518 10.5676 13.7577 10.4854 13.8643 10.4023L20 5.71289L16.3945 2.89551C15.372 3.71276 14.3497 4.51611 13.3271 5.30469C12.4343 6.015 11.5446 6.70616 10.6621 7.38281C10.4166 7.10218 10.1674 6.81999 9.91797 6.5332C8.88645 5.34727 7.89182 4.19168 6.93555 3.06641C5.99445 1.95341 5.1666 0.931054 4.45117 0Z" fill="#FFAA22"/>
+                </svg>
+              </button>
+              
+              {/* Popup Content - Plain for now */}
+              <div className="p-6">
+                <h2 className="text-2xl font-bold mb-4">Chinatown</h2>
+                <p className="text-gray-600">Popup content will go here...</p>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Desktop Layout */}
