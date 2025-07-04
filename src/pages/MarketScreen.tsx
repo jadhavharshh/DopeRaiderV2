@@ -400,97 +400,15 @@ export const MarketScreen = (): JSX.Element => {
           className="absolute z-20"
           style={{
             width: 'calc(100% - 32px)',
-            height: '136px',
+            height: '93px',
             top: '461px',
             left: '16px',
             right: '16px',
             borderRadius: '4px',
             background: '#000000B2',
-            border: '0.5px solid #FFFFFF66'
+            border: '1px solid #FFFFFF66'
           }}
         >
-          {/* ITEM Label */}
-          <div 
-            className="absolute"
-            style={{
-              width: '29px',
-              height: '16px',
-              top: '14px',
-              left: '24px'
-            }}
-          >
-            <span 
-              style={{
-                fontFamily: 'Roboto Condensed',
-                fontWeight: 700,
-                fontSize: '14px',
-                lineHeight: '100%',
-                letterSpacing: '0%',
-                color: '#FFFFFF'
-              }}
-            >
-              ITEM
-            </span>
-          </div>
-
-          {/* BUY Label */}
-          <div 
-            className="absolute"
-            style={{
-              width: '24px',
-              height: '16px',
-              top: '14px',
-              left: '146px'
-            }}
-          >
-            <span 
-              style={{
-                fontFamily: 'Roboto Condensed',
-                fontWeight: 700,
-                fontSize: '14px',
-                lineHeight: '100%',
-                letterSpacing: '0%',
-                color: '#FFFFFF'
-              }}
-            >
-              BUY
-            </span>
-          </div>
-
-          {/* SELL Label */}
-          <div 
-            className="absolute"
-            style={{
-              width: '28px',
-              height: '16px',
-              top: '14px',
-              left: '213px'
-            }}
-          >
-            <span 
-              style={{
-                fontFamily: 'Roboto Condensed',
-                fontWeight: 700,
-                fontSize: '14px',
-                lineHeight: '100%',
-                letterSpacing: '0%',
-                color: '#FFFFFF'
-              }}
-            >
-              SELL
-            </span>
-          </div>
-
-          {/* Divider Line */}
-          <div 
-            className="absolute"
-            style={{
-              width: '100%',
-              top: '46px',
-              left: '0',
-              borderTop: '0.5px solid #FFFFFF66'
-            }}
-          />
 
           {/* Row #1 - SEEDS */}
           <div 
@@ -498,7 +416,7 @@ export const MarketScreen = (): JSX.Element => {
             style={{
               width: '329px',
               height: '38px',
-              top: '52px',
+              top: '8px',
               left: '16px'
             }}
           >
@@ -642,7 +560,7 @@ export const MarketScreen = (): JSX.Element => {
             style={{
               width: '329px',
               height: '38px',
-              top: '90px',
+              top: '46px',
               left: '16px'
             }}
           >
