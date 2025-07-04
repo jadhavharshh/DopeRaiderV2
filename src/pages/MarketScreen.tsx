@@ -150,7 +150,7 @@ export const MarketScreen = (): JSX.Element => {
                 height: '0px',
                 top: '80px',
                 left: '1px',
-                border: '0.5px solid rgba(255, 255, 255, 0.4)',
+                borderTop: '0.5px solid rgba(255, 255, 255, 0.4)',
                 opacity: 1
               }}
             />
@@ -322,7 +322,7 @@ export const MarketScreen = (): JSX.Element => {
                 height: '0px',
                 top: '80px',
                 left: '1px',
-                border: '0.5px solid rgba(255, 255, 255, 0.4)',
+                borderTop: '0.5px solid rgba(255, 255, 255, 0.4)',
                 opacity: 1
               }}
             />
