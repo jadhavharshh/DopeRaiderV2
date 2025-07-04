@@ -242,17 +242,22 @@ export const MarketScreen = (): JSX.Element => {
                 flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'center',
-                padding: '8px 14px 8px 8px',
-                gap: '8px',
                 position: 'absolute',
                 minWidth: '48px',
                 height: '30px',
                 left: '258px',
                 top: '4px',
-                background: 'linear-gradient(360deg, #10341D 0%, #318952 100%)',
+                background: 'linear-gradient(to top, #10341D, #318952)',
+                border: '1px solid transparent',
+                backgroundImage: 'linear-gradient(to top, #10341D, #318952), linear-gradient(to top, #76E39D, #6BBA1C)',
+                backgroundOrigin: 'border-box',
+                backgroundClip: 'content-box, border-box',
                 borderRadius: '74px'
               }}
             >
+              <span className="text-white text-[12px] font-semibold leading-[14px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
+                TRADE
+              </span>
             </button>
           </div>
 
@@ -370,17 +375,22 @@ export const MarketScreen = (): JSX.Element => {
                 flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'center',
-                padding: '8px 14px 8px 8px',
-                gap: '8px',
                 position: 'absolute',
                 minWidth: '48px',
                 height: '30px',
                 left: '258px',
                 top: '4px',
-                background: 'linear-gradient(360deg, #10341D 0%, #318952 100%)',
+                background: 'linear-gradient(to top, #10341D, #318952)',
+                border: '1px solid transparent',
+                backgroundImage: 'linear-gradient(to top, #10341D, #318952), linear-gradient(to top, #76E39D, #6BBA1C)',
+                backgroundOrigin: 'border-box',
+                backgroundClip: 'content-box, border-box',
                 borderRadius: '74px'
               }}
             >
+              <span className="text-white text-[12px] font-semibold leading-[14px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
+                TRADE
+              </span>
             </button>
           </div>
         </div>
@@ -607,17 +617,22 @@ export const MarketScreen = (): JSX.Element => {
                 flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'center',
-                padding: '8px 14px 8px 8px',
-                gap: '8px',
                 position: 'absolute',
                 minWidth: '48px',
                 height: '30px',
                 left: '258px',
                 top: '4px',
-                background: 'linear-gradient(360deg, #10341D 0%, #318952 100%)',
+                background: 'linear-gradient(to top, #10341D, #318952)',
+                border: '1px solid transparent',
+                backgroundImage: 'linear-gradient(to top, #10341D, #318952), linear-gradient(to top, #76E39D, #6BBA1C)',
+                backgroundOrigin: 'border-box',
+                backgroundClip: 'content-box, border-box',
                 borderRadius: '74px'
               }}
             >
+              <span className="text-white text-[12px] font-semibold leading-[14px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
+                TRADE
+              </span>
             </button>
           </div>
 
@@ -746,17 +761,22 @@ export const MarketScreen = (): JSX.Element => {
                 flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'center',
-                padding: '8px 14px 8px 8px',
-                gap: '8px',
                 position: 'absolute',
                 minWidth: '48px',
                 height: '30px',
                 left: '258px',
                 top: '4px',
-                background: 'linear-gradient(360deg, #10341D 0%, #318952 100%)',
+                background: 'linear-gradient(to top, #10341D, #318952)',
+                border: '1px solid transparent',
+                backgroundImage: 'linear-gradient(to top, #10341D, #318952), linear-gradient(to top, #76E39D, #6BBA1C)',
+                backgroundOrigin: 'border-box',
+                backgroundClip: 'content-box, border-box',
                 borderRadius: '74px'
               }}
             >
+              <span className="text-white text-[12px] font-semibold leading-[14px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
+                TRADE
+              </span>
             </button>
           </div>
         </div>
