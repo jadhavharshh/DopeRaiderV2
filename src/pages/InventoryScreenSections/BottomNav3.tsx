@@ -104,7 +104,7 @@ export const BottomNav3 = ({ onNotificationClick }: { onNotificationClick?: () =
               borderRightWidth: '1px'
             }}>
               <img
-                className="h-8 w-8 mb-1"
+                className={`h-8 w-8 mb-1 ${pathname.startsWith("/player") ? "brightness-125 contrast-125" : "brightness-75 opacity-75"}`}
                 alt="Union"
                 src={unionYou}
               />
@@ -119,7 +119,7 @@ export const BottomNav3 = ({ onNotificationClick }: { onNotificationClick?: () =
               borderRightStyle: 'solid',
               borderRightWidth: '1px'
             }}>
-              <img className="h-8 w-8 mb-1" alt="Layer" src={layerMarket} />
+              <img className={`h-8 w-8 mb-1 ${pathname.startsWith("/market") ? "brightness-125 contrast-125" : "brightness-75 opacity-75"}`} alt="Layer" src={layerMarket} />
               <div className={`font-['Roboto_Condensed'] text-xs font-black tracking-0 leading-normal whitespace-nowrap ${pathname.startsWith("/market") ? "text-white" : "text-[#aaaaaa]"}`}>
                 MARKET
               </div>
@@ -132,7 +132,7 @@ export const BottomNav3 = ({ onNotificationClick }: { onNotificationClick?: () =
               borderRightWidth: '1px'
             }}>
               <img
-                className="h-8 w-8 mb-1"
+                className={`h-8 w-8 mb-1 ${pathname.startsWith("/production") ? "brightness-125 contrast-125" : "brightness-75 opacity-75"}`}
                 alt="Layer"
                 src={layerProduce}
               />
@@ -147,7 +147,7 @@ export const BottomNav3 = ({ onNotificationClick }: { onNotificationClick?: () =
               borderRightStyle: 'solid',
               borderRightWidth: '1px'
             }}>
-              <img className="h-8 w-8 mb-1" alt="Icon" src={iconMap} />
+              <img className={`h-8 w-8 mb-1 ${pathname.startsWith("/map") ? "brightness-125 contrast-125" : "brightness-75 opacity-75"}`} alt="Icon" src={iconMap} />
               <div className={`font-['Roboto_Condensed'] text-xs font-black tracking-0 leading-normal whitespace-nowrap ${pathname.startsWith("/map") ? "text-white" : "text-[#aaaaaa]"}`}>
                 MAP
               </div>
@@ -155,7 +155,7 @@ export const BottomNav3 = ({ onNotificationClick }: { onNotificationClick?: () =
 
             {/* RAID */}
             <Link className={`h-16 flex-1 flex flex-col items-center justify-center ${pathname.startsWith("/raid") ? "bg-gradient-to-b from-[#1c1c1c] to-black" : ""}`} to="/raid">
-              <img className="h-8 w-8 mb-1" alt="Icon" src={iconRaid} />
+              <img className={`h-8 w-8 mb-1 ${pathname.startsWith("/raid") ? "brightness-125 contrast-125" : "brightness-75 opacity-75"}`} alt="Icon" src={iconRaid} />
               <div className={`font-['Roboto_Condensed'] text-xs font-black tracking-0 leading-normal whitespace-nowrap ${pathname.startsWith("/raid") ? "text-white" : "text-[#aaaaaa]"}`}>
                 RAID
               </div>
