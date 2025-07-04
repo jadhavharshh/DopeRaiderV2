@@ -34,8 +34,8 @@ export const InventoryScreen = (): JSX.Element => {
   return (
     <div className="min-h-screen w-full bg-black overflow-hidden">
       {/* Mobile Layout - up to 767px */}
-      <div className="flex flex-col h-screen w-full min-w-[390px] md:hidden">
-        <div className="bg-black h-full w-full relative flex flex-col">
+      <div className="flex flex-col h-screen w-full md:hidden overflow-hidden">
+        <div className="bg-black h-full w-full relative flex flex-col overflow-hidden">
           {/* Background Image - Fixed positioning */}
           <img
             className="absolute inset-0 w-full h-full object-cover z-0"
@@ -44,31 +44,31 @@ export const InventoryScreen = (): JSX.Element => {
           />
 
           {/* Gray Background Container with TopWrapper and YourStatsWrapper */}
-          <div className="relative z-10 flex-shrink-0 bg-gradient-to-b from-[#303030] to-black">
-            {/* Top Wrapper - Main profile content (now includes logo) */}
-            <div className="px-0">
+          <div className="relative z-10 flex-shrink-0 bg-gradient-to-b from-[#303030] to-black w-full">
+            {/* Top Wrapper - Main profile content (includes logo) */}
+            <div className="w-full">
               <TopWrapper />
             </div>
 
             {/* Tab Navigation - At bottom of gray container */}
-            <div className="pb-2">
+            <div className="pb-2 w-full">
               <YourStatsWrapper activeTab={activeTab} onTabChange={setActiveTab} />
             </div>
           </div>
 
           {/* Main Content */}
-          <div className="relative z-10 flex-1 overflow-y-auto">
+          <div className="relative z-10 flex-1 overflow-y-auto overflow-x-hidden w-full">
             {renderTabContent()}
           </div>
 
           {/* Bottom Navigation */}
-          <div className="relative z-10 flex-shrink-0">
+          <div className="relative z-10 flex-shrink-0 w-full">
             <BottomNav3 onNotificationClick={() => setShowNotifications(true)} />
           </div>
         </div>
       </div>
 
-      {/* Desktop Layout */}
+      {/* Desktop Layout - unchanged */}
       <div className="hidden md:block h-screen relative">
         <img
           className="absolute inset-0 w-full h-full object-cover opacity-70"
