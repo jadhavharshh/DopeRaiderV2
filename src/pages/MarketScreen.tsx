@@ -31,13 +31,70 @@ export const MarketScreen = (): JSX.Element => {
           </h1>
         </div>
 
+        {/* New Container */}
+        <div 
+          className="absolute z-20"
+          style={{
+            width: '294px',
+            height: '160px',
+            top: '117px',
+            left: '50px',
+            opacity: 1
+          }}
+        >
+          {/* First element inside new container */}
+          <div
+            className="absolute"
+            style={{
+              width: '120px',
+              height: '160px',
+              borderRadius: '4px',
+              background: 'rgba(0, 0, 0, 0.5)',
+              border: '1px solid rgba(255, 255, 255, 0.4)',
+              opacity: 1
+            }}
+          />
+          
+          {/* Second element inside new container */}
+          <div
+            className="absolute"
+            style={{
+              width: '120px',
+              height: '160px',
+              left: '174px',
+              borderRadius: '4px',
+              background: 'rgba(0, 0, 0, 0.5)',
+              border: '1px solid rgba(255, 255, 255, 0.4)',
+              opacity: 1
+            }}
+          />
+          
+          {/* SVG Flag */}
+          <div
+            className="absolute"
+            style={{
+              width: '64px',
+              height: '64px',
+              top: '48px',
+              left: '115px',
+              opacity: 1
+            }}
+          >
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.3334 52.9652H1.1035C0.494125 52.9652 0 52.4711 0 51.8617V12.1376C0 11.5282 0.494125 11.0341 1.1035 11.0341H21.3334V52.9652Z" fill="#73AF00"/>
+              <path d="M42.6677 11.0347H21.334V52.9659H42.6677V11.0347Z" fill="#F5F5F5"/>
+              <path d="M62.8964 52.9652H42.6665V11.0342H62.8964C63.5058 11.0342 63.9999 11.5283 63.9999 12.1377V51.8618C63.9999 52.4713 63.5058 52.9652 62.8964 52.9652Z" fill="#FF4B55"/>
+            </svg>
+          </div>
+        </div>
+
         {/* Middle Element */}
         <div 
           className="absolute z-20"
           style={{
             width: 'calc(100% - 32px)',
             height: '136px',
-            top: '317px',
+            top: '357px',
             left: '16px',
             right: '16px',
             borderRadius: '4px',
@@ -415,7 +472,7 @@ export const MarketScreen = (): JSX.Element => {
           style={{
             width: 'calc(100% - 32px)',
             height: '93px',
-            top: '461px',
+            top: '501px',
             left: '16px',
             right: '16px',
             borderRadius: '4px',
