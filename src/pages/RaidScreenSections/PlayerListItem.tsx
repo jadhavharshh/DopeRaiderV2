@@ -1,5 +1,6 @@
 import React from "react";
 import type { JSX } from "react";
+import { useNavigate } from "react-router-dom";
 
 // Assets for Sonny Black's details - these are specific and passed if needed
 import maskGroup9Png from "@/static/img/mask-group-9.png";
@@ -57,6 +58,7 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
   isProtected,
 }) => {
   const { playerStatCommonClasses, profilePicShadowStyle, textShadowStyle } = commonStyles;
+  const navigate = useNavigate();
 
   return (
     <div
@@ -145,6 +147,7 @@ export const PlayerListItem: React.FC<PlayerListItemProps> = ({
                     minWidth: '120px',
                     height: '38px',
                   }}
+                  onClick={e => { e.stopPropagation(); navigate('/raid/active'); }}
                 >
                   {/* Inner content with main background */}
                   <div
