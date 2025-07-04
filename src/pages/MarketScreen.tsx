@@ -889,10 +889,10 @@ export const MarketScreen = (): JSX.Element => {
                   lineHeight: '100%',
                   letterSpacing: '0%',
                   textAlign: 'center',
-                  color: '#5BFF8E'
+                  color: '#FFFFFF'
                 }}
               >
-                $0.25
+                $2.50
               </span>
             </div>
 
@@ -1040,10 +1040,10 @@ export const MarketScreen = (): JSX.Element => {
                   lineHeight: '100%',
                   letterSpacing: '0%',
                   textAlign: 'center',
-                  color: '#FF5454'
+                  color: '#FFFFFF'
                 }}
               >
-                $0.25
+                $4.50
               </span>
             </div>
 
