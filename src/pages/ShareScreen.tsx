@@ -99,20 +99,9 @@ const ShareScreenContent = () => {
   return (
     <div className="relative w-full h-full flex flex-col items-center justify-between p-4 text-white overflow-hidden">
       {/* Header */}
-      <div className="w-full flex items-center justify-between z-20">
-        <button onClick={() => navigate(-1)} className="flex items-center gap-2 bg-black/50 rounded-full px-3 py-1.5 border border-white/20 hover:bg-black/70 transition-colors">
-          <img src={closeIcon} alt="Close" className="w-3 h-3" />
-          <span className="text-white font-['Roboto_Condensed'] text-sm">Close</span>
-        </button>
+      <div className="w-full flex items-center justify-center m-10 z-20">
         <img src={logo} alt="Doperaider Logo" className="h-7" />
-        <div className="flex items-center gap-2">
-          <button className="bg-black/50 rounded-full p-2 border border-white/20 hover:bg-black/70 transition-colors">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9L12 15L18 9" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-          </button>
-          <button className="bg-black/50 rounded-full p-2 border border-white/20 hover:bg-black/70 transition-colors">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M5 13C5.5523 13 6 12.5523 6 12C6 11.4477 5.5523 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-          </button>
-        </div>
+
       </div>
 
       <div className="flex flex-col items-center gap-5 mt-4">
