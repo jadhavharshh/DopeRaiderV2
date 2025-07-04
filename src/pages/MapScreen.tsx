@@ -59,134 +59,9 @@ export const DoperaiderMap = (): JSX.Element => {
             className="absolute inset-0 w-full h-full bg-cover bg-center"
             style={{ backgroundImage: `url(${fullMapImg})` }}
           >
-            {/* BOTTOM-NAV-6 - Fixed positioning for mobile */}
-            <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-[393px] h-[120px] z-50">
-              {/* YOUR-STATS-12 */}
-              <div className="bg-gradient-to-b from-[#303030] to-[#1b1b1b] border-b border-black h-[40px] left-0 absolute top-0 w-[393px]">
-                {/* stats-11 */}
-                <div className="flex items-center gap-[2px] justify-end left-[80px] absolute top-[4px]">
-                  {/* div-24 (Money) */}
-                  <div className="relative flex items-center bg-gradient-to-b from-[#666666] to-[#454545] border-none rounded shadow-[0px_4px_4px_#00000040] gap-[4px] h-[32px] overflow-hidden px-[8px] py-[4px]">
-                    <div className="absolute inset-0 rounded bg-gradient-to-t from-black to-[#666666] p-[1px] pointer-events-none z-[1]" 
-                         style={{
-                           WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                           WebkitMaskComposite: "xor",
-                           maskComposite: "exclude"
-                         }}>
-                    </div>
-                    <div className="text-white font-['Roboto_Condensed'] text-[16px] font-bold tracking-[0] leading-normal relative text-center drop-shadow-[0px_4px_4px_#00000040] whitespace-nowrap w-fit">
-                      $120.64
-                    </div>
-                  </div>
-
-                  {/* respect-12 */}
-                  <div className="relative flex items-center bg-gradient-to-b from-[#0a0a28] to-[#49497f] border-none rounded gap-[4px] h-[32px] overflow-hidden px-[8px] py-[4px]">
-                    <div className="absolute inset-0 rounded bg-gradient-to-t from-black to-[#666666] p-[1px] pointer-events-none z-[1]" 
-                         style={{
-                           WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                           WebkitMaskComposite: "xor",
-                           maskComposite: "exclude"
-                         }}>
-                    </div>
-                    <div className="h-[14px] relative w-[11px] bg-cover bg-center" 
-                         style={{ backgroundImage: `url(${athga12Png})` }}>
-                    </div>
-                    <div className="text-white font-['Roboto_Condensed'] text-[16px] font-bold tracking-[0] leading-normal relative text-center drop-shadow-[0px_4px_4px_#00000040] whitespace-nowrap w-fit">
-                      100
-                    </div>
-                  </div>
-
-                  {/* coke-13 */}
-                  <div className="relative flex items-center bg-gradient-to-b from-black to-[#8992a5] border-none rounded gap-[4px] h-[32px] overflow-hidden px-[8px] py-[4px]">
-                    <div className="absolute inset-0 rounded bg-gradient-to-t from-black to-[#666666] p-[1px] pointer-events-none z-[1]" 
-                         style={{
-                           WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                           WebkitMaskComposite: "xor",
-                           maskComposite: "exclude"
-                         }}>
-                    </div>
-                    <img className="h-[15px] relative w-[13px]" alt="Icon" src={iconCoke} />
-                    <div className="text-white font-['Roboto_Condensed'] text-[16px] font-bold tracking-[0] leading-normal relative text-center drop-shadow-[0px_4px_4px_#00000040] whitespace-nowrap w-fit">
-                      10
-                    </div>
-                  </div>
-
-                  {/* weed-15 */}
-                  <div className="relative flex items-center bg-gradient-to-b from-[#10341d] to-[#318952] border-none rounded gap-[4px] h-[32px] overflow-hidden px-[8px] py-[4px]">
-                    <div className="absolute inset-0 rounded bg-gradient-to-t from-black to-[#666666] p-[1px] pointer-events-none z-[1]" 
-                         style={{
-                           WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                           WebkitMaskComposite: "xor",
-                           maskComposite: "exclude"
-                         }}>
-                    </div>
-                    <img className="h-[15px] relative w-[14px]" alt="Icon" src={iconWeed} />
-                    <div className="text-white font-['Roboto_Condensed'] text-[16px] font-bold tracking-[0] leading-normal relative text-center drop-shadow-[0px_4px_4px_#00000040] whitespace-nowrap w-fit">
-                      20
-                    </div>
-                  </div>
-
-                  {/* div-24 (Capacity) */}
-                  <div className="relative flex items-center bg-gradient-to-b from-[#666666] to-[#454545] border-none rounded shadow-[0px_4px_4px_#00000040] gap-[4px] h-[32px] overflow-hidden px-[8px] py-[4px]">
-                    <div className="absolute inset-0 rounded bg-gradient-to-t from-black to-[#666666] p-[1px] pointer-events-none z-[1]" 
-                         style={{
-                           WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                           WebkitMaskComposite: "xor",
-                           maskComposite: "exclude"
-                         }}>
-                    </div>
-                    <div className="h-[13px] relative w-[16px] bg-cover bg-center" 
-                         style={{ backgroundImage: `url(${iconEnergy})` }}>
-                    </div>
-                    <p className="text-transparent font-['Roboto_Condensed'] text-[16px] font-bold tracking-[0] leading-normal relative text-center drop-shadow-[0px_4px_4px_#00000040] whitespace-nowrap w-fit">
-                      <span className="text-white">30</span>
-                      <span className="text-[#aaaaaa]">/70</span>
-                    </p>
-                  </div>
-                </div>
-
-                {/* NOTIFICAITONS-10 */}
-                <div className="h-[49px] left-[16px] absolute top-[-13px] w-[49px]">
-                  <div className="h-[49px] relative">
-                    {/* notif-icon-12 */}
-                    <div className="relative bg-gradient-to-b from-black to-[#414141] border-none rounded-[74px] h-[47px] left-0 overflow-hidden absolute top-[2px] w-[47px]">
-                      <div className="absolute inset-0 rounded-[74px] bg-gradient-to-t from-black to-[#666666] p-[1px] pointer-events-none z-[1]" 
-                           style={{
-                             WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                             WebkitMaskComposite: "xor",
-                             maskComposite: "exclude"
-                           }}>
-                      </div>
-                      <div className="h-[21px] left-[16px] relative top-[13px] rotate-180 w-[16px]">
-                        <img
-                          className="h-[21px] left-0 absolute top-0 rotate-180 w-[16px]"
-                          alt="Xt h fgl"
-                          src={xthfgl6Png}
-                        />
-                      </div>
-                    </div>
-
-                    {/* notif-number-10 */}
-                    <div className="relative bg-gradient-to-b from-black to-[#414141] border-none rounded-[74px] h-[20px] left-[29px] absolute top-0 w-[20px]">
-                      <div className="absolute inset-0 rounded-[74px] bg-gradient-to-t from-black to-[#666666] p-[1px] pointer-events-none z-[1]" 
-                           style={{
-                             WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                             WebkitMaskComposite: "xor",
-                             maskComposite: "exclude"
-                           }}>
-                      </div>
-                      <div className="text-[#ffaa22] font-['Roboto_Condensed'] text-[12px] font-semibold left-[7px] tracking-[0] leading-normal absolute top-[2px] whitespace-nowrap">
-                        2
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* NavTabs - Use relative positioning within the fixed container */}
-              <div className="absolute top-[40px] left-0 w-full">
-                <BottomNav3 />
-              </div>
+            {/* Bottom Navigation */}
+            <div className="absolute bottom-0 left-0 right-0 z-30">
+              <BottomNav3 />
             </div>
 
             {/* MAP Title */}
@@ -484,10 +359,10 @@ export const DoperaiderMap = (): JSX.Element => {
           {/* Desktop Stats Bar - Top */}
 
 
-          {/* Bottom Navigation - Desktop */}
+          {/* Desktop Bottom Navigation */}
           <div className="fixed bottom-0 left-0 right-0 z-30">
             <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-30">
-              <div className="scale-90 lg:scale-100 origin-bottom">
+              <div className="scale-60 sm:scale-70 md:scale-80 lg:scale-90 xl:scale-100 origin-bottom">
                 <BottomNav3 />
               </div>
             </div>
