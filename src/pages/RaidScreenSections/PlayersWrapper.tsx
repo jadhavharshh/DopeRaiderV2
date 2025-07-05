@@ -108,8 +108,8 @@ export const PlayersWrapper = (): JSX.Element => {
   };
 
   return (
-    <div className="h-[588px] w-full max-w-[362px] mx-auto overflow-hidden overflow-y-scroll scrollbar-hide">
-      <div className="flex flex-col gap-1 relative top-[6px] w-full">
+    <div className="h-full w-full max-w-[362px] mx-auto overflow-hidden overflow-y-scroll scrollbar-hide">
+      <div className="flex flex-col gap-1 w-full py-2">
         {allPlayersData.map((player) => (
           <PlayerListItem
             key={player.id}
