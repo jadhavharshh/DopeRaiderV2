@@ -12,7 +12,7 @@ import vector27Svg from "@/static/img/vector-27.svg";
 export const Top1 = (): JSX.Element => {
   return (
     // TOP-1
-    <div className="bg-gradient-to-b from-[rgba(48,48,48,1)] to-[rgba(27,27,27,1)] border-b border-black h-[144px] w-[393px] relative">
+    <div className="bg-gradient-to-b from-[rgba(48,48,48,1)] to-[rgba(27,27,27,1)] border-b border-black h-[144px] w-full max-w-[393px] relative">
       {/* element-hga-wrapper */}
       <div
         className="bg-contain bg-no-repeat h-8 w-8 absolute left-[245px] top-[104px]"

@@ -72,7 +72,7 @@ export const BottomNav3 = ({ onNotificationClick }: { onNotificationClick?: () =
         </div>
 
         {/* Notification icon - Hide on desktop */}
-        <div className="md:hidden absolute left-4 top-0 transform -translate-y-2" onClick={onNotificationClick}>
+        <div className="md:hidden absolute left-4 top-0 transform -translate-y-2 z-10" onClick={onNotificationClick}>
           <div className="relative">
             <div className="bg-gradient-to-b from-black to-[#414141] border-none rounded-full h-12 w-12 flex items-center justify-center overflow-hidden relative before:absolute before:inset-0 before:rounded-full before:p-[1px] before:bg-gradient-to-b before:from-black before:to-[#666666] before:mask-composite-exclude before:pointer-events-none before:z-[1]">
               <div className="transform rotate-180 relative z-10">
