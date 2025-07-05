@@ -29,14 +29,14 @@ export const RaidLobbyScreen = (): JSX.Element => {
             <div className="absolute w-[250px] h-[558px] left-[calc(50%-125px)] top-[-50px] bg-black opacity-60 blur-[27px] mix-blend-soft-light rotate-90" />
           </div>
 
-          {/* Top Bar */}
-          <div className="relative z-10 flex-shrink-0">
-            <Top1 />
-          </div>
-
-          {/* Main Content - PlayersWrapper */}
-          <div className="relative z-10 flex-1 overflow-y-auto scrollbar-hide px-[15px] pt-1">
-            <PlayersWrapper />
+          {/* Centered Header and List for Mobile */}
+          <div className="flex flex-col items-center w-full flex-1 relative z-10">
+            <div className="w-full flex justify-center">
+              <Top1 />
+            </div>
+            <div className="flex-1 w-full flex justify-center">
+              <PlayersWrapper />
+            </div>
           </div>
 
           {/* Original SHADOW div is commented out as its placement in responsive design is unclear without visual context */}
