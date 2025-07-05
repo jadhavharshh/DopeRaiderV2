@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BottomNav3 } from "./InventoryScreenSections/BottomNav3";
 import { TopWrapper } from "./InventoryScreenSections/TopWrapper";
+import { LocationPopup } from "../components/LocationPopup";
 import type { JSX } from "react";
 
 // Import all images using Vite's static imports
@@ -42,149 +43,6 @@ import organicGrunge14Svg from "@/static/img/organic-grunge-bold-shapes-13.svg";
 import vector9Svg from "@/static/img/vector-9.svg";
 import group4Png from "@/static/img/group-4.png";
 import Logo from "@/static/img/logo-1.svg";
-import maskGroupPng from '@/static/img/mask-group.png';
-import weedIcon from '@/static/img/weed-icon.svg';
-import cokeIcon from '@/static/img/coke-icon.svg';
-
-// Popup data for each location
-const popupData: Record<string, any> = {
-  'Chinatown': {
-    population: '12k',
-    image: maskGroupPng,
-    items: [
-      { name: 'COKE', icon: cokeIcon, buy: '$6.66', sell: '$6.33', buyColor: 'text-green-400' },
-      { name: 'WEED', icon: weedIcon, buy: '$3.73', sell: '$3.54', buyColor: 'text-green-400' },
-    ],
-    description: `Tucked behind neon-lit noodle shops and incense-filled herbal markets, Chinatown is the beating heart of the underground narcotics trade. Beneath its vibrant facade lies a dense web of hidden backrooms, coded phrases, and cash-only transactions.`
-  },
-  'Jamaica Village': {
-    population: '8k',
-    image: maskGroupPng,
-    items: [
-      { name: 'COKE', icon: cokeIcon, buy: '$5.00', sell: '$4.80', buyColor: 'text-green-400' },
-      { name: 'WEED', icon: weedIcon, buy: '$2.50', sell: '$2.30', buyColor: 'text-green-400' },
-    ],
-    description: 'A laid-back coastal hub known for reggae, rum, and a thriving herbal scene.'
-  },
-  'Novo Moskovo': {
-    population: '10k',
-    image: maskGroupPng,
-    items: [
-      { name: 'COKE', icon: cokeIcon, buy: '$7.10', sell: '$6.90', buyColor: 'text-green-400' },
-      { name: 'WEED', icon: weedIcon, buy: '$4.00', sell: '$3.80', buyColor: 'text-green-400' },
-    ],
-    description: 'A cold, industrial city with a taste for luxury and a hidden underworld.'
-  },
-  'Little Italy': {
-    population: '6k',
-    image: maskGroupPng,
-    items: [
-      { name: 'COKE', icon: cokeIcon, buy: '$6.00', sell: '$5.80', buyColor: 'text-green-400' },
-      { name: 'WEED', icon: weedIcon, buy: '$3.20', sell: '$3.00', buyColor: 'text-green-400' },
-    ],
-    description: 'Classic mobster territory, where deals are made over pasta and wine.'
-  },
-  'Cartagena': {
-    population: '7k',
-    image: maskGroupPng,
-    items: [
-      { name: 'COKE', icon: cokeIcon, buy: '$5.80', sell: '$5.60', buyColor: 'text-green-400' },
-      { name: 'WEED', icon: weedIcon, buy: '$2.90', sell: '$2.70', buyColor: 'text-green-400' },
-    ],
-    description: 'A sun-soaked port city with a reputation for fast boats and faster deals.'
-  },
-  'Baltimore': {
-    population: '9k',
-    image: maskGroupPng,
-    items: [
-      { name: 'COKE', icon: cokeIcon, buy: '$6.20', sell: '$6.00', buyColor: 'text-green-400' },
-      { name: 'WEED', icon: weedIcon, buy: '$3.50', sell: '$3.30', buyColor: 'text-green-400' },
-    ],
-    description: 'A gritty city where the docks never sleep and neither do the hustlers.'
-  },
-  'Vice Island': {
-    population: '5k',
-    image: maskGroupPng,
-    items: [
-      { name: 'COKE', icon: cokeIcon, buy: '$7.50', sell: '$7.20', buyColor: 'text-green-400' },
-      { name: 'WEED', icon: weedIcon, buy: '$4.50', sell: '$4.20', buyColor: 'text-green-400' },
-    ],
-    description: 'A tropical paradise with a dark side, where anything goes for the right price.'
-  },
-};
-
-// PopupLocation component for both mobile and desktop
-const PopupLocation = ({ openPopup, handleClosePopup }: { openPopup: string | null, handleClosePopup: () => void }) => {
-  if (!openPopup) return null;
-  return (
-    <div 
-      className="absolute inset-0 z-50 flex items-center justify-center"
-      style={{
-        background: 'rgba(0, 0, 0, 0.5)',
-        animation: 'dissolve-in 300ms ease-out'
-      }}
-    >
-      <div
-        className="relative rounded-xl shadow-lg flex flex-col items-center"
-        style={{
-          width: 350,
-          background: 'linear-gradient(180deg, #232323 0%, #353535 100%)',
-          border: '2px solid #232323',
-          boxShadow: '0 8px 32px #000a',
-          padding: 0,
-          fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
-        }}
-      >
-        {/* Top Bar */}
-        <div className="absolute right-3 top-3 z-10">
-          <button onClick={handleClosePopup} className="w-8 h-8 rounded-full bg-[#232323] border-2 border-[#666] flex items-center justify-center text-2xl text-[#FFAA22] hover:bg-[#333] transition">
-            ×
-          </button>
-        </div>
-        {/* Header */}
-        <div className="w-full flex flex-col items-center pt-3 pb-1">
-          <div className="flex items-center gap-2 mb-1">
-            <span className="text-xs">🇨🇳</span>
-            <span className="bg-[#232323] border border-[#666] text-white font-bold px-4 py-1 rounded-[4px] uppercase tracking-widest text-xs shadow" style={{letterSpacing: 1, fontFamily: 'Bangers, Roboto, Helvetica, Arial, sans-serif', fontSize: '18px', marginTop: '-2px'}}>CHINATOWN</span>
-          </div>
-          <div className="w-full flex justify-center">
-            <img src={popupData[openPopup]?.image} alt={openPopup} className="w-[320px] h-[110px] object-cover rounded-[8px] border border-[#232323] shadow" style={{objectPosition:'center', marginTop: '2px'}} />
-          </div>
-        </div>
-        {/* Population Row */}
-        <div className="flex items-center gap-2 text-xs text-[#bdbdbd] font-semibold w-full px-6 mt-2 mb-1">
-          <svg width="16" height="16" fill="currentColor" className="inline-block"><circle cx="8" cy="8" r="8" fill="#aaa" /></svg>
-          <span>POPULATION: <span className="text-white font-bold">{popupData[openPopup]?.population}</span></span>
-          <span className="ml-auto flex items-center gap-1"><img src={cokeIcon} alt="coke" className="w-4 h-4" /><img src={weedIcon} alt="weed" className="w-4 h-4" /></span>
-        </div>
-        {/* Table */}
-        <div className="w-[90%] mx-auto mt-1 bg-[#232323] rounded-lg border border-[#444] overflow-hidden">
-          <div className="flex justify-between px-4 py-1 text-xs text-[#bdbdbd] font-bold border-b border-[#444] bg-[#181818] tracking-wider">
-            <span>ITEM</span>
-            <span>BUY</span>
-            <span>SELL</span>
-          </div>
-          {popupData[openPopup]?.items.map((item:any) => (
-            <div key={item.name} className="flex justify-between items-center px-4 py-1 text-sm border-b border-[#333] last:border-b-0 bg-[#232323]">
-              <span className="flex items-center gap-1 font-bold text-white"><img src={item.icon} alt={item.name} className="w-4 h-4" />{item.name}</span>
-              <span className={item.buyColor + ' font-bold'}>{item.buy}</span>
-              <span className="text-[#bdbdbd] font-bold">{item.sell}</span>
-            </div>
-          ))}
-        </div>
-        {/* Description */}
-        <div className="text-xs text-[#bdbdbd] px-6 py-2 text-left w-full font-medium" style={{lineHeight: '1.4'}}>
-          {popupData[openPopup]?.description}
-        </div>
-        {/* Travel Buttons */}
-        <div className="flex w-full gap-2 px-6 pb-4 mt-1">
-          <button className="flex-1 bg-gradient-to-b from-[#76E39D] to-[#6BBA1C] text-white font-bold py-2 rounded-full shadow-inner border-2 border-[#318952] text-base transition hover:brightness-110">TRAVEL $0.25</button>
-          <button className="flex-1 bg-[#444] text-[#bdbdbd] font-bold py-2 rounded-full border-2 border-[#666] text-base cursor-not-allowed opacity-70">FAST TRAVEL $1.00</button>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 export const DoperaiderMap = (): JSX.Element => {
   const [openPopup, setOpenPopup] = useState<string | null>(null);
@@ -348,8 +206,8 @@ export const DoperaiderMap = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Chinatown Popup - Mobile */}
-        <PopupLocation openPopup={openPopup} handleClosePopup={handleClosePopup} />
+        {/* Location Popup - Mobile */}
+        <LocationPopup openPopup={openPopup} handleClosePopup={handleClosePopup} />
       </div>
 
       {/* Desktop Layout */}
@@ -522,8 +380,8 @@ export const DoperaiderMap = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Chinatown Popup - Desktop */}
-        <PopupLocation openPopup={openPopup} handleClosePopup={handleClosePopup} />
+        {/* Location Popup - Desktop */}
+        <LocationPopup openPopup={openPopup} handleClosePopup={handleClosePopup} />
       </div>
     </div>
   );
