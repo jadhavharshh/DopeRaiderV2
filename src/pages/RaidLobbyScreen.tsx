@@ -42,7 +42,7 @@ export const RaidLobbyScreen = (): JSX.Element => {
           {/* <div className="bg-black rounded-full blur-[27px] h-[478px] left-[120px] opacity-80 fixed top-[490px] transform rotate-90 w-[131px]" /> */}
 
           {/* Bottom Navigation */}
-          <div className="relative z-10 flex-shrink-0">
+          <div className="relative z-10 flex-shrink-0 w-full">
             <BottomNav3 />
           </div>
         </div>
@@ -82,7 +82,11 @@ export const RaidLobbyScreen = (): JSX.Element => {
 
         {/* Bottom Navigation for Desktop */}
         <div className="fixed bottom-0 left-0 right-0 z-30">
-          <BottomNav3 />
+          <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-30">
+            <div className="scale-60 sm:scale-70 md:scale-80 lg:scale-90 xl:scale-100 origin-bottom">
+              <BottomNav3 />
+            </div>
+          </div>
         </div>
       </div>
     </div>
