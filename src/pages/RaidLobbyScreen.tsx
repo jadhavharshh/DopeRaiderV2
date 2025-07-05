@@ -3,6 +3,7 @@ import { PlayersWrapper } from "./RaidScreenSections/PlayersWrapper";
 import { BottomNav3 } from "./InventoryScreenSections/BottomNav3";
 import { Top1 } from "./RaidScreenSections/Top1";
 import type { JSX } from "react";
+import { TopWrapper } from "./InventoryScreenSections/TopWrapper";
 
 // Assuming image-7.png is in the public/img folder
 import backgroundImageSrc from "@/static/img/image-7.png"; // Can be different if needed
@@ -61,6 +62,13 @@ export const RaidLobbyScreen = (): JSX.Element => {
         <div className="absolute w-[127px] h-[433px] left-[calc(50%+200px)] top-[calc(50%-100px)] bg-white rounded-full blur-[27px] mix-blend-soft-light opacity-30" />
         <div className="absolute w-[406px] h-[906px] left-[calc(50%-203px)] top-[-200px] bg-black opacity-20 blur-[27px] mix-blend-soft-light rotate-90" />
         <div className="absolute w-[250px] h-[558px] left-[calc(50%-125px)] top-[-100px] bg-black opacity-40 blur-[27px] mix-blend-soft-light rotate-90" />
+
+        {/* Top Left Profile Section - Glassmorphic */}
+        <div className="absolute top-5 left-5 lg:left-5 z-10 w-64 lg:w-72 scale-75 lg:scale-90 origin-top-left">
+          <div className="">
+            <TopWrapper />
+          </div>
+        </div>
 
         {/* Central Content Panel for Desktop */}
         <div

@@ -4,6 +4,7 @@ import type { JSX } from "react";
 import { BottomNav3 } from "./InventoryScreenSections/BottomNav3";
 import { BagIcon } from "@/icons/BagIcon";
 import { InfoIcon } from "@/icons/InfoIcon";
+import { TopWrapper } from "./InventoryScreenSections/TopWrapper";
 
 // Import images using Vite's path configuration
 import backgroundImg from "@/static/img/image-2.png";
@@ -613,6 +614,13 @@ export const ProductionScreen = (): JSX.Element => {
           alt="Background"
           src={WeedBgIMG}
         />
+
+        {/* Top Left Profile Section - Glassmorphic */}
+        <div className="absolute top-5 left-5 lg:left-5 z-10 w-64 lg:w-72 scale-75 lg:scale-90 origin-top-left">
+          <div className="">
+            <TopWrapper />
+          </div>
+        </div>
 
         {/* Desktop Content - Centered Layout */}
         <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pb-20">
