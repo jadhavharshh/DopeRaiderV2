@@ -180,57 +180,64 @@ export const Scroll = (): JSX.Element => {
           </div>
 
           {/* WALLET Section */}
+          {/* WALLET Section */}
           <div className="h-[124px] relative w-full">
             <div className="h-[124px] relative w-full">
               {/* Background rectangle */}
               <div className="bg-gradient-to-b from-[#666666] to-[#454545] border border-[#666666] rounded h-[124px] w-full" />
 
-              {/* Disconnect button */}
-              <Link
-                className="flex items-center bg-gradient-to-b from-[#10341d] to-[#318952] border border-[#76e39d] rounded-[74px] gap-2 justify-center right-4 overflow-hidden p-2 absolute top-[14px] w-[104px]"
-                to="/player/inventory"
-              >
-                <div className="text-xs font-semibold text-white tracking-[-0.36px] leading-normal -mt-[1px] drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] whitespace-nowrap">
-                  DISCONNECT
-                </div>
-              </Link>
-
               {/* Inner rectangle overlay */}
               <div className="bg-black/30 border border-white/20 rounded h-[113px] left-[6px] absolute top-[5px] right-[6px]" />
 
-              {/* Wallet address section */}
-              <div className="flex items-center bg-black/50 border border-white/40 rounded gap-[10px] h-[30px] justify-center left-4 py-[21px] px-4 absolute top-[14px] right-[120px]">
-                <div className="flex items-center gap-2 -mb-[14px] -mt-[14px]">
-                  <div className="h-[15px] w-4">
-                    <img
-                      className="h-[15px] w-4 object-cover"
-                      alt="Wallet icon"
-                      src={bpfdwnPng}
-                    />
+              {/* Top row - Wallet address and Disconnect button */}
+              <div className="absolute top-[14px] left-[14px] right-[14px] flex items-center h-[38px]">
+                {/* Wallet address section */}
+                <div className="flex items-center bg-black/50 border border-white/40 border-b-0 border-r-0 rounded-tl gap-[10px] h-full justify-center px-4 flex-1">
+                  <div className="flex items-center gap-2">
+                    <div className="h-[15px] w-4">
+                      <img
+                        className="h-[15px] w-4 object-cover"
+                        alt="Wallet icon"
+                        src={bpfdwnPng}
+                      />
+                    </div>
+                    <div className="text-sm font-medium text-[#aeaeae] tracking-0 leading-normal whitespace-nowrap">
+                      WALLET:
+                    </div>
                   </div>
-                  <div className="text-sm font-medium text-[#aeaeae] tracking-0 leading-normal -mb-[13.5px] -mt-[14.5px] whitespace-nowrap">
-                    WALLET:
+                  <div className="text-sm font-medium text-[#aeaeae] tracking-0 leading-normal whitespace-nowrap">
+                    0xE5...13
                   </div>
                 </div>
-                <div className="text-sm font-medium text-[#aeaeae] tracking-0 leading-normal -mb-[13.5px] -mt-[14.5px] whitespace-nowrap">
-                  0xE5...13
-                </div>
+
+                {/* Disconnect button */}
+                <Link
+                  className="flex items-center bg-gradient-to-b from-[#10341d] to-[#318952] border border-[#76e39d] rounded-[74px] gap-2 justify-center overflow-hidden px-4 h-[30px] w-[112px] flex-shrink-0"
+                  to="/player/inventory"
+                >
+                  <div className="text-xs font-semibold text-white tracking-[-0.36px] leading-normal drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] whitespace-nowrap">
+                    DISCONNECT
+                  </div>
+                </Link>
               </div>
 
-              {/* Balance section - left part */}
-              <div className="flex items-center bg-black/50 border-b border-l border-t border-white/40 rounded-[4px_0px_0px_4px] gap-[10px] h-[58px] justify-center left-[14px] overflow-hidden py-[21px] px-[25px] absolute top-[52px] w-[calc(100%-140px)]">
-                <div className="flex items-center gap-2 -mb-[6px] -mt-[6px]">
-                  <img className="h-[18px] w-[18px]" alt="Frame" src={frameSvg} />
-                  <div className="text-2xl font-bold text-white tracking-0 leading-normal -mt-[1px] whitespace-nowrap">
-                    $120.64
+              {/* Bottom row - Balance and Network sections */}
+              <div className="absolute top-[52px] left-[14px] right-[14px] h-[58px] flex">
+                {/* Balance section - left part */}
+                <div className="flex items-center bg-black/50 border border-white/40 border-t-0 border-r-0 rounded-bl gap-[10px] h-full justify-center overflow-hidden py-[21px] px-[25px] flex-1">
+                  <div className="flex items-center gap-2">
+                    <img className="h-[18px] w-[18px]" alt="Frame" src={frameSvg} />
+                    <div className="text-2xl font-bold text-white tracking-0 leading-normal whitespace-nowrap">
+                      $120.64
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Network section - right part */}
-              <div className="flex items-center bg-black/50 border border-white/40 rounded-[0px_4px_4px_0px] gap-[10px] justify-center right-[14px] overflow-hidden py-[21px] px-[25px] absolute top-[52px] w-[112px]">
-                <div className="text-sm font-bold text-white tracking-0 leading-normal -ml-[5.5px] -mr-[5.5px] -mt-[0.5px] whitespace-nowrap">
-                  Base Sepolia
+                {/* Network section - right part */}
+                <div className="flex items-center bg-black/50 border border-white/40 border-l-0 rounded-r gap-[10px] justify-center overflow-hidden py-[21px] px-[25px] w-[112px] h-full">
+                  <div className="text-sm font-bold text-white tracking-0 leading-normal whitespace-nowrap">
+                    Base Sepolia
+                  </div>
                 </div>
               </div>
             </div>
