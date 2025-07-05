@@ -70,7 +70,7 @@ export const ActiveRaidScreen = (): JSX.Element => {
   }, [navigate]);
 
   const renderContent = () => (
-    <div className="relative w-[393px] h-[852px] bg-white overflow-hidden mx-auto overflow-y-auto scrollbar-hide">
+    <div className="relative w-full max-w-[393px] h-[852px] bg-white overflow-hidden mx-auto overflow-y-auto scrollbar-hide">
       <div className="absolute top-[-78px] left-[-277px] w-[906px] h-[944px]">
         <div className="absolute inset-0">
           <div className="relative w-full h-full">
@@ -161,12 +161,12 @@ export const ActiveRaidScreen = (): JSX.Element => {
   return (
     <div className="min-h-screen w-full bg-black overflow-hidden">
       {/* Mobile Layout */}
-      <div className="md:hidden flex flex-col h-screen w-full min-w-[390px] relative">
+      <div className="md:hidden flex flex-col h-screen w-full relative">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${bgImage})` }}>
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="flex-1 flex items-center justify-center overflow-hidden">
-          <div className="scale-[0.9] origin-center">
+          <div className="w-full h-full flex items-center justify-center">
             {renderContent()}
           </div>
         </div>

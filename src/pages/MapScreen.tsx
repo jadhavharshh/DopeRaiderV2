@@ -80,7 +80,7 @@ export const DoperaiderMap = (): JSX.Element => {
             {/* Map Pins Container - Keep same positions */}
             <div className="absolute inset-0 pt-24 pb-32">
               {/* PIN-4 - Jamaica Village */}
-              <div className="absolute" style={{ left: '54%', top: '28%' }} onClick={() => handlePinClick('Jamaica Village')}>
+              <div className="absolute" style={{ left: '54%', top: '18%' }} onClick={() => handlePinClick('Jamaica Village')}>
                 <div className="relative cursor-pointer">
                   <div 
                     className="bg-cover bg-center rounded-[40px] h-[32px] w-[32px] absolute left-[10px] top-0"
@@ -110,7 +110,7 @@ export const DoperaiderMap = (): JSX.Element => {
               </div>
 
               {/* PIN-5 - Novo Moskovo */}
-              <div className="absolute" style={{ left: '58%', top: '54%' }} onClick={() => handlePinClick('Novo Moskovo')}>
+              <div className="absolute" style={{ left: '70%', top: '38%' }} onClick={() => handlePinClick('Novo Moskovo')}>
                 <div className="h-[74px] relative w-[109px]">
                   <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[42px] absolute top-[56px] w-[28px]"></div>
                   <img className="h-[69px] left-[35px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract1Svg} />
@@ -124,7 +124,7 @@ export const DoperaiderMap = (): JSX.Element => {
               </div>
 
               {/* PIN-6 - Little Italy */}
-              <div className="absolute" style={{ left: '52%', top: '68%' }} onClick={() => handlePinClick('Little Italy')}>
+              <div className="absolute" style={{ left: '60%', top: '68%' }} onClick={() => handlePinClick('Little Italy')}>
                 <div className="h-[74px] relative w-[77px]">
                   <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[25px] absolute top-[56px] w-[28px]"></div>
                   <img className="h-[69px] left-[18px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract2Svg} />
@@ -138,7 +138,7 @@ export const DoperaiderMap = (): JSX.Element => {
               </div>
 
               {/* PIN-7 - Cartagena */}
-              <div className="absolute" style={{ left: '46%', top: '68%' }} onClick={() => handlePinClick('Cartagena')}>
+              <div className="absolute" style={{ left: '35%', top: '68%' }} onClick={() => handlePinClick('Cartagena')}>
                 <div className="h-[74px] relative w-[77px]">
                   <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[25px] absolute top-[56px] w-[28px]"></div>
                   <img className="h-[69px] left-[18px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract3Svg} />
@@ -152,7 +152,7 @@ export const DoperaiderMap = (): JSX.Element => {
               </div>
 
               {/* PIN-8 - Baltimore */}
-              <div className="absolute" style={{ left: '42%', top: '54%' }} onClick={() => handlePinClick('Baltimore')}>
+              <div className="absolute" style={{ left: '22%', top: '38%' }} onClick={() => handlePinClick('Baltimore')}>
                 <div className="h-[74px] relative w-[76px]">
                   <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[26px] absolute top-[56px] w-[28px]"></div>
                   <img className="h-[69px] left-[19px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract4Svg} />
@@ -172,7 +172,7 @@ export const DoperaiderMap = (): JSX.Element => {
               </div>
 
               {/* PIN-9 - Vice Island */}
-              <div className="absolute" style={{ left: '48%', top: '48%' }} onClick={() => handlePinClick('Vice Island')}>
+              <div className="absolute" style={{ left: '40%', top: '48%' }} onClick={() => handlePinClick('Vice Island')}>
                 <div className="h-[74px] relative w-[79px]">
                   <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[26px] absolute top-[56px] w-[28px]"></div>
                   <img className="h-[69px] left-[19px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract5Svg} />
@@ -186,7 +186,7 @@ export const DoperaiderMap = (): JSX.Element => {
               </div>
 
               {/* PIN-10 - Chinatown (Button) */}
-              <div className="absolute" style={{ left: '46%', top: '20%' }} onClick={() => handlePinClick('Chinatown')}>
+              <div className="absolute" style={{ left: '20%', top: '18%' }} onClick={() => handlePinClick('Chinatown')}>
                 <div className="h-[74px] relative w-[78px] cursor-pointer">
                   <div className="bg-[#00000099] rounded-[14px/8.5px] h-[17px] left-[27px] absolute top-[56px] w-[28px]"></div>
                   <img className="h-[69px] left-[20px] absolute top-[5px] w-[41px]" alt="Subtract" src={subtract6Svg} />
@@ -197,7 +197,8 @@ export const DoperaiderMap = (): JSX.Element => {
                   </div>
                   <div className="h-[20px] left-[30px] absolute top-[3px] w-[20px]">
                     <div className="h-[13px] relative top-[3px] bg-cover bg-center" style={{ backgroundImage: `url(${vector9Svg})` }}>
-                      <img className="h-[5px] left-[2px] absolute top-[1px] w-[6px]" alt="Group" src={group4Png} />
+                      <img className="h-[13px] left-0 absolute top-0 w-[20px]" alt="Vector" src={vector3Svg} />
+                      <img className="h-[11px] left-0 absolute top-[1px] w-[20px]" alt="Group" src={group10Png} />
                     </div>
                   </div>
                 </div>
