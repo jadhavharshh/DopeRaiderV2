@@ -83,10 +83,10 @@ export const BottomNav3 = ({ onNotificationClick }: { onNotificationClick?: () =
                 />
               </div>
             </div>
-            
-            <div className="bg-gradient-to-b from-black to-[#414141] border-none rounded-full h-5 w-5 absolute -top-1 -right-1 flex items-center justify-center relative before:absolute before:inset-0 before:rounded-full before:p-[1px] before:bg-gradient-to-b before:from-black before:to-[#666666] before:mask-composite-exclude before:pointer-events-none before:z-[1]">
-              <div className="font-['Roboto_Condensed'] text-xs font-semibold text-[#ffaa22] tracking-0 leading-normal relative z-10">
-                2
+            {/* Notification badge - top right of bell */}
+            <div className="bg-gradient-to-b from-black to-[#414141] border-none rounded-full h-5 w-5 absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-20">
+              <div className="font-['Roboto_Condensed'] text-xs font-semibold text-[#ffaa22] tracking-0 leading-normal">
+                3
               </div>
             </div>
           </div>
