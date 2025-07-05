@@ -613,33 +613,33 @@ export const MarketScreen = (): JSX.Element => {
                 $6.33
               </span>
             </div>
-
-            {/* TRADE Button */}
-            <button 
-              style={{
-                boxSizing: 'border-box',
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                position: 'absolute',
-                minWidth: '48px',
-                height: '30px',
-                left: '258px',
-                top: '4px',
-                background: 'linear-gradient(to top, #10341D, #318952)',
-                border: '1px solid transparent',
-                backgroundImage: 'linear-gradient(to top, #10341D, #318952), linear-gradient(to top, #76E39D, #6BBA1C)',
-                backgroundOrigin: 'border-box',
-                backgroundClip: 'content-box, border-box',
-                borderRadius: '74px'
-              }}
-            >
-              <span className="text-white text-[12px] font-semibold leading-[14px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
-                TRADE
-              </span>
-            </button>
           </div>
+          
+          {/* TRADE Button for COKE - positioned 16px from right edge of container */}
+          <button 
+            style={{
+              boxSizing: 'border-box',
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignItems: 'center',
+              position: 'absolute',
+              minWidth: '48px',
+              height: '30px',
+              right: '16px',
+              top: '56px',
+              background: 'linear-gradient(to top, #10341D, #318952)',
+              border: '1px solid transparent',
+              backgroundImage: 'linear-gradient(to top, #10341D, #318952), linear-gradient(to top, #76E39D, #6BBA1C)',
+              backgroundOrigin: 'border-box',
+              backgroundClip: 'content-box, border-box',
+              borderRadius: '74px'
+            }}
+          >
+            <span className="text-white text-[12px] font-semibold leading-[14px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
+              TRADE
+            </span>
+          </button>
 
           {/* Row #2 - WEED */}
           <div 
@@ -753,33 +753,33 @@ export const MarketScreen = (): JSX.Element => {
                 $3.54
               </span>
             </div>
-
-            {/* TRADE Button */}
-            <button 
-              style={{
-                boxSizing: 'border-box',
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                position: 'absolute',
-                minWidth: '48px',
-                height: '30px',
-                left: '258px',
-                top: '4px',
-                background: 'linear-gradient(to top, #10341D, #318952)',
-                border: '1px solid transparent',
-                backgroundImage: 'linear-gradient(to top, #10341D, #318952), linear-gradient(to top, #76E39D, #6BBA1C)',
-                backgroundOrigin: 'border-box',
-                backgroundClip: 'content-box, border-box',
-                borderRadius: '74px'
-              }}
-            >
-              <span className="text-white text-[12px] font-semibold leading-[14px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
-                TRADE
-              </span>
-            </button>
           </div>
+          
+          {/* TRADE Button for WEED - positioned 16px from right edge of container */}
+          <button 
+            style={{
+              boxSizing: 'border-box',
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignItems: 'center',
+              position: 'absolute',
+              minWidth: '48px',
+              height: '30px',
+              right: '16px',
+              top: '94px',
+              background: 'linear-gradient(to top, #10341D, #318952)',
+              border: '1px solid transparent',
+              backgroundImage: 'linear-gradient(to top, #10341D, #318952), linear-gradient(to top, #76E39D, #6BBA1C)',
+              backgroundOrigin: 'border-box',
+              backgroundClip: 'content-box, border-box',
+              borderRadius: '74px'
+            }}
+          >
+            <span className="text-white text-[12px] font-semibold leading-[14px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
+              TRADE
+            </span>
+          </button>
         </div>
 
         {/* Bottom Element - Container 2 with SEEDS and CHEMICALS */}
@@ -920,33 +920,33 @@ export const MarketScreen = (): JSX.Element => {
                 $0.20
               </span>
             </div>
-
-            {/* BUY Button */}
-            <button 
-              style={{
-                boxSizing: 'border-box',
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                position: 'absolute',
-                minWidth: '70px',
-                height: '30px',
-                right: '16px',
-                top: '4px',
-                background: 'linear-gradient(to top, #10341D, #318952)',
-                border: '1px solid transparent',
-                backgroundImage: 'linear-gradient(to top, #10341D, #318952), linear-gradient(to top, #76E39D, #6BBA1C)',
-                backgroundOrigin: 'border-box',
-                backgroundClip: 'content-box, border-box',
-                borderRadius: '74px'
-              }}
-            >
-              <span className="text-white text-[12px] font-semibold leading-[14px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
-                BUY $2.50
-              </span>
-            </button>
           </div>
+          
+          {/* BUY Button for SEEDS - positioned 16px from right edge of container */}
+          <button 
+            style={{
+              boxSizing: 'border-box',
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignItems: 'center',
+              position: 'absolute',
+              minWidth: '70px',
+              height: '30px',
+              right: '16px',
+              top: '12px',
+              background: 'linear-gradient(to top, #10341D, #318952)',
+              border: '1px solid transparent',
+              backgroundImage: 'linear-gradient(to top, #10341D, #318952), linear-gradient(to top, #76E39D, #6BBA1C)',
+              backgroundOrigin: 'border-box',
+              backgroundClip: 'content-box, border-box',
+              borderRadius: '74px'
+            }}
+          >
+            <span className="text-white text-[12px] font-semibold leading-[14px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
+              BUY $2.50
+            </span>
+          </button>
 
           {/* Row #2 - CHEMICALS */}
           <div 
@@ -1071,33 +1071,33 @@ export const MarketScreen = (): JSX.Element => {
                 $0.20
               </span>
             </div>
-
-            {/* BUY Button */}
-            <button 
-              style={{
-                boxSizing: 'border-box',
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                position: 'absolute',
-                minWidth: '80px',
-                height: '30px',
-                right: '16px',
-                top: '4px',
-                background: 'linear-gradient(to top, #10341D, #318952)',
-                border: '1px solid transparent',
-                backgroundImage: 'linear-gradient(to top, #10341D, #318952), linear-gradient(to top, #76E39D, #6BBA1C)',
-                backgroundOrigin: 'border-box',
-                backgroundClip: 'content-box, border-box',
-                borderRadius: '74px'
-              }}
-            >
-              <span className="text-white text-[12px] font-semibold leading-[14px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
-                BUY $13.50
-              </span>
-            </button>
           </div>
+          
+          {/* BUY Button for CHEMICALS - positioned 16px from right edge of container */}
+          <button 
+            style={{
+              boxSizing: 'border-box',
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignItems: 'center',
+              position: 'absolute',
+              minWidth: '80px',
+              height: '30px',
+              right: '16px',
+              top: '50px',
+              background: 'linear-gradient(to top, #10341D, #318952)',
+              border: '1px solid transparent',
+              backgroundImage: 'linear-gradient(to top, #10341D, #318952), linear-gradient(to top, #76E39D, #6BBA1C)',
+              backgroundOrigin: 'border-box',
+              backgroundClip: 'content-box, border-box',
+              borderRadius: '74px'
+            }}
+          >
+            <span className="text-white text-[12px] font-semibold leading-[14px] tracking-[-0.03em]" style={{ fontFamily: 'Roboto Condensed', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
+              BUY $13.50
+            </span>
+          </button>
         </div>
 
         {/* Bottom Navigation */}
